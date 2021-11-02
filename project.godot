@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Game_Off_2021_Bug"
+run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]

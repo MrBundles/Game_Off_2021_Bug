@@ -4,6 +4,11 @@ extends Node
 
 
 # signals --------------------------------------------------------------------------------------------------------------
+# scene management signals
+signal change_game_scene										# new_game_scene_id
+signal change_menu_scene										# new_menu_scene_id
+signal reload_game_scene
+signal reload_menu_scene
 
 
 # variables ------------------------------------------------------------------------------------------------------------
