@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GSM="*res://Globals/GlobalSignalManager.gd"
-GVM="*res://Globals/GlobalVariableManager.gd"
+GVM="*res://Globals/GlobalVariableManager.tscn"
 
 [physics]
 

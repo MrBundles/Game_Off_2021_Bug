@@ -12,6 +12,10 @@ signal reload_game_scene
 signal reload_menu_scene
 
 
+# theme management signals
+signal change_theme												# new_theme_id
+
+
 # variables ------------------------------------------------------------------------------------------------------------
 
 

@@ -25,7 +25,7 @@ func _process(delta):
 
 
 func _get_configuration_warning():
-	if get_parent() and not get_parent() is Control:
+	if not get_parent() is Control:
 		return "Feature can only be added to a Control Node"
 	else:
 		return ""
@@ -44,6 +44,5 @@ func _on_change_theme(new_theme_id):
 	if get_parent() is Control:
 		get_parent().set_theme(GVM.theme_array[new_theme_id])
 	else:
-		pass
-		# push_warning("warning: feature theme setter can only be added to control nodes.")
+		push_warning("warning: feature theme setter can only be added to control nodes.")
 

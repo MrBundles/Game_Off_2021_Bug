@@ -24,7 +24,10 @@ func _ready():
 	# initialize setgets
 	
 	# initialize variables
-	pass
+	
+	# load initial game and menu scenes
+	add_game_scene(current_game_scene_id)
+	add_menu_scene(current_menu_scene_id)
 
 
 func _process(delta):

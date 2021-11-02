@@ -16,7 +16,6 @@ func _ready():
 	# connect signals
 	GSM.connect("change_theme", self, "_on_change_theme")
 	
-	
 	# initialize variables
 	self.font_size = font_size
 
@@ -26,7 +25,7 @@ func _process(delta):
 
 
 func _get_configuration_warning():
-	if get_parent() and not get_parent() is Control:
+	if not get_parent() is Control:
 		return "Feature can only be added to a Control Node"
 	else:
 		return ""
@@ -46,8 +45,7 @@ func set_font_size(new_val):
 		new_font.size = font_size
 		get_parent().add_font_override("font", new_font)
 	else:
-		pass
-		# push_warning("warning: can only add feature font size overrider to control node")
+		push_warning("warning: can only add feature font size overrider to control node")
 	
 
 

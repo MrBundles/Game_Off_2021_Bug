@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Globals/GlobalVariableManager.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Themes/DefaultTheme.tres" type="Theme" id=2]
+
+[node name="GlobalVariableManager" type="Node"]
+script = ExtResource( 1 )
+theme_array = [ ExtResource( 2 ) ]
