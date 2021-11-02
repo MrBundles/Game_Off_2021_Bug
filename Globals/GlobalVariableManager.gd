@@ -5,15 +5,12 @@ extends Node
 
 # signals --------------------------------------------------------------------------------------------------------------
 
-# scene management signals
-signal change_game_scene										# new_game_scene_id
-signal change_menu_scene										# new_menu_scene_id
-signal reload_game_scene
-signal reload_menu_scene
-
 
 # variables ------------------------------------------------------------------------------------------------------------
 
+# theme management variables
+export(Array, Theme) var theme_array = []
+var current_theme_id = 0
 
 
 # main functions -------------------------------------------------------------------------------------------------------
