@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.gd" type="Script" id=1]
+
+[node name="FeatureFontSizeOverrider" type="Node"]
+script = ExtResource( 1 )
