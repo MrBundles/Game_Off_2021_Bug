@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Joint/Character_Worm_Joint.tscn" type="PackedScene" id=3]
 
-[node name="Character_Worm" type="Line2D"]
-points = PoolVector2Array( 617, 261, 755, 261, 811, 184, 936, 184 )
+[node name="Character_Worm" type="Node2D"]
+position = Vector2( 369, 317 )
 script = ExtResource( 1 )
+generate = true
+worm_segment = ExtResource( 2 )
+worm_joint = ExtResource( 3 )
+
+[node name="Segments" type="Node2D" parent="."]
