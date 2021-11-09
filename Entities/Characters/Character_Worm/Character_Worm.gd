@@ -8,11 +8,11 @@ extends Node2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-export var generate = false
-
 # worm parameters
 export(float, 1, 256) var length = 10.0
+export(float, 1, 128) var thickness = 16.0 setget set_thickness
 export(int, 2, 256) var segment_qty = 10
+export(Color) var worm_color = Color(1,1,1,1) setget set_worm_color
 
 # scenes for instancing
 export(PackedScene) var worm_segment
@@ -25,16 +25,17 @@ func _ready():
 	# connect signals
 	
 	# initialize setgets
+	self.thickness = thickness
+	self.worm_color = worm_color
 	
 	# initialize variables
 	
-	if generate:
-		generate_segments()
+	generate_segments()
 	pass
 
 
 func _process(delta):
-	pass
+	update_worm_line()
 
 
 func _get_configuration_warning():
@@ -71,16 +72,48 @@ func generate_segments():
 		# add segment
 		worm_segment_instance = worm_segment.instance()
 		worm_segment_instance.position.x = i * segment_length
+		worm_segment_instance.thickness = thickness
 		$Segments.add_child(worm_segment_instance)
 		
 		# connect joints between segments
 		worm_joint_instance.node_a = worm_joint_instance.get_path_to($Segments.get_child(2 * i - 2))
 		worm_joint_instance.node_b = worm_joint_instance.get_path_to($Segments.get_child(2 * i))
 		print("node a: " + str(worm_joint_instance.node_a) + "    node b: " + str(worm_joint_instance.node_b))
+	
+	# redraw worm graphic to reflect newly generate segments
+	generate_worm_line()
+
+
+func generate_worm_line():
+	$Line2D.clear_points()
+	
+	for i in range($Segments.get_child_count()):
+		if i % 2 == 0:
+			$Line2D.add_point($Segments.get_child(i).position)
+
+func update_worm_line():
+	for i in range($Line2D.points.size()):
+		$Line2D.set_point_position(i, $Segments.get_child(i * 2).position)
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_worm_color(new_val):
+	worm_color = new_val
+	
+	if has_node("Line2D"):
+		$Line2D.default_color = worm_color
 
+
+func set_thickness(new_val):
+	thickness = new_val
+	
+	if has_node("Segments"):
+		for child in $Segments.get_children():
+			if child.has_method("set_thickness"):
+				child.thickness = thickness
+	
+	if has_node("Line2D"):
+		$Line2D.width = thickness
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
