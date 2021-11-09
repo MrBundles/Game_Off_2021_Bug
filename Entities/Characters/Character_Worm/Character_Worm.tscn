@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm.gd" type="Script" id=1]
+
+[node name="Character_Worm" type="Line2D"]
+points = PoolVector2Array( 617, 261, 755, 261, 811, 184, 936, 184 )
+script = ExtResource( 1 )

@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuSceneBase.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 game_scene_array = [ ExtResource( 2 ) ]
+menu_scene_array = [ ExtResource( 3 ) ]
 
 [node name="GameScenes" type="Node2D" parent="."]
+
+[node name="GameScene01" parent="GameScenes" instance=ExtResource( 2 )]
 
 [node name="MenuScenes" type="CanvasLayer" parent="."]
