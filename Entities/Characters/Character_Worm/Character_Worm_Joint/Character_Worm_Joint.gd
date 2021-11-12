@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends PinJoint2D
 
 # references -----------------------------------------------------------------------------------------------------------
 
@@ -7,26 +7,20 @@ extends RigidBody2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-var thickness = 16.0 setget set_thickness
-
+var node_spread = 0.0 setget , get_node_spread
 
 # main functions -------------------------------------------------------------------------------------------------------
 func _ready():
 	# connect signals
 	
 	# initialize setgets
-	self.thickness = thickness
 	
 	# initialize variables
 	pass
 
 
 func _process(delta):
-	update()
-
-
-func _draw():
-	draw_circle(Vector2(0,0), thickness / 2, Color(1,1,1,1))
+	pass
 
 
 func _get_configuration_warning():
@@ -41,10 +35,9 @@ func _get_configuration_warning():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
-func set_thickness(new_val):
-	thickness = new_val
-	
-	$CollisionShape2D.shape.radius = thickness / 2.0
+func get_node_spread():
+	node_spread = get_node(node_a).global_position.distance_to(get_node(node_b).global_position)
+	return node_spread
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
