@@ -7,8 +7,8 @@
 [node name="Character_Worm" type="Node2D"]
 position = Vector2( 369, 317 )
 script = ExtResource( 1 )
-segment_length = 12.0
-segment_qty = 16
+segment_length = 32.0
+segment_qty = 8
 move_force = 10.0
 worm_color = Color( 0.839216, 0.364706, 0.8, 1 )
 max_stretch = 32

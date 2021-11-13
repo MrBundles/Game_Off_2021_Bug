@@ -45,13 +45,13 @@ func _process(delta):
 	update_worm_line()
 	
 	if not Engine.editor_hint:
-#		var text = ""
-#		if has_node("Segments"):
-#			for child in $Segments.get_children():
-#				if child.has_method("get_node_spread"):
-#					text += "    " + str(child.get_node_spread()).pad_decimals(2).pad_zeros(2)
+		var text = ""
+		if has_node("Segments"):
+			for child in $Segments.get_children():
+				if child.has_method("get_node_spread"):
+					text += "    " + str(child.node_spread).pad_decimals(2).pad_zeros(2)
 		
-		$Label.text = str(move_step)
+		$Label.text = text
 
 
 func _physics_process(delta):
@@ -104,6 +104,7 @@ func generate_segments():
 	for i in range(1, segment_qty):
 		# add joint
 		var worm_joint_instance : PinJoint2D = worm_joint.instance()
+		worm_joint_instance.thickness = thickness
 		worm_joint_instance.position.x = i * segment_length - segment_length / 2	# This should place the joint in between the previous two segments
 		$Segments.add_child(worm_joint_instance)
 		
