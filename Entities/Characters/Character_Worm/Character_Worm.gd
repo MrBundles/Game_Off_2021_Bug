@@ -9,8 +9,8 @@ extends Node2D
 
 # variables ------------------------------------------------------------------------------------------------------------
 # worm parameters
-export(float, 1, 256) var length = 10.0
 export(float, 1, 128) var thickness = 16.0 setget set_thickness
+export(float, 1, 256) var segment_length = 10.0
 export(int, 2, 256) var segment_qty = 10
 export(float, 1, 256) var move_force = 5
 export(Color) var worm_color = Color(1,1,1,1) setget set_worm_color
@@ -18,6 +18,7 @@ export(Color) var worm_color = Color(1,1,1,1) setget set_worm_color
 # worm movement variables
 var move_step = 0 setget set_move_step		# this variable is used to create a kind of stretch and contract wave through the worm as it moves
 export var max_stretch = 16
+export var rest_stretch = 8
 export var min_stretch = 0
 
 # scenes for instancing
@@ -95,9 +96,6 @@ func generate_segments():
 	# clear all current segments
 	clear_segments()
 	
-	# calculate individual segment length
-	var segment_length = length / segment_qty
-	
 	# first add a segment
 	var worm_segment_instance : RigidBody2D = worm_segment.instance()
 	$Segments.add_child(worm_segment_instance)
@@ -165,17 +163,17 @@ func set_move_step(new_val):
 			if joint.has_method("get_node_spread"):
 				match move_step:
 					0:
-						joint.softness = min_stretch
+						joint.stretch = rest_stretch
 					1:
 						if i < $Segments.get_child_count() / 2:
-							joint.softness = max_stretch
+							joint.stretch = max_stretch
 						else:
-							joint.softness = min_stretch
+							joint.stretch = min_stretch
 					2:
 						if i < $Segments.get_child_count() / 2:
-							joint.softness = min_stretch
+							joint.stretch = min_stretch
 						else:
-							joint.softness = max_stretch
+							joint.stretch = max_stretch
 
 
 # signal functions -------------------------------------------------------------------------------------------------------

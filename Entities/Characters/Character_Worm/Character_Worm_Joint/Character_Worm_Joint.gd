@@ -8,6 +8,7 @@ extends PinJoint2D
 
 # variables ------------------------------------------------------------------------------------------------------------
 var node_spread = 0.0 setget , get_node_spread
+var stretch = 0.0 setget set_stretch
 
 # main functions -------------------------------------------------------------------------------------------------------
 func _ready():
@@ -38,6 +39,14 @@ func _get_configuration_warning():
 func get_node_spread():
 	node_spread = get_node(node_a).global_position.distance_to(get_node(node_b).global_position)
 	return node_spread
+
+
+func set_stretch(new_val):
+	stretch = new_val
+	
+	$Tween.stop_all()
+	$Tween.interpolate_property(self, "softness", softness, stretch, 1, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	$Tween.start()
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
