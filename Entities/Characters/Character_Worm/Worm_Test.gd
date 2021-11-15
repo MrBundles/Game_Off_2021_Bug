@@ -10,6 +10,7 @@ extends RigidBody2D
 # variables ------------------------------------------------------------------------------------------------------------
 export var length = 20.0 setget set_length
 var force = 10.0
+export var rebuild = false setget set_rebuild
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -23,9 +24,9 @@ func _ready():
 	pass
 
 
-func _process(delta):
-	if Input.is_action_pressed("left_click"):
-		apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * force)
+#func _process(delta):
+#	if Input.is_action_pressed("left_click"):
+#		apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * force)
 
 
 func _get_configuration_warning():
@@ -51,6 +52,11 @@ func set_length(new_val):
 		$PinJoint2D.position.x = length * 2
 		$PinJoint2D.disable_collision = !$PinJoint2D.disable_collision
 
+
+func set_rebuild(new_val):
+	rebuild = new_val
+	
+	$GrooveJoint2D.disable_collision = !$GrooveJoint2D.disable_collision
 
 # signal functions -------------------------------------------------------------------------------------------------------
 

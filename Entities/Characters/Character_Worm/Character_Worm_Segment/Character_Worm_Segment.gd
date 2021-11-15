@@ -1,3 +1,4 @@
+tool
 extends RigidBody2D
 
 # references -----------------------------------------------------------------------------------------------------------
@@ -7,8 +8,11 @@ extends RigidBody2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-var thickness = 16.0 setget set_thickness
-var contact_positions = []
+export var move = false
+export var radius = 16.0 setget set_radius
+export var length = 50.0 setget set_length
+export var length_max = 150.0 setget set_length_max
+export var length_min = 25.0
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -16,17 +20,22 @@ func _ready():
 	# connect signals
 	
 	# initialize setgets
-	self.thickness = thickness
+	self.radius = radius
+	self.length = length
+	self.length_max = length_max
 	
 	# initialize variables
 	pass
 
 
+func _process(delta):
+	if Input.is_action_pressed("left_click") and move:
+		apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * 10.0)
+
+
 func _integrate_forces(state):
-	contact_positions.clear()
-	
-	for i in range(state.get_contact_count()):
-		contact_positions.append(state.get_contact_local_position(i))
+#	for i in range(state.get_contact_count()):
+#		contact_positions.append(state.get_contact_local_position(i))
 	
 	update()
 
@@ -34,8 +43,8 @@ func _integrate_forces(state):
 func _draw():
 	draw_set_transform_matrix(transform.inverse())
 	
-	for pos in contact_positions:
-		draw_circle(pos, thickness / 2, Color(1,1,1,1))
+#	for pos in contact_positions:
+#		draw_circle(pos, radius / 2, Color(1,1,1,1))
 
 
 func _get_configuration_warning():
@@ -50,18 +59,39 @@ func _get_configuration_warning():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
-func set_thickness(new_val):
-	thickness = new_val
+func set_radius(new_val):
+	radius = new_val
 	
-	$CollisionShape2D.shape.radius = thickness / 2.0
+	if has_node("CollisionShape2D"):
+		$CollisionShape2D.shape.radius = radius
+
+
+func set_length(new_val):
+	if new_val > length_max:
+		return
+	
+	length = new_val
+	
+	if has_node("CollisionShape2D"):
+		$CollisionShape2D.shape.height = length
+		$CollisionShape2D.position.x = length / 2
+	
+#	if has_node("GrooveJoint2D"):
+#		$GrooveJoint2D.initial_offset = length
+	
+	if has_node("DampedSpringJoint2D"):
+		$DampedSpringJoint2D.length = length
+		$DampedSpringJoint2D.rest_length = length
+
+
+func set_length_max(new_val):
+	length_max = new_val
+	
+	if has_node("GrooveJoint2D"):
+		$GrooveJoint2D.length = length_max
+#
+#	if has_node("DampedSpringJoint2D"):
+#		$DampedSpringJoint2D.length = length_max
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
-#func _on_Character_Worm_Segment_body_entered(body):
-#	if not body in colliding_bodies:
-#		colliding_bodies.append(body)
-#
-#
-#func _on_Character_Worm_Segment_body_exited(body):
-#	if body in colliding_bodies:
-#		colliding_bodies.remove(colliding_bodies.find(body))
