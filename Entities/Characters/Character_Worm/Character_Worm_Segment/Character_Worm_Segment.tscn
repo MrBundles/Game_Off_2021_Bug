@@ -18,8 +18,8 @@ gravity_scale = 2.0
 can_sleep = false
 script = ExtResource( 1 )
 segment_types = [ 0, 0 ]
-move = false
 worm_segment_path = "res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn"
+worm_handle_path = "res://Entities/Characters/Character_Worm/Character_Worm_Handle/Character_Worm_Handle.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 25, 0 )

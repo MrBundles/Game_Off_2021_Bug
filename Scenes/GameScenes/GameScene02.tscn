@@ -14,9 +14,6 @@ tile_data = PoolIntArray( 65535, 0, 0, 30, 0, 0, 131071, 0, 0, 65566, 0, 0, 1966
 
 [node name="Character_Worm_Segment" parent="." index="1" instance=ExtResource( 4 )]
 position = Vector2( 605.883, 258.293 )
-rotation = 3.14159
 physics_material_override = SubResource( 1 )
-move = true
-segment_qty = 8
+segment_types = [ 1, 2, 2, 3, 3, 4 ]
 radius = 12.0
-length = 32.0
