@@ -4,15 +4,14 @@
 
 [sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
-friction = 0.25
+friction = 0.5
 
 [sub_resource type="CapsuleShape2D" id=2]
 resource_local_to_scene = true
-radius = 16.0
+radius = 12.0
 height = 50.0
 
 [node name="Character_Worm_Segment" type="RigidBody2D"]
-collision_layer = 0
 physics_material_override = SubResource( 1 )
 gravity_scale = 2.0
 can_sleep = false
@@ -20,6 +19,8 @@ script = ExtResource( 1 )
 segment_types = [ 0, 0 ]
 worm_segment_path = "res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn"
 worm_handle_path = "res://Entities/Characters/Character_Worm/Character_Worm_Handle/Character_Worm_Handle.tscn"
+
+[node name="Tween" type="Tween" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 25, 0 )
@@ -30,7 +31,6 @@ shape = SubResource( 2 )
 visible = false
 rotation = 4.71239
 node_a = NodePath("..")
-disable_collision = false
 length = 150.0
 initial_offset = 50.0
 
@@ -38,13 +38,11 @@ initial_offset = 50.0
 visible = false
 rotation = 4.71239
 node_a = NodePath("..")
-disable_collision = false
 rest_length = 50.0
 stiffness = 64.0
-damping = 4.0
+damping = 2.0
 
 [node name="ChildSegmentPosition" type="Position2D" parent="."]
-position = Vector2( 50, 0 )
 
 [connection signal="body_entered" from="." to="." method="_on_Character_Worm_Segment_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Character_Worm_Segment_body_exited"]
