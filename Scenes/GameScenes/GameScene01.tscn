@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/GameScenes/GameSceneBase/GameSceneBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.gd" type="Script" id=2]
 [ext_resource path="res://Entities/Characters/Character_Worm/Worm_Test.gd" type="Script" id=3]
 [ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn" type="PackedScene" id=4]
 
@@ -16,6 +17,29 @@ extents = Vector2( 64, 16 )
 resource_local_to_scene = true
 friction = 0.5
 
+[sub_resource type="PhysicsMaterial" id=9]
+resource_local_to_scene = true
+friction = 0.5
+
+[sub_resource type="CapsuleShape2D" id=10]
+resource_local_to_scene = true
+radius = 16.0
+height = 50.0
+
+[sub_resource type="PackedScene" id=11]
+resource_local_to_scene = true
+_bundled = {
+"conn_count": 2,
+"conns": PoolIntArray( 0, 0, 23, 22, 2, 0, 0, 0, 25, 24, 2, 0 ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Character_Worm_Segment", "collision_layer", "physics_material_override", "gravity_scale", "contacts_reported", "can_sleep", "script", "worm_segment", "RigidBody2D", "CollisionShape2D", "position", "rotation", "shape", "GrooveJoint2D", "node_a", "length", "initial_offset", "DampedSpringJoint2D", "rest_length", "stiffness", "ChildSegmentPosition", "Position2D", "_on_Character_Worm_Segment_body_entered", "body_entered", "_on_Character_Worm_Segment_body_exited", "body_exited" ),
+"node_count": 5,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 8, 0, -1, 7, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 0, 0, 0, 9, 9, -1, 3, 10, 7, 11, 8, 12, 9, 0, 0, 0, 13, 13, -1, 4, 11, 8, 14, 10, 15, 11, 16, 12, 0, 0, 0, 17, 17, -1, 4, 11, 8, 14, 10, 18, 12, 19, 13, 0, 0, 0, 21, 20, -1, 1, 10, 14, 0 ),
+"variants": [ 0, SubResource( 9 ), 2.0, 5, false, ExtResource( 2 ), ExtResource( 4 ), Vector2( 25, 0 ), 4.71239, SubResource( 10 ), NodePath(".."), 150.0, 50.0, 64.0, Vector2( 50, 0 ) ],
+"version": 2
+}
+
 [sub_resource type="CapsuleShape2D" id=5]
 resource_local_to_scene = true
 radius = 16.0
@@ -25,10 +49,42 @@ height = 50.0
 resource_local_to_scene = true
 friction = 0.5
 
+[sub_resource type="PackedScene" id=12]
+resource_local_to_scene = true
+_bundled = {
+"conn_count": 2,
+"conns": PoolIntArray( 0, 0, 23, 22, 2, 0, 0, 0, 25, 24, 2, 0 ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Character_Worm_Segment", "collision_layer", "physics_material_override", "gravity_scale", "contacts_reported", "can_sleep", "script", "worm_segment", "RigidBody2D", "CollisionShape2D", "position", "rotation", "shape", "GrooveJoint2D", "node_a", "length", "initial_offset", "DampedSpringJoint2D", "rest_length", "stiffness", "ChildSegmentPosition", "Position2D", "_on_Character_Worm_Segment_body_entered", "body_entered", "_on_Character_Worm_Segment_body_exited", "body_exited" ),
+"node_count": 5,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 8, 0, -1, 7, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 0, 0, 0, 9, 9, -1, 3, 10, 7, 11, 8, 12, 9, 0, 0, 0, 13, 13, -1, 4, 11, 8, 14, 10, 15, 11, 16, 12, 0, 0, 0, 17, 17, -1, 4, 11, 8, 14, 10, 18, 12, 19, 13, 0, 0, 0, 21, 20, -1, 1, 10, 14, 0 ),
+"variants": [ 0, SubResource( 9 ), 2.0, 5, false, ExtResource( 2 ), ExtResource( 4 ), Vector2( 25, 0 ), 4.71239, SubResource( 10 ), NodePath(".."), 150.0, 50.0, 64.0, Vector2( 50, 0 ) ],
+"version": 2
+}
+
 [sub_resource type="CapsuleShape2D" id=7]
 resource_local_to_scene = true
 radius = 16.0
 height = 50.0
+
+[sub_resource type="PhysicsMaterial" id=8]
+resource_local_to_scene = true
+friction = 0.5
+
+[sub_resource type="PackedScene" id=13]
+resource_local_to_scene = true
+_bundled = {
+"conn_count": 2,
+"conns": PoolIntArray( 0, 0, 23, 22, 2, 0, 0, 0, 25, 24, 2, 0 ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Character_Worm_Segment", "collision_layer", "physics_material_override", "gravity_scale", "contacts_reported", "can_sleep", "script", "worm_segment", "RigidBody2D", "CollisionShape2D", "position", "rotation", "shape", "GrooveJoint2D", "node_a", "length", "initial_offset", "DampedSpringJoint2D", "rest_length", "stiffness", "ChildSegmentPosition", "Position2D", "_on_Character_Worm_Segment_body_entered", "body_entered", "_on_Character_Worm_Segment_body_exited", "body_exited" ),
+"node_count": 5,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 8, 0, -1, 7, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 0, 0, 0, 9, 9, -1, 3, 10, 7, 11, 8, 12, 9, 0, 0, 0, 13, 13, -1, 4, 11, 8, 14, 10, 15, 11, 16, 12, 0, 0, 0, 17, 17, -1, 4, 11, 8, 14, 10, 18, 12, 19, 13, 0, 0, 0, 21, 20, -1, 1, 10, 14, 0 ),
+"variants": [ 0, SubResource( 9 ), 2.0, 5, false, ExtResource( 2 ), ExtResource( 4 ), Vector2( 25, 0 ), 4.71239, SubResource( 10 ), NodePath(".."), 150.0, 50.0, 64.0, Vector2( 50, 0 ) ],
+"version": 2
+}
 
 [node name="GameScene01" instance=ExtResource( 1 )]
 
@@ -58,7 +114,6 @@ initial_offset = 60.0
 
 [node name="PinJoint2D" type="PinJoint2D" parent="RigidBody2D" index="3"]
 position = Vector2( 90, -37.5324 )
-disable_collision = false
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="RigidBody2D" index="4"]
 position = Vector2( 15.4597, -0.297302 )
@@ -93,37 +148,43 @@ shape = SubResource( 3 )
 position = Vector2( 918.649, 384.864 )
 physics_material_override = SubResource( 4 )
 move = true
+worm_segment = SubResource( 11 )
+segment_qty = 1
 
 [node name="CollisionShape2D" parent="Character_Worm_Segment" index="0"]
 shape = SubResource( 5 )
 
 [node name="GrooveJoint2D" parent="Character_Worm_Segment" index="1"]
-visible = false
-node_a = NodePath("..")
-node_b = NodePath("../Character_Worm_Segment1")
+node_b = NodePath("../ChildSegmentPosition/Character_Worm_Segment1")
 
 [node name="DampedSpringJoint2D" parent="Character_Worm_Segment" index="2"]
-node_a = NodePath("..")
-node_b = NodePath("../Character_Worm_Segment1")
-length = 50.0
-rest_length = 50.0
-damping = 16.0
+node_b = NodePath("../ChildSegmentPosition/Character_Worm_Segment1")
+damping = 4.0
 
-[node name="Character_Worm_Segment1" parent="Character_Worm_Segment" index="3" instance=ExtResource( 4 )]
+[node name="ChildSegmentPosition" type="Position2D" parent="Character_Worm_Segment" index="3"]
 position = Vector2( 50, 0 )
-physics_material_override = SubResource( 6 )
 
-[node name="CollisionShape2D" parent="Character_Worm_Segment/Character_Worm_Segment1" index="0"]
-position = Vector2( 25, -0.166748 )
+[node name="Character_Worm_Segment1" parent="Character_Worm_Segment/ChildSegmentPosition" index="0" instance=ExtResource( 4 )]
+rotation = 1.5708
+physics_material_override = SubResource( 6 )
+worm_segment = SubResource( 12 )
+segment_qty = 1
+
+[node name="CollisionShape2D" parent="Character_Worm_Segment/ChildSegmentPosition/Character_Worm_Segment1" index="0"]
+position = Vector2( 25, 0.00012207 )
 shape = SubResource( 7 )
 
-[node name="GrooveJoint2D" parent="Character_Worm_Segment/Character_Worm_Segment1" index="1"]
+[node name="GrooveJoint2D" parent="Character_Worm_Segment/ChildSegmentPosition/Character_Worm_Segment1" index="1"]
 visible = false
 
-[node name="DampedSpringJoint2D" parent="Character_Worm_Segment/Character_Worm_Segment1" index="2"]
+[node name="DampedSpringJoint2D" parent="Character_Worm_Segment/ChildSegmentPosition/Character_Worm_Segment1" index="2"]
 visible = false
-length = 50.0
-rest_length = 50.0
+
+[node name="Character_Worm_Segment2" parent="." index="4" instance=ExtResource( 4 )]
+position = Vector2( 890.34, 280.719 )
+physics_material_override = SubResource( 8 )
+move = true
+worm_segment = SubResource( 13 )
 
 [editable path="Character_Worm_Segment"]
-[editable path="Character_Worm_Segment/Character_Worm_Segment1"]
+[editable path="Character_Worm_Segment/ChildSegmentPosition/Character_Worm_Segment1"]

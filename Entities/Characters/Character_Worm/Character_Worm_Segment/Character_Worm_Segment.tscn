@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.gd" type="Script" id=1]
 
-[sub_resource type="PhysicsMaterial" id=1]
+[sub_resource type="PhysicsMaterial" id=3]
 resource_local_to_scene = true
-friction = 0.5
+friction = 0.25
 
 [sub_resource type="CapsuleShape2D" id=2]
 resource_local_to_scene = true
@@ -13,11 +13,11 @@ height = 50.0
 
 [node name="Character_Worm_Segment" type="RigidBody2D"]
 collision_layer = 0
-physics_material_override = SubResource( 1 )
+physics_material_override = SubResource( 3 )
 gravity_scale = 2.0
-contacts_reported = 5
 can_sleep = false
 script = ExtResource( 1 )
+worm_segment_path = "res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 25, 0 )
@@ -25,14 +25,24 @@ rotation = 4.71239
 shape = SubResource( 2 )
 
 [node name="GrooveJoint2D" type="GrooveJoint2D" parent="."]
+visible = false
 rotation = 4.71239
+node_a = NodePath("..")
+disable_collision = false
 length = 150.0
 initial_offset = 50.0
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
+visible = false
 rotation = 4.71239
+node_a = NodePath("..")
+disable_collision = false
 rest_length = 50.0
 stiffness = 64.0
+damping = 4.0
+
+[node name="ChildSegmentPosition" type="Position2D" parent="."]
+position = Vector2( 50, 0 )
 
 [connection signal="body_entered" from="." to="." method="_on_Character_Worm_Segment_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Character_Worm_Segment_body_exited"]

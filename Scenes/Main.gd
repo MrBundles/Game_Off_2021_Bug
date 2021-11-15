@@ -9,7 +9,7 @@ extends Node2D
 # variables ------------------------------------------------------------------------------------------------------------
 export(Array, PackedScene) var game_scene_array = []
 export(Array, PackedScene) var menu_scene_array = []
-var current_game_scene_id = 0
+var current_game_scene_id = 2
 var current_menu_scene_id = 0
 
 

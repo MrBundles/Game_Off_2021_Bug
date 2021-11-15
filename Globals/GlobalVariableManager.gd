@@ -1,6 +1,9 @@
 tool
 extends Node
 
+# enums
+enum SEGMENT_TYPES {null, front, back}
+
 # references -----------------------------------------------------------------------------------------------------------
 
 
