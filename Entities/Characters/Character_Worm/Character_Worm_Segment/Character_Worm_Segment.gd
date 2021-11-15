@@ -6,7 +6,7 @@ extends RigidBody2D
 # signals --------------------------------------------------------------------------------------------------------------
 
 # variables ------------------------------------------------------------------------------------------------------------
-export var move = false
+export(Array, GVM.SEGMENT_TYPES) var segment_types = []
 export(String, FILE) var worm_segment_path
 export(int, 1, 256) var segment_qty = 5
 var segment_mid_cutoff = 2
@@ -38,7 +38,8 @@ func _ready():
 
 
 func _process(delta):
-	if not Engine.editor_hint and Input.is_action_pressed("left_click") and move:
+	update_collision_shape()
+	if not Engine.editor_hint and Input.is_action_pressed("left_click"):
 #		apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * 10.0)
 		apply_impulse(Vector2(0,0), global_position.direction_to(get_global_mouse_position()).normalized() * 20.0)
 
@@ -70,18 +71,27 @@ func generate_segments(_segment_qty):
 		return
 	
 	if _segment_qty > 1:
-		var worm_segment_instance = load(worm_segment_path).instance()
-		worm_segment_instance.length = length
+		var worm_segment_instance = load(worm_segment_path).instance()									# create worm instance
+		worm_segment_instance.length = length															# update worm instance variables
 		worm_segment_instance.length_max = length_max
 		worm_segment_instance.length_min = length_min
 		worm_segment_instance.radius = radius
 		worm_segment_instance.segment_qty = _segment_qty - 1
 		worm_segment_instance.segment_mid_cutoff = segment_mid_cutoff
-		$ChildSegmentPosition.add_child(worm_segment_instance)
-		$GrooveJoint2D.node_b = $GrooveJoint2D.get_path_to(worm_segment_instance)
-		$DampedSpringJoint2D.node_b = $DampedSpringJoint2D.get_path_to(worm_segment_instance)
-	else:
-		move = true
+		$ChildSegmentPosition.add_child(worm_segment_instance)											# add worm instance as a child of ChildSegmentPosition
+		$GrooveJoint2D.node_b = $GrooveJoint2D.get_path_to(worm_segment_instance)						# update node_b of GrooveJoint
+		$DampedSpringJoint2D.node_b = $DampedSpringJoint2D.get_path_to(worm_segment_instance)			# update node_b of SpringJoint
+#	else:
+#		move = true
+
+
+func update_collision_shape():
+	if has_node("CollisionShape2D") and has_node("ChildSegmentPosition"):
+		if $ChildSegmentPosition.get_child_count() < 1:
+			return
+		
+		var stretch_dist = global_position.distance_to($ChildSegmentPosition.get_child(0).global_position)
+		$CollisionShape2D.shape.height = stretch_dist
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
@@ -99,7 +109,7 @@ func set_length(new_val):
 	length = new_val
 	
 	if has_node("CollisionShape2D"):
-		$CollisionShape2D.shape.height = length
+#		$CollisionShape2D.shape.height = length
 		$CollisionShape2D.position.x = length / 2
 	
 	if has_node("GrooveJoint2D"):
