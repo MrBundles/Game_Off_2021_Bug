@@ -7,9 +7,23 @@ extends RigidBody2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
+# color variables
+export var color_front = Color(1,1,1,1)
+export var color_back = Color(1,1,1,1)
+export var color_front_outline = Color(1,1,1,1)
+export var color_back_outline = Color(1,1,1,1)
+export var color_outline_thickness = 4.0
+
+# handle type variables
 var handle_type = GVM.HANDLE_TYPES.null
+
+# move force on handle
 export var move_force = 20.0
+
+# segment variables
 export var radius = 16.0 setget set_radius
+
+# body collision tracking variables
 var bodies = []
 var bodies_grabbed = []
 
@@ -26,8 +40,24 @@ func _ready():
 
 
 func _process(delta):
-	get_input()
 	update_radius()
+	update()
+
+
+func _physics_process(delta):
+	get_input()
+
+
+func _draw():
+	match handle_type:
+		GVM.HANDLE_TYPES.front:
+#			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_front_outline)
+#			draw_circle(Vector2(0,0), radius, color_front)
+			pass
+		
+		GVM.HANDLE_TYPES.back:
+			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_back_outline)
+			draw_circle(Vector2(0,0), radius, color_back)
 
 
 func _get_configuration_warning():

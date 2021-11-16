@@ -1,14 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Handle/Character_Worm_Handle.gd" type="Script" id=1]
 
+[sub_resource type="PhysicsMaterial" id=3]
+resource_local_to_scene = true
+friction = 0.5
+
 [sub_resource type="CircleShape2D" id=1]
+resource_local_to_scene = true
 
 [sub_resource type="CircleShape2D" id=2]
+resource_local_to_scene = true
 radius = 16.0
 
 [node name="Character_Worm_Handle" type="RigidBody2D"]
 collision_layer = 2
+physics_material_override = SubResource( 3 )
+gravity_scale = 5.0
 contacts_reported = 5
 contact_monitor = true
 can_sleep = false
