@@ -8,14 +8,14 @@ extends RigidBody2D
 
 # variables ------------------------------------------------------------------------------------------------------------
 # color variables
-export var color_front = Color(1,1,1,1)
-export var color_back = Color(1,1,1,1)
-export var color_front_outline = Color(1,1,1,1)
-export var color_back_outline = Color(1,1,1,1)
+export var color_left = Color(1,1,1,1)
+export var color_right = Color(1,1,1,1)
+export var color_left_outline = Color(1,1,1,1)
+export var color_right_outline = Color(1,1,1,1)
 export var color_outline_thickness = 4.0
 
-# handle type variables
-var handle_type = GVM.HANDLE_TYPES.null
+# input type variables
+var input_type = GVM.INPUT_TYPES.null
 
 # move force on handle
 export var move_force = 20.0
@@ -49,15 +49,14 @@ func _physics_process(delta):
 
 
 func _draw():
-	match handle_type:
-		GVM.HANDLE_TYPES.front:
-#			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_front_outline)
-#			draw_circle(Vector2(0,0), radius, color_front)
-			pass
+	match input_type:
+		GVM.INPUT_TYPES.left:
+			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_left_outline)
+			draw_circle(Vector2(0,0), radius, color_left)
 		
-		GVM.HANDLE_TYPES.back:
-			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_back_outline)
-			draw_circle(Vector2(0,0), radius, color_back)
+		GVM.INPUT_TYPES.right:
+			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_right_outline)
+			draw_circle(Vector2(0,0), radius, color_right)
 
 
 func _get_configuration_warning():
@@ -69,24 +68,36 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------------------------------------------------
 func get_input():
-	match handle_type:
-		GVM.HANDLE_TYPES.front:
+#	var stretch_dist = 1.0
+#	var stretch_dist_max = 1.0
+	
+#	var segment = get_parent().get_parent()
+#	var force_stretch_multiplier = segment.length / segment.stretch_dist
+#	print(force_stretch_multiplier)
+	
+	# nerf the move_force if both inputs are pressed at once, this is to keep the player from cheesing the game by always pressing both inputs...
+	var nerf_mult = 1.0
+	if Input.is_action_pressed("left_click") and Input.is_action_pressed("right_click"):
+		nerf_mult = 0.5
+	
+	match input_type:
+		GVM.INPUT_TYPES.left:
 			if Input.is_action_just_pressed("left_click"):
 				clear_pins()
 			
 			if Input.is_action_pressed("left_click"):
-				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force)
+				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force * nerf_mult)
 				
 			elif bodies.size() > 0:
 				for b in bodies:
 					add_body_pin(b)
 			
-		GVM.HANDLE_TYPES.back:
+		GVM.INPUT_TYPES.right:
 			if Input.is_action_just_pressed("right_click"):
 				clear_pins()
 			
 			if Input.is_action_pressed("right_click"):
-				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force)
+				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force * nerf_mult)
 			
 			elif bodies.size() > 0:
 				for b in bodies:
@@ -94,12 +105,7 @@ func get_input():
 
 
 func update_radius():
-	match handle_type:
-		GVM.HANDLE_TYPES.front:
-			self.radius = get_parent().radius
-			
-		GVM.HANDLE_TYPES.back:
-			self.radius = get_parent().get_parent().radius
+	self.radius = get_parent().get_parent().radius
 
 
 func clear_pins():
@@ -123,20 +129,20 @@ func add_body_pin(body):
 	bodies_grabbed.append(body)
 
 
-func add_tilemap_pin():
-	# add a static body to attach to
-	var static_instance = StaticBody2D.new()
-	var static_shape_instance = CollisionShape2D.new()
-	static_shape_instance.shape = CircleShape2D.new()
-	static_shape_instance.shape.radius = 16.0
-	static_instance.add_child(static_shape_instance)
-	$PinJoints.add_child(static_instance)
-	
-	# add a pin
-	var pin_instance = PinJoint2D.new()
-	$PinJoints.add_child(pin_instance)
-	pin_instance.node_a = pin_instance.get_path_to(self)
-	pin_instance.node_b = pin_instance.get_path_to(static_instance)
+#func add_tilemap_pin():
+#	# add a static body to attach to
+#	var static_instance = StaticBody2D.new()
+#	var static_shape_instance = CollisionShape2D.new()
+#	static_shape_instance.shape = CircleShape2D.new()
+#	static_shape_instance.shape.radius = 16.0
+#	static_instance.add_child(static_shape_instance)
+#	$PinJoints.add_child(static_instance)
+#
+#	# add a pin
+#	var pin_instance = PinJoint2D.new()
+#	$PinJoints.add_child(pin_instance)
+#	pin_instance.node_a = pin_instance.get_path_to(self)
+#	pin_instance.node_b = pin_instance.get_path_to(static_instance)
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------

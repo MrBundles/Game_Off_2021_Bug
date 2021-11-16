@@ -2,8 +2,7 @@ tool
 extends Node
 
 # enums
-enum SEGMENT_TYPES {null, front, mid_front, mid_back, back}
-enum HANDLE_TYPES {null, front, back}
+enum INPUT_TYPES {null, left, right}
 
 # references -----------------------------------------------------------------------------------------------------------
 

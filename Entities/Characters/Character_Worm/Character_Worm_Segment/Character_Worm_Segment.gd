@@ -11,15 +11,20 @@ export(String, FILE) var worm_segment_path
 export(String, FILE) var worm_handle_path
 
 # color variables
-export var color_front = Color(1,1,1,1)
-export var color_back = Color(1,1,1,1)
-export var color_front_outline = Color(1,1,1,1)
-export var color_back_outline = Color(1,1,1,1)
+export var color_left = Color(1,1,1,1)
+export var color_right = Color(1,1,1,1)
+export var color_left_outline = Color(1,1,1,1)
+export var color_right_outline = Color(1,1,1,1)
 export var color_outline_thickness = 4.0
 
-# segment type variables
-export(Array, GVM.SEGMENT_TYPES) var segment_types = []
-var segment_type = GVM.SEGMENT_TYPES.null
+# var segment_type = GVM.SEGMENT_TYPES.null
+export var segment_qty = 5
+
+# when toggled, this bit will cause the segments to be drawn under one another rather than on top
+export var invert_depth = false
+
+# input type variables
+export(GVM.INPUT_TYPES) var input_type = GVM.INPUT_TYPES.null
 
 # move force on worm handles
 export var move_force = 20.0
@@ -33,6 +38,8 @@ var radius = 16.0 setget set_radius
 export var length_stretch = 150.0 setget set_length_stretch
 export var length_rest = 50.0 setget set_length_rest
 var length = 50.0 setget set_length
+var stretch_dist = 1.0
+var stretch_dist_max = 1.0
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -47,15 +54,13 @@ func _ready():
 #	self.length = length						# don't have to call this setget as it is called in the length_rest setter function
 	
 	# initialize variables
-	if segment_types:
-		segment_type = segment_types[0]
-	
 	if not Engine.editor_hint:
 		generate_segments()
-		add_handle()
+		init_stretch_dist_max()
 
 
 func _process(delta):
+	update_stretch_distance()
 	update_collision_shape()
 	update()
 
@@ -65,24 +70,29 @@ func _physics_process(delta):
 
 
 func _draw():
-	if Engine.editor_hint:
+	if Engine.editor_hint or $ChildSegmentPosition.get_child_count() < 1:
 		return
 	
-	if segment_type == GVM.SEGMENT_TYPES.front or segment_type == GVM.SEGMENT_TYPES.mid_front:
-		# draw outline of segment
-		draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_front_outline, (radius + color_outline_thickness) * 2, true)
-		draw_circle(Vector2(0,0), radius + color_outline_thickness, color_front_outline)
-		# draw segment
-		draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_front, radius * 2, true)
-		draw_circle(Vector2(0,0), radius, color_front)
-	
-	elif segment_type == GVM.SEGMENT_TYPES.back or segment_type == GVM.SEGMENT_TYPES.mid_back:
-		# draw outline of segment
-		draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_back_outline, (radius + color_outline_thickness) * 2, true)
-		draw_circle(Vector2(0,0), radius + color_outline_thickness, color_back_outline)
-		# draw segment
-		draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_back, radius * 2, true)
-		draw_circle(Vector2(0,0), radius, color_back)
+	match input_type:
+		GVM.INPUT_TYPES.left:
+			# draw outline of segment
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius + color_outline_thickness, color_left_outline)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_left_outline, (radius + color_outline_thickness) * 2, true)
+			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_left_outline)
+			# draw segment
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius, color_left)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_left, radius * 2, true)
+			draw_circle(Vector2(0,0), radius, color_left)
+		
+		GVM.INPUT_TYPES.right:
+			# draw outline of segment
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius + color_outline_thickness, color_right_outline)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_right_outline, (radius + color_outline_thickness) * 2, true)
+			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_right_outline)
+			# draw segment
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius, color_right)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_right, radius * 2, true)
+			draw_circle(Vector2(0,0), radius, color_right)
 
 
 func _get_configuration_warning():
@@ -97,35 +107,40 @@ func get_input():
 	if Engine.editor_hint:
 		return
 	
-	if segment_type == GVM.SEGMENT_TYPES.front or segment_type == GVM.SEGMENT_TYPES.mid_front:
-		if Input.is_action_pressed("left_click"):
-			$DampedSpringJoint2D.stiffness = 32
-		else:
-			$DampedSpringJoint2D.stiffness = 64
-		
-	elif segment_type == GVM.SEGMENT_TYPES.back or segment_type == GVM.SEGMENT_TYPES.mid_back:
-		if Input.is_action_pressed("right_click"):
-			$DampedSpringJoint2D.stiffness = 32
-		else:
-			$DampedSpringJoint2D.stiffness = 64
+	match input_type:
+		GVM.INPUT_TYPES.left:
+			if Input.is_action_pressed("left_click"):
+				$DampedSpringJoint2D.stiffness = 42
+			else:
+				$DampedSpringJoint2D.stiffness = 64
+
+		GVM.INPUT_TYPES.right:
+			if Input.is_action_pressed("right_click"):
+				$DampedSpringJoint2D.stiffness = 42
+			else:
+				$DampedSpringJoint2D.stiffness = 64
 
 
 func generate_segments():
 	if not worm_segment_path:
 		return
 	
-	if segment_types and segment_types.size() > 1:
+	if segment_qty > 1:																					# if there is more than one segment left, instantiate another segment
 		var worm_segment_instance = load(worm_segment_path).instance()									# create worm instance
 		
-		worm_segment_instance.color_front = color_front
-		worm_segment_instance.color_back = color_back
-		worm_segment_instance.color_front_outline = color_front_outline
-		worm_segment_instance.color_back_outline = color_back_outline
+		worm_segment_instance.color_left = color_left
+		worm_segment_instance.color_right = color_right
+		worm_segment_instance.color_left_outline = color_left_outline
+		worm_segment_instance.color_right_outline = color_right_outline
 		worm_segment_instance.color_outline_thickness = color_outline_thickness							# set color variables
 		
-		segment_types.remove(0)
-		worm_segment_instance.segment_types = segment_types												# set segment_type variable
+		worm_segment_instance.segment_qty = segment_qty - 1												# set segment_qty variable
 		
+		worm_segment_instance.invert_depth = invert_depth												# set invert_depth variable
+		if invert_depth:
+			worm_segment_instance.z_index = z_index - 1
+			
+		worm_segment_instance.input_type = input_type													# set input_type variable
 		worm_segment_instance.move_force = move_force													# set move_force variable
 		
 		worm_segment_instance.radius_stretch = radius_stretch
@@ -137,57 +152,45 @@ func generate_segments():
 		$ChildSegmentPosition.add_child(worm_segment_instance)											# add worm instance as a child of ChildSegmentPosition
 		$GrooveJoint2D.node_b = $GrooveJoint2D.get_path_to(worm_segment_instance)						# update node_b of GrooveJoint
 		$DampedSpringJoint2D.node_b = $DampedSpringJoint2D.get_path_to(worm_segment_instance)			# update node_b of SpringJoint
-
-
-func add_handle():
-	if not worm_handle_path:
-		return
 	
-	if segment_type == GVM.SEGMENT_TYPES.front or segment_type == GVM.SEGMENT_TYPES.back:
+	else:																								# if this is the last segment, instantiate a handle for the endpoint
 		var worm_handle_instance = load(worm_handle_path).instance()
-		worm_handle_instance.radius = radius																	# set handle radius
-		worm_handle_instance.move_force = move_force															# set handle move_force
+		worm_handle_instance.radius = radius															# set handle radius
+		worm_handle_instance.move_force = move_force													# set handle move_force
 		
-		worm_handle_instance.color_front = color_front
-		worm_handle_instance.color_back = color_back
-		worm_handle_instance.color_front_outline = color_front_outline
-		worm_handle_instance.color_back_outline = color_back_outline
+		worm_handle_instance.color_left = color_left
+		worm_handle_instance.color_right = color_right
+		worm_handle_instance.color_left_outline = color_left_outline
+		worm_handle_instance.color_right_outline = color_right_outline
 		worm_handle_instance.color_outline_thickness = color_outline_thickness							# set color variables
 		
-		# set handle position
-		match segment_type:
-			GVM.SEGMENT_TYPES.front:
-				worm_handle_instance.handle_type = GVM.HANDLE_TYPES.front										# set handle type
-				add_child(worm_handle_instance)																	# add handle as child of RigidBody2D
-				
-				# pin handle in place
-				var pin_joint_instance = PinJoint2D.new()
-				pin_joint_instance.position = Vector2(0,0)
-				add_child(pin_joint_instance)
-				pin_joint_instance.node_a = pin_joint_instance.get_path_to(self)
-				pin_joint_instance.node_b = pin_joint_instance.get_path_to(worm_handle_instance)
-				
-			GVM.SEGMENT_TYPES.back:
-				worm_handle_instance.handle_type = GVM.HANDLE_TYPES.back										# set handle type
-				$ChildSegmentPosition.add_child(worm_handle_instance)											# add handle as child of ChildSegmentPosition node
-				$GrooveJoint2D.node_b = $GrooveJoint2D.get_path_to(worm_handle_instance)						# update node_b of GrooveJoint
-				$DampedSpringJoint2D.node_b = $DampedSpringJoint2D.get_path_to(worm_handle_instance)			# update node_b of SpringJoint
+		if invert_depth:
+			worm_handle_instance.z_index = z_index - 1
+		
+		worm_handle_instance.input_type = input_type													# set input_type
+		
+		$ChildSegmentPosition.add_child(worm_handle_instance)											# add handle as child of ChildSegmentPosition node
+		$GrooveJoint2D.node_b = $GrooveJoint2D.get_path_to(worm_handle_instance)						# update node_b of GrooveJoint
+		$DampedSpringJoint2D.node_b = $DampedSpringJoint2D.get_path_to(worm_handle_instance)			# update node_b of SpringJoint
+
+
+func init_stretch_dist_max():
+	stretch_dist_max = length_rest * 2.5
+
+
+func update_stretch_distance():
+	if $ChildSegmentPosition.get_child_count() > 0:
+		stretch_dist = global_position.distance_to($ChildSegmentPosition.get_child(0).global_position)
 
 
 func update_collision_shape():
 	# update length of collisionshape
 	if has_node("CollisionShape2D") and has_node("ChildSegmentPosition"):
-		var stretch_dist = length
-		
-		if $ChildSegmentPosition.get_child_count() > 0:
-			stretch_dist = global_position.distance_to($ChildSegmentPosition.get_child(0).global_position)
-			
 		$CollisionShape2D.shape.height = stretch_dist
 		$CollisionShape2D.position.x = stretch_dist / 2
 		
 		#update radius of collisionshape
-		var max_stretch_dist = length_rest * 2
-		self.radius = lerp(radius_rest, radius_stretch, clamp(stretch_dist / max_stretch_dist, 0.0, 1.0))
+		self.radius = lerp(radius_rest, radius_stretch, clamp(stretch_dist / stretch_dist_max, 0.0, 1.0))
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------

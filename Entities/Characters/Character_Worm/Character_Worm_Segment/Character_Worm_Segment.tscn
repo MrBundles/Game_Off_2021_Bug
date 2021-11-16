@@ -4,12 +4,12 @@
 
 [sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
-friction = 0.3
+friction = 0.5
 
 [sub_resource type="CapsuleShape2D" id=2]
 resource_local_to_scene = true
-radius = 12.0
-height = 26.0
+radius = 8.0
+height = 1.0
 
 [node name="Character_Worm_Segment" type="RigidBody2D"]
 physics_material_override = SubResource( 1 )
@@ -18,19 +18,20 @@ can_sleep = false
 script = ExtResource( 1 )
 worm_segment_path = "res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn"
 worm_handle_path = "res://Entities/Characters/Character_Worm/Character_Worm_Handle/Character_Worm_Handle.tscn"
-color_front = Color( 0.29, 0.514833, 1, 1 )
-color_back = Color( 1, 0.29, 0.491167, 1 )
-color_front_outline = Color( 0.211765, 0.380392, 0.733333, 1 )
-color_back_outline = Color( 0.666667, 0.192157, 0.32549, 1 )
-segment_types = [ 1, 2, 2, 2, 2, 3, 3, 3, 3, 4 ]
-move_force = 32.0
-length_stretch = 75.0
+color_left = Color( 0.29, 0.514833, 1, 1 )
+color_right = Color( 1, 0.29, 0.491167, 1 )
+color_left_outline = Color( 0.211765, 0.380392, 0.733333, 1 )
+color_right_outline = Color( 0.666667, 0.192157, 0.32549, 1 )
+color_outline_thickness = 3.0
+segment_qty = 3
+move_force = 28.0
+length_stretch = 65.0
 length_rest = 26.0
 
 [node name="Tween" type="Tween" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 13, 0 )
+position = Vector2( 0.5, 0 )
 rotation = 4.71239
 shape = SubResource( 2 )
 
@@ -38,7 +39,7 @@ shape = SubResource( 2 )
 visible = false
 rotation = 4.71239
 node_a = NodePath("..")
-length = 75.0
+length = 65.0
 initial_offset = 26.0
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
