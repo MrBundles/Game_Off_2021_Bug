@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Hook/Character_Worm_Hook.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 32.0
+
+[node name="Character_Worm_Hook" type="PinJoint2D"]
+position = Vector2( 1325.22, 919.814 )
+z_index = 1
+node_a = NodePath("../Character_Worm_Segment_good")
+node_b = NodePath("../Character_Worm_Segment_good2")
+script = ExtResource( 1 )
+color_normal = Color( 1, 1, 1, 0 )
+color_hovered = Color( 1, 1, 1, 0.282353 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]

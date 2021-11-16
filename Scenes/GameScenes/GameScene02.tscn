@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Entities/Objects/Grabbable/Object_Grabbable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Hook/Character_Worm_Hook.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/GameScenes/GameSceneBase/GameSceneBase.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn" type="PackedScene" id=4]
 
@@ -22,17 +23,19 @@ position = Vector2( 141.63, 619.063 )
 
 [node name="Character_Worm_Segment_good2" parent="." index="4" instance=ExtResource( 4 )]
 position = Vector2( 1325.11, 919.715 )
+z_index = 1
 physics_material_override = SubResource( 1 )
 invert_depth = true
 input_type = 2
 
+[node name="Character_Worm_Hook" parent="Character_Worm_Segment_good2" index="4" instance=ExtResource( 2 )]
+position = Vector2( 0.108887, 0.0991211 )
+node_a = NodePath("..")
+node_b = NodePath("../../Character_Worm_Segment_good")
+
 [node name="Character_Worm_Segment_good" parent="." index="5" instance=ExtResource( 4 )]
 position = Vector2( 1325.19, 919.669 )
 rotation = 3.14159
+z_index = 1
 physics_material_override = SubResource( 1 )
 input_type = 1
-
-[node name="PinJoint2D" type="PinJoint2D" parent="." index="6"]
-position = Vector2( 1325.22, 919.814 )
-node_a = NodePath("../Character_Worm_Segment_good")
-node_b = NodePath("../Character_Worm_Segment_good2")

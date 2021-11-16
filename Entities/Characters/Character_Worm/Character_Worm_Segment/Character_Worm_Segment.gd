@@ -17,11 +17,12 @@ export var color_left_outline = Color(1,1,1,1)
 export var color_right_outline = Color(1,1,1,1)
 export var color_outline_thickness = 4.0
 
-# var segment_type = GVM.SEGMENT_TYPES.null
+# segment quantity variables
 export var segment_qty = 5
+var first_segment = true
 
 # when toggled, this bit will cause the segments to be drawn under one another rather than on top
-export var invert_depth = false
+export var invert_depth = false setget set_invert_depth
 
 # input type variables
 export(GVM.INPUT_TYPES) var input_type = GVM.INPUT_TYPES.null
@@ -45,8 +46,10 @@ var stretch_dist_max = 1.0
 # main functions -------------------------------------------------------------------------------------------------------
 func _ready():
 	# connect signals
+	GSM.connect("break_worm", self, "_on_break_worm")
 	
 	# initialize setgets
+	self.invert_depth = invert_depth
 	self.radius_rest = radius_rest
 #	self.radius = radius						# don't have to call this setget as it is called in the radius_rest setter function
 	self.length_stretch = length_stretch
@@ -136,10 +139,10 @@ func generate_segments():
 		
 		worm_segment_instance.segment_qty = segment_qty - 1												# set segment_qty variable
 		
+		worm_segment_instance.first_segment = false														# set first segment flag to false
+		
 		worm_segment_instance.invert_depth = invert_depth												# set invert_depth variable
-		if invert_depth:
-			worm_segment_instance.z_index = z_index - 1
-			
+		
 		worm_segment_instance.input_type = input_type													# set input_type variable
 		worm_segment_instance.move_force = move_force													# set move_force variable
 		
@@ -164,8 +167,7 @@ func generate_segments():
 		worm_handle_instance.color_right_outline = color_right_outline
 		worm_handle_instance.color_outline_thickness = color_outline_thickness							# set color variables
 		
-		if invert_depth:
-			worm_handle_instance.z_index = z_index - 1
+		worm_handle_instance.invert_depth = invert_depth												# set invert_depth variable
 		
 		worm_handle_instance.input_type = input_type													# set input_type
 		
@@ -194,6 +196,21 @@ func update_collision_shape():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_invert_depth(new_val):
+	invert_depth = new_val
+	
+	if not first_segment and get_parent():
+		if invert_depth:
+			z_index = get_parent().z_index - 1
+		else:
+			z_index = get_parent().z_index + 1
+	
+	
+	if has_node("ChildSegmentPosition") and $ChildSegmentPosition.get_child_count() > 0:
+		if $ChildSegmentPosition.get_child(0).has_method("set_invert_depth"):
+			$ChildSegmentPosition.get_child(0).invert_depth = invert_depth
+
+
 func set_radius_rest(new_val):
 	radius_rest = new_val
 	
@@ -238,3 +255,5 @@ func set_length(new_val):
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
+func _on_break_worm():
+	self.invert_depth = false

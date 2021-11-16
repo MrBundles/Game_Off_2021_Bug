@@ -15,10 +15,13 @@ export var color_right_outline = Color(1,1,1,1)
 export var color_outline_thickness = 4.0
 
 # input type variables
-var input_type = GVM.INPUT_TYPES.null
+export(GVM.INPUT_TYPES) var input_type = GVM.INPUT_TYPES.null
 
 # move force on handle
 export var move_force = 20.0
+
+# when toggled, this bit will cause the hangle to be drawn under its parent segment rather than on top
+export var invert_depth = false setget set_invert_depth
 
 # segment variables
 export var radius = 16.0 setget set_radius
@@ -31,8 +34,10 @@ var bodies_grabbed = []
 # main functions -------------------------------------------------------------------------------------------------------
 func _ready():
 	# connect signals
+	GSM.connect("break_worm", self, "_on_break_worm")
 	
 	# initialize setgets
+	self.invert_depth = invert_depth
 	self.radius = radius
 	
 	# initialize variables
@@ -146,6 +151,16 @@ func add_body_pin(body):
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_invert_depth(new_val):
+	invert_depth = new_val
+	
+	if get_parent() and get_parent().get_parent():
+		if invert_depth:
+			z_index = get_parent().get_parent().z_index - 1
+		else:
+			z_index = get_parent().get_parent().z_index + 1
+
+
 func set_radius(new_val):
 	radius = new_val
 	
@@ -157,6 +172,11 @@ func set_radius(new_val):
 
 
 # signal functions ------------------------------------------------------------------------------------------------------
+func _on_break_worm():
+	self.invert_depth = false
+	move_force = move_force / 1.5
+
+
 func _on_Area2D_body_entered(body):
 	if not body in bodies and body.is_in_group("grabbable"):
 		bodies.append(body)

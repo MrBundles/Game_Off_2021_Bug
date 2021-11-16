@@ -1,28 +1,18 @@
-extends Node
+extends PinJoint2D
 
 # references -----------------------------------------------------------------------------------------------------------
 
 
 # signals --------------------------------------------------------------------------------------------------------------
 
-# scene management signals
-signal change_game_scene										# new_game_scene_id
-signal change_menu_scene										# new_menu_scene_id
-signal reload_game_scene
-signal reload_menu_scene
-
-
-# theme management signals
-signal change_theme												# new_theme_id
-
-
-# worm signals
-signal break_worm
-
-
 
 # variables ------------------------------------------------------------------------------------------------------------
+var hovered = false
 
+# draw variables
+export var radius = 16.0
+export var color_normal = Color(1,1,1,1)
+export var color_hovered = Color(1,1,1,1)
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -36,7 +26,15 @@ func _ready():
 
 
 func _process(delta):
-	pass
+	get_input()
+	update()
+
+
+func _draw():
+	if hovered:
+		draw_circle(Vector2(0,0), radius, color_hovered)
+	else:
+		draw_circle(Vector2(0,0), radius, color_normal)
 
 
 func _get_configuration_warning():
@@ -47,7 +45,11 @@ func _get_configuration_warning():
 
 
 # helper functions ------------------------------------------------------------------------------------------------------
-
+func get_input():
+	if hovered:
+		if Input.is_action_pressed("left_click") or Input.is_action_pressed("right_click"):
+			GSM.emit_signal("break_worm")
+			queue_free()
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
@@ -57,3 +59,11 @@ func _get_configuration_warning():
 # signal functions -------------------------------------------------------------------------------------------------------
 
 
+
+
+func _on_Area2D_mouse_entered():
+	hovered = true
+
+
+func _on_Area2D_mouse_exited():
+	hovered = false
