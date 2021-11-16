@@ -178,6 +178,7 @@ func _on_break_worm():
 
 
 func _on_Area2D_body_entered(body):
+#	print("body in bodies: " + str(body in bodies) + "    body in group: " + str(body.is_in_group("grabbable")) + "    body name: " + str(body.name))
 	if not body in bodies and body.is_in_group("grabbable"):
 		bodies.append(body)
 

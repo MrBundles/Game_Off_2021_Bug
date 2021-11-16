@@ -8,7 +8,7 @@ friction = 0.5
 
 [sub_resource type="CapsuleShape2D" id=2]
 resource_local_to_scene = true
-radius = 16.0
+radius = 8.0
 height = 1.0
 
 [node name="Character_Worm_Segment" type="RigidBody2D"]

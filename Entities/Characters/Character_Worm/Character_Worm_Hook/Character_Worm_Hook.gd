@@ -8,6 +8,7 @@ extends PinJoint2D
 
 # variables ------------------------------------------------------------------------------------------------------------
 var hovered = false
+export var breakable = false
 
 # draw variables
 export var radius = 16.0
@@ -31,7 +32,7 @@ func _process(delta):
 
 
 func _draw():
-	if hovered:
+	if hovered and breakable:
 		draw_circle(Vector2(0,0), radius, color_hovered)
 	else:
 		draw_circle(Vector2(0,0), radius, color_normal)
@@ -46,8 +47,8 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------------------------------------------------
 func get_input():
-	if hovered:
-		if Input.is_action_pressed("left_click") or Input.is_action_pressed("right_click"):
+	if hovered and breakable:
+		if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
 			GSM.emit_signal("break_worm")
 			queue_free()
 
