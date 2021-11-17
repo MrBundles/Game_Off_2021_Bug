@@ -8,7 +8,7 @@ extends StaticBody2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-export var tile_size = Vector2(16,16) setget set_tile_size
+export var color_grabbable = Color(1,1,1,1) setget set_color_grabbable
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -16,7 +16,7 @@ func _ready():
 	# connect signals
 	
 	# initialize setgets
-	self.tile_size = tile_size
+	self.color_grabbable = color_grabbable
 	
 	# initialize variables
 	pass
@@ -36,14 +36,11 @@ func _get_configuration_warning():
 # helper functions ------------------------------------------------------------------------------------------------------
 
 
-
 # set/get functions ------------------------------------------------------------------------------------------------------
-func set_tile_size(new_val):
-	tile_size = new_val
+func set_color_grabbable(new_val):
+	color_grabbable = new_val
 	
-	if has_node("CollisionShape2D"):
-		$CollisionShape2D.position = tile_size
-		$CollisionShape2D.shape.extents = tile_size
+	modulate = color_grabbable
 
 
 # signal functions -------------------------------------------------------------------------------------------------------

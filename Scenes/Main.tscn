@@ -10,6 +10,18 @@ script = ExtResource( 1 )
 game_scene_array = [ null, ExtResource( 2 ), ExtResource( 4 ) ]
 menu_scene_array = [ ExtResource( 3 ) ]
 
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.192157, 0.211765, 0.219608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="GameScenes" type="Node2D" parent="."]
 
 [node name="MenuScenes" type="CanvasLayer" parent="."]

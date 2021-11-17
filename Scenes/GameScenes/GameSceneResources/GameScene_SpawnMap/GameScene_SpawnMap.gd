@@ -17,7 +17,6 @@ func _ready():
 	# initialize setgets
 	
 	# initialize variables
-	pass
 	
 	spawn()
 
@@ -35,9 +34,13 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------------------------------------------------
 func spawn():
+	if Engine.editor_hint:
+		return
+	
 	for i in range(get_used_cells().size()):
 		var tile_pos = get_used_cells()[i]
 		var tile_id = get_cellv(tile_pos)
+		print(tile_id)
 		
 		if tile_id < spawn_scenes.size():
 			var spawn_instance = spawn_scenes[tile_id].instance()
