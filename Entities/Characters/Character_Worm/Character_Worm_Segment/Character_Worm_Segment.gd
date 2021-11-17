@@ -47,6 +47,7 @@ var stretch_dist_max = 1.0
 func _ready():
 	# connect signals
 	GSM.connect("break_worm", self, "_on_break_worm")
+	GSM.connect("destroy_segments", self, "_on_destroy_segments")
 	
 	# initialize setgets
 	self.invert_depth = invert_depth
@@ -79,23 +80,23 @@ func _draw():
 	match input_type:
 		GVM.INPUT_TYPES.left:
 			# draw outline of segment
-			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius + color_outline_thickness, color_left_outline)
-			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_left_outline, (radius + color_outline_thickness) * 2, true)
-			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_left_outline)
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius, color_left_outline)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_left_outline, radius * 2, true)
+			draw_circle(Vector2(0,0), radius, color_left_outline)
 			# draw segment
-			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius, color_left)
-			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_left, radius * 2, true)
-			draw_circle(Vector2(0,0), radius, color_left)
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius - color_outline_thickness, color_left)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_left, (radius - color_outline_thickness) * 2, true)
+			draw_circle(Vector2(0,0), radius - color_outline_thickness, color_left)
 		
 		GVM.INPUT_TYPES.right:
 			# draw outline of segment
-			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius + color_outline_thickness, color_right_outline)
-			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_right_outline, (radius + color_outline_thickness) * 2, true)
-			draw_circle(Vector2(0,0), radius + color_outline_thickness, color_right_outline)
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius, color_right_outline)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_right_outline, radius * 2, true)
+			draw_circle(Vector2(0,0), radius, color_right_outline)
 			# draw segment
-			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius, color_right)
-			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_right, radius * 2, true)
-			draw_circle(Vector2(0,0), radius, color_right)
+			draw_circle(Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, radius - color_outline_thickness, color_right)
+			draw_line(Vector2(0,0), Vector2(length,0) + $ChildSegmentPosition.get_child(0).position, color_right, (radius - color_outline_thickness) * 2, true)
+			draw_circle(Vector2(0,0), radius - color_outline_thickness, color_right)
 
 
 func _get_configuration_warning():

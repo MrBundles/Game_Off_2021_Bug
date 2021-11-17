@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Tilesets/Spawn_Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Resources/Tilesets/Spawn_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.gd" type="Script" id=2]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tile/Object_Grabbable_Tile.tscn" type="PackedScene" id=3]
 

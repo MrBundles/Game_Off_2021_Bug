@@ -21,6 +21,9 @@ contacts_reported = 5
 contact_monitor = true
 can_sleep = false
 script = ExtResource( 1 )
+color_grab_available = Color( 1, 1, 1, 0.156863 )
+color_grab_active = Color( 1, 1, 1, 0.313726 )
+color_grab_outline_thickness = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
