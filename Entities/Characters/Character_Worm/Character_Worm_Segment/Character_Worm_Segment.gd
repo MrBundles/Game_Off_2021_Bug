@@ -47,7 +47,6 @@ var stretch_dist_max = 1.0
 func _ready():
 	# connect signals
 	GSM.connect("break_worm", self, "_on_break_worm")
-	GSM.connect("destroy_segments", self, "_on_destroy_segments")
 	
 	# initialize setgets
 	self.invert_depth = invert_depth

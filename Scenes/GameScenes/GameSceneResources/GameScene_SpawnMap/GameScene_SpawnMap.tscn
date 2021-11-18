@@ -1,27 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Resources/Tilesets/Spawn_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.gd" type="Script" id=2]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile.gd" type="Script" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-[sub_resource type="PackedScene" id=2]
-_bundled = {
-"conn_count": 0,
-"conns": PoolIntArray(  ),
-"editable_instances": [  ],
-"names": PoolStringArray( "Object_Grabbable_Tile_0", "script", "tile_size", "grabbable", "StaticBody2D", "CollisionShape2D", "position", "shape", "Sprite", "texture" ),
-"node_count": 3,
-"node_paths": [  ],
-"nodes": PoolIntArray( -1, -1, 4, 0, -1, 2, 1, 0, 2, 1, 1, 3, 0, 0, 5, 5, -1, 2, 6, 1, 7, 2, 0, 0, 0, 8, 8, -1, 2, 6, 1, 9, 3, 0 ),
-"variants": [ ExtResource( 3 ), Vector2( 32, 32 ), SubResource( 1 ), ExtResource( 4 ) ],
-"version": 2
-}
 
 [node name="SpawnMap" type="TileMap"]
 tile_set = ExtResource( 1 )
 format = 1
 script = ExtResource( 2 )
-spawn_scenes = [ SubResource( 2 ) ]
+color_editor = Color( 0.992157, 0, 1, 1 )

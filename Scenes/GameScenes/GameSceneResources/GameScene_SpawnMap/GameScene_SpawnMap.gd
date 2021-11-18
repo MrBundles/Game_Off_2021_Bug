@@ -1,3 +1,4 @@
+tool
 extends TileMap
 
 # references -----------------------------------------------------------------------------------------------------------
@@ -8,6 +9,7 @@ extends TileMap
 
 # variables ------------------------------------------------------------------------------------------------------------
 export(Array, String, FILE) var spawn_scene_paths = []
+export var color_editor = Color(1,1,1,1) setget set_color_editor
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -15,6 +17,7 @@ func _ready():
 	# connect signals
 	
 	# initialize setgets
+	self.color_editor = color_editor
 	
 	# initialize variables
 	
@@ -96,7 +99,10 @@ func get_tile_rotation_info(tile_position : Vector2) -> Array:
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
-
+func set_color_editor(new_val):
+	color_editor = new_val
+	
+	modulate = color_editor
 
 
 # signal functions -------------------------------------------------------------------------------------------------------

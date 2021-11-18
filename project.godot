@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "PhysicsBody2D",
+"class": "Grabbable",
+"language": "GDScript",
+"path": "res://Entities/Objects/Grabbable/Object_Grabbable_Base.gd"
+} ]
+_global_script_class_icons={
+"Grabbable": ""
+}
+
 [application]
 
 config/name="Game_Off_2021_Bug"
