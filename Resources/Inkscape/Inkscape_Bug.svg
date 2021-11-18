@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3203697"
-     inkscape:cx="57.42799"
-     inkscape:cy="-26.450913"
+     inkscape:zoom="0.93364238"
+     inkscape:cx="155.34921"
+     inkscape:cy="1.849551"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1924,135 +1924,69 @@
          inkscape:export-ydpi="48" />
     </g>
     <rect
-       y="-42.333332"
-       x="-42.333332"
-       height="16.933332"
-       width="16.933332"
-       id="rect1059"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel" />
-    <path
-       d="M -16.933333,-8.4666657 V -25.399998 a 8.466666,8.466666 0 0 0 -8.466667,8.466666 8.466666,8.466666 0 0 0 8.466667,8.4666663 z"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-       id="path1061" />
-    <path
-       id="path1068"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-       d="M -25.4,-42.333333 V -25.4 a 8.466666,8.466666 0 0 0 8.466668,-8.466667 A 8.466666,8.466666 0 0 0 -25.4,-42.333333 Z" />
-    <rect
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1070"
-       width="16.933332"
-       height="16.933332"
-       x="-42.333332"
-       y="-8.4666672" />
-    <rect
-       y="8.4666662"
-       x="-42.333332"
-       height="16.933332"
-       width="16.933332"
-       id="rect1072"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel" />
-    <rect
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1074"
-       width="16.933332"
-       height="16.933332"
-       x="-42.333332"
-       y="-25.4" />
-    <rect
        transform="rotate(-45)"
        style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
        id="rect1076"
        width="11.973675"
        height="11.973675"
-       x="-56.874954"
-       y="-2.9934187" />
-    <path
-       d="m -25.400002,25.399999 8.466667,-8.466666 -8.466667,-8.4666671 z"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1080" />
-    <rect
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1088"
-       width="21.166668"
-       height="8.4666662"
-       x="-38.099998"
-       y="12.7" />
-    <rect
-       y="-21.166666"
-       x="-38.099998"
-       height="8.4666662"
-       width="21.166668"
-       id="rect1090"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel" />
-    <path
-       id="path1094"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
-       d="M -16.933335,-8.4666673 -25.400002,-2.6911621e-7 -16.933335,8.4666661 Z" />
-    <rect
-       y="-4.2333331"
-       x="-38.099998"
-       height="8.4666662"
-       width="21.166668"
-       id="rect1096"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel" />
-    <rect
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1098"
-       width="16.933332"
-       height="8.4666662"
-       x="-38.099998"
-       y="-38.099998" />
-    <path
-       id="path1102"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-       d="M 16.933332,-8.4666669 V -25.399999 a 8.466666,8.466666 0 0 0 -8.4666668,8.466666 8.466666,8.466666 0 0 0 8.4666668,8.4666661 z" />
-    <path
-       d="m 8.4666652,-42.333334 v 16.933333 a 8.466666,8.466666 0 0 0 8.4666678,-8.466667 8.466666,8.466666 0 0 0 -8.4666678,-8.466666 z"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-       id="path1104" />
-    <path
-       id="path1112"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
-       d="M 8.4666632,25.399998 16.93333,16.933332 8.4666632,8.4666647 Z" />
-    <rect
-       y="12.699999"
-       x="-4.2333331"
-       height="8.4666662"
-       width="21.166668"
-       id="rect1114"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel" />
-    <rect
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1116"
-       width="21.166668"
-       height="8.4666662"
-       x="-4.2333331"
-       y="-21.166668" />
-    <path
-       d="M 16.93333,-8.4666685 8.4666632,-1.4949951e-6 16.93333,8.4666649 Z"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
-       id="path1118" />
-    <rect
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1120"
-       width="21.166668"
-       height="8.4666662"
-       x="-4.2333331"
-       y="-4.2333345" />
-    <rect
-       y="-38.099998"
-       x="-4.2333331"
-       height="8.4666662"
-       width="16.933332"
-       id="rect1122"
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel" />
-    <rect
-       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
-       id="rect1126"
-       width="21.166668"
-       height="8.4666662"
-       x="-4.2333331"
-       y="12.699999" />
+       x="-83.81572"
+       y="-29.934187" />
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Spawn_Tileset_Switches.png"
+       id="g1165">
+      <path
+         d="M -12.700005,8.4666614 V -8.4666697 A 8.466666,8.466666 0 0 0 -21.166671,-4.2166138e-6 8.466666,8.466666 0 0 0 -12.700005,8.4666614 Z"
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         id="path1102" />
+      <path
+         id="path1104"
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         d="m -21.166668,-42.333337 v 16.933333 a 8.466666,8.466666 0 0 0 8.466667,-8.466667 8.466666,8.466666 0 0 0 -8.466667,-8.466666 z" />
+      <path
+         d="M 12.699997,8.4666659 21.166667,-4.0191654e-7 12.699997,-8.4666679 Z"
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
+         id="path1112" />
+      <rect
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect1114"
+         width="21.166668"
+         height="8.4666662"
+         x="0"
+         y="-4.2333326" />
+      <rect
+         y="-4.2333403"
+         x="-42.333332"
+         height="8.4666662"
+         width="29.633327"
+         id="rect1116"
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.953188;stroke-linecap:round;stroke-linejoin:bevel" />
+      <path
+         id="path1118"
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
+         d="m 21.166667,-42.333334 -8.46667,8.466667 8.46667,8.466666 z" />
+      <rect
+         y="-38.099998"
+         x="-8.4666662"
+         height="8.4666662"
+         width="29.633335"
+         id="rect1120"
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.953188;stroke-linecap:round;stroke-linejoin:bevel" />
+      <rect
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.882481;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect1122"
+         width="25.400002"
+         height="8.4666662"
+         x="-42.333332"
+         y="-38.099998" />
+      <rect
+         y="-4.2333326"
+         x="-8.4666662"
+         height="8.4666662"
+         width="29.633335"
+         id="rect1126"
+         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.953188;stroke-linecap:round;stroke-linejoin:bevel" />
+    </g>
   </g>
 </svg>

@@ -7,7 +7,7 @@ extends PinJoint2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-var hovered = false
+var hovered = false setget set_hovered
 export var breakable = false
 
 # draw variables
@@ -50,11 +50,15 @@ func get_input():
 	if hovered and breakable:
 		if Input.is_action_just_pressed("left_click") or Input.is_action_just_pressed("right_click"):
 			GSM.emit_signal("break_worm")
+			self.hovered = false
 			queue_free()
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
-
+func set_hovered(new_val):
+	hovered = new_val
+	
+	GVM.worm_hook_hovered = hovered
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
@@ -63,8 +67,8 @@ func get_input():
 
 
 func _on_Area2D_mouse_entered():
-	hovered = true
+	self.hovered = true
 
 
 func _on_Area2D_mouse_exited():
-	hovered = false
+	self.hovered = false

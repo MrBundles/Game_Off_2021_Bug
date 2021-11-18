@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "PhysicsBody2D",
+"base": "RigidBody2D",
 "class": "Grabbable",
 "language": "GDScript",
 "path": "res://Entities/Objects/Grabbable/Object_Grabbable_Base.gd"

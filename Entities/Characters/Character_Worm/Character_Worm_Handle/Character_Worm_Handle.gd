@@ -89,17 +89,14 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------------------------------------------------
 func get_input():
-#	var stretch_dist = 1.0
-#	var stretch_dist_max = 1.0
-	
-#	var segment = get_parent().get_parent()
-#	var force_stretch_multiplier = segment.length / segment.stretch_dist
-#	print(force_stretch_multiplier)
-	
 	# nerf the move_force if both inputs are pressed at once, this is to keep the player from cheesing the game by always pressing both inputs...
 	var nerf_mult = 1.0
 	if Input.is_action_pressed("left_click") and Input.is_action_pressed("right_click") and not broken:
 		nerf_mult = 0.5
+	
+	# do not process input is the worm_hook is currently hovered, we don't want to let go if we're breaking the worm
+	if GVM.worm_hook_hovered:
+		return
 	
 	match input_type:
 		GVM.INPUT_TYPES.left:
@@ -133,6 +130,11 @@ func clear_pins():
 	for child in $PinJoints.get_children():
 		child.queue_free()
 	
+	# this will tell a switch that it is no longer being grabbed
+	for body in bodies_grabbed:
+		if "grabbed" in body:
+			body.grabbed = false
+	
 	bodies.clear()
 	bodies_grabbed.clear()
 
@@ -148,6 +150,10 @@ func add_body_pin(body):
 	pin_instance.node_b = pin_instance.get_path_to(body)
 	
 	bodies_grabbed.append(body)
+	
+	# this will tell a switch if it is being grabbed
+	if "grabbed" in body:
+		body.grabbed = true
 
 
 #func add_tilemap_pin():

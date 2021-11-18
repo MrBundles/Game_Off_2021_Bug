@@ -8,7 +8,7 @@ extends TileMap
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-export(Array, String, FILE) var spawn_scene_paths = []
+export(Array, PackedScene) var spawn_scenes = []
 export var color_editor = Color(1,1,1,1) setget set_color_editor
 
 
@@ -44,9 +44,11 @@ func spawn():
 		var tile_pos = get_used_cells()[i]
 		var tile_id = get_cellv(tile_pos)
 		
-		if tile_id < spawn_scene_paths.size():
-			var spawn_instance = load(spawn_scene_paths[tile_id]).instance()
+		if tile_id < spawn_scenes.size():
+			var spawn_instance = spawn_scenes[tile_id].instance()
 			spawn_instance.global_position = map_to_world(tile_pos)
+			if "global_position_init" in spawn_instance:
+				spawn_instance.global_position_init = spawn_instance.global_position
 			
 			var tile_rotation_info = get_tile_rotation_info(tile_pos)
 			if "tile_rotation_degrees" in spawn_instance:
@@ -102,7 +104,10 @@ func get_tile_rotation_info(tile_position : Vector2) -> Array:
 func set_color_editor(new_val):
 	color_editor = new_val
 	
-	modulate = color_editor
+	if Engine.editor_hint:
+		modulate = color_editor
+	else:
+		modulate = Color(1,1,1,1)
 
 
 # signal functions -------------------------------------------------------------------------------------------------------

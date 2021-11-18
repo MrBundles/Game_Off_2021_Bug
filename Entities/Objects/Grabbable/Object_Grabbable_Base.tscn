@@ -9,14 +9,15 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 96, 32, 32 )
 
-[node name="Object_Grabbable_Base" type="StaticBody2D" groups=[
+[node name="Object_Grabbable_Base" type="RigidBody2D" groups=[
 "grabbable",
 ]]
 modulate = Color( 1, 0.686275, 0.541176, 1 )
+mode = 1
 script = ExtResource( 1 )
 color = Color( 1, 0.686275, 0.541176, 1 )
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 1 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

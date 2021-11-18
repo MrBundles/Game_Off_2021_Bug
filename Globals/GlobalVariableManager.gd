@@ -16,6 +16,9 @@ enum INPUT_TYPES {null, left, right}
 export(Array, Theme) var theme_array = []
 var current_theme_id = 0
 
+# worm variables
+var worm_hook_hovered = false
+
 
 # main functions -------------------------------------------------------------------------------------------------------
 func _ready():

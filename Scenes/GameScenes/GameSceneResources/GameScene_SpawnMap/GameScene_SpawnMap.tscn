@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Resources/Tilesets/Spawn_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.gd" type="Script" id=2]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Switch/Object_Grabbable_Switch_0.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_7.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_0.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_6.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_5.tscn" type="PackedScene" id=11]
 
 [node name="SpawnMap" type="TileMap"]
+modulate = Color( 0.992157, 0, 1, 1 )
 tile_set = ExtResource( 1 )
 format = 1
 script = ExtResource( 2 )
+spawn_scenes = [ ExtResource( 9 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 4 ) ]
 color_editor = Color( 0.992157, 0, 1, 1 )

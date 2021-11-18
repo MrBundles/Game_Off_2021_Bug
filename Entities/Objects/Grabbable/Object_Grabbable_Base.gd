@@ -1,5 +1,5 @@
 tool
-extends PhysicsBody2D
+extends RigidBody2D
 class_name Grabbable
 
 # references -----------------------------------------------------------------------------------------------------------
