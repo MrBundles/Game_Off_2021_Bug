@@ -8,22 +8,24 @@
 resource_local_to_scene = true
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 32 )
+region = Rect2( 0, 0, 48, 32 )
 
 [node name="Object_Grabbable_Switch_Base" instance=ExtResource( 2 )]
 modulate = Color( 0.67451, 0.905882, 0.752941, 1 )
+position = Vector2( 24, 0 )
 mode = 3
 script = ExtResource( 3 )
 color = Color( 0.67451, 0.905882, 0.752941, 1 )
-child_position_init = Vector2( 32, 16 )
+child_position_init = Vector2( 24, 16 )
 switch_offset_grabbed = Vector2( 24, 0 )
 
 [node name="CollisionPolygon2D" parent="." index="0"]
-position = Vector2( 32, 16 )
-polygon = PoolVector2Array( -32, -16, 8, -16, 16, -8, 16, 8, 8, 16, -32, 16 )
+position = Vector2( 24, 16 )
 
 [node name="Sprite" parent="." index="1"]
-position = Vector2( 32, 16 )
+position = Vector2( 24, 16 )
 texture = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="." index="2"]
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

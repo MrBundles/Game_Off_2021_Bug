@@ -20,6 +20,9 @@ signal change_theme												# new_theme_id
 signal break_worm
 
 
+# event signals
+signal event_trigger											# event_id, event_value
+
 
 # variables ------------------------------------------------------------------------------------------------------------
 

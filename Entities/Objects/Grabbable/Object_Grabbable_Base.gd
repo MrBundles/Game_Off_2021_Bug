@@ -9,6 +9,7 @@ class_name Grabbable
 
 
 # variables ------------------------------------------------------------------------------------------------------------
+export var grabbable = true setget set_grabbable
 export var color = Color(1,1,1,1) setget set_color
 export var tile_rotation_degrees = 0.0 setget set_tile_rotation_degrees
 export var tile_flip = false setget set_tile_flip
@@ -24,6 +25,7 @@ func _ready():
 	# connect signals
 	
 	# initialize setgets
+	self.grabbable = grabbable
 	self.color = color
 	self.tile_rotation_degrees = tile_rotation_degrees
 	self.tile_flip = tile_flip
@@ -48,6 +50,17 @@ func _get_configuration_warning():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_grabbable(new_val):
+	grabbable = new_val
+	
+	if grabbable:
+		if not is_in_group("grabbable"):
+			add_to_group("grabbable")
+	else:
+		if is_in_group("grabbable"):
+			remove_from_group("grabbable")
+
+
 func set_color(new_val):
 	color = new_val
 	

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Globals/GlobalEventManager.gd" type="Script" id=1]
+[ext_resource path="res://Globals/GlobalResources/GlobalEventManager_EventTimer.tscn" type="PackedScene" id=2]
+
+[node name="GlobalEventManager" type="Node"]
+script = ExtResource( 1 )
+event_timer_scene = ExtResource( 2 )
+
+[node name="EventTimers" type="Node" parent="."]

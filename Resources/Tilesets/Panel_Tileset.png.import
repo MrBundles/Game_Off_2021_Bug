@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Spawn_Tileset_Switches.png-afb587ea0f0d5062c8838c9f24702d75.stex"
+path="res://.import/Panel_Tileset.png-c0c411bf23189550efd89827d58ee6dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Tilesets/Spawn_Tileset_Switches.png"
-dest_files=[ "res://.import/Spawn_Tileset_Switches.png-afb587ea0f0d5062c8838c9f24702d75.stex" ]
+source_file="res://Resources/Tilesets/Panel_Tileset.png"
+dest_files=[ "res://.import/Panel_Tileset.png-c0c411bf23189550efd89827d58ee6dd.stex" ]
 
 [params]
 
@@ -24,7 +24,7 @@ flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

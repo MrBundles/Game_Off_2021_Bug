@@ -1,9 +1,4 @@
-tool
-extends Node
-
-# enums
-enum INPUT_TYPES {null, left, right}
-enum EVENT_TRIGGER_TYPES {null, on, off, delay_on, delay_off, on_delay_off, off_delay_on}
+extends Timer
 
 # references -----------------------------------------------------------------------------------------------------------
 
@@ -12,13 +7,8 @@ enum EVENT_TRIGGER_TYPES {null, on, off, delay_on, delay_off, on_delay_off, off_
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-
-# theme management variables
-export(Array, Theme) var theme_array = []
-var current_theme_id = 0
-
-# worm variables
-var worm_hook_hovered = false
+var event_id = 0
+var event_value = true
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -51,5 +41,6 @@ func _get_configuration_warning():
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
-
-
+func _on_EventTimer_timeout():
+	GSM.emit_signal("event_trigger", event_id, event_value)
+	queue_free()

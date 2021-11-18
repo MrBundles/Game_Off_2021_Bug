@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Panel/Object_Grabbable_Panel_Base.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Objects/Grabbable/Object_Grabbable_Base.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Tilesets/Panel_Tileset.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+resource_local_to_scene = true
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 32 )
+
+[node name="Object_Grabbable_Panel_Base" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 1 )
+mode = 3
+script = ExtResource( 1 )
+grabbable = false
+color = Color( 1, 1, 1, 1 )
+child_position_init = Vector2( 64, 16 )
+switch_offset_grabbed = Vector2( 128, 0 )
+
+[node name="CollisionPolygon2D" parent="." index="0"]
+position = Vector2( 64, 16 )
+polygon = PoolVector2Array( -64, -16, 64, -16, 64, 16, -64, 16 )
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2( 64, 16 )
+texture = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="." index="2"]

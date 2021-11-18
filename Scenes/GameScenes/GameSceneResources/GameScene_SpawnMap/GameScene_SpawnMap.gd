@@ -47,8 +47,6 @@ func spawn():
 		if tile_id < spawn_scenes.size():
 			var spawn_instance = spawn_scenes[tile_id].instance()
 			spawn_instance.global_position = map_to_world(tile_pos)
-			if "global_position_init" in spawn_instance:
-				spawn_instance.global_position_init = spawn_instance.global_position
 			
 			var tile_rotation_info = get_tile_rotation_info(tile_pos)
 			if "tile_rotation_degrees" in spawn_instance:
