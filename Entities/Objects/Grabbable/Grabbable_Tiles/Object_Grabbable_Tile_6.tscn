@@ -14,10 +14,12 @@ atlas = SubResource( 1 )
 region = Rect2( 0, 0, 64, 32 )
 
 [node name="Object_Grabbable_Tile_6" instance=ExtResource( 1 )]
+child_position_init = Vector2( 32, 16 )
 
 [node name="Sprite" parent="." index="0"]
 position = Vector2( 32, 16 )
 texture = SubResource( 2 )
 
 [node name="CollisionPolygon2D" parent="." index="1"]
-polygon = PoolVector2Array( 48, -16, 48, 16, -16, 16 )
+position = Vector2( 32, 16 )
+polygon = PoolVector2Array( -32, 16, 32, -16, 32, 16 )

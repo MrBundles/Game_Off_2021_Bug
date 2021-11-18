@@ -21,4 +21,3 @@ position = Vector2( 16, 16 )
 texture = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 16, 16 )

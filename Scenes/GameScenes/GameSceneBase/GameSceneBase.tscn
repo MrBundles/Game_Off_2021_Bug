@@ -1,15 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Resources/Tilesets/Default_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_5.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_0.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_6.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_7.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_3.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_2.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_4.tscn" type="PackedScene" id=10]
 
 [node name="GameSceneBase" type="Node2D"]
 
@@ -21,4 +13,4 @@ tile_data = PoolIntArray( -1, 72, 0, -65536, 72, 0, -65535, 72, 0, -65534, 72, 0
 
 [node name="SpawnMap" parent="." instance=ExtResource( 2 )]
 cell_size = Vector2( 32, 32 )
-spawn_scenes = [ ExtResource( 4 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ) ]
+spawn_scene_paths = [ "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_0.tscn", "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_1.tscn", "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_2.tscn", "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_3.tscn", "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_4.tscn", "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_5.tscn", "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_6.tscn", "res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_7.tscn" ]
