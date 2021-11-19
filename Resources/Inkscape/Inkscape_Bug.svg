@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.33009243"
-     inkscape:cx="390.95304"
-     inkscape:cy="-1128.9941"
+     inkscape:zoom="0.66018486"
+     inkscape:cx="160.75124"
+     inkscape:cy="-815.32756"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1921,64 +1921,64 @@
        height="11.973675"
        x="77.828888"
        y="-77.828888" />
+    <path
+       id="path1102"
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+       d="m -67.733313,-88.899995 v -16.933335 a 8.466666,8.466666 0 0 0 -8.466666,8.466669 8.466666,8.466666 0 0 0 8.466666,8.466666 z" />
+    <path
+       id="path1112"
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
+       d="m -42.333334,-88.899996 8.46667,-8.466666 -8.46667,-8.466668 z" />
+    <rect
+       y="-101.59999"
+       x="-55.033333"
+       height="8.4666662"
+       width="21.166668"
+       id="rect1114"
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect1116"
+       width="21.166668"
+       height="8.4666662"
+       x="-93.133316"
+       y="-101.6" />
+    <path
+       d="m -33.866664,-139.7 -8.46667,8.46667 8.46667,8.46667 z"
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
+       id="path1118" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.88248;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect1120"
+       width="25.399984"
+       height="8.4666662"
+       x="-59.266647"
+       y="-135.46666" />
     <g
-       transform="translate(-55.033331,-97.366662)"
        inkscape:export-ydpi="48"
        inkscape:export-xdpi="48"
-       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Spawn_Tileset_Switches.png"
-       id="g1165">
-      <path
-         d="M -12.699982,8.4666669 V -8.4666642 A 8.466666,8.466666 0 0 0 -21.166648,1.2467529e-6 8.466666,8.466666 0 0 0 -12.699982,8.4666669 Z"
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-         id="path1102" />
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Objects\Switch\Switch.png"
+       transform="translate(0,-4.2333265)"
+       id="g1620">
       <path
          id="path1104"
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
-         d="m -21.166668,-42.333337 v 16.933333 a 8.466666,8.466666 0 0 0 8.466667,-8.466667 8.466666,8.466666 0 0 0 -8.466667,-8.466666 z" />
-      <path
-         d="M 12.699997,8.4666659 21.166667,-4.0191654e-7 12.699997,-8.4666679 Z"
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
-         id="path1112" />
+         style="fill:#ffffff;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         d="m -76.199999,-139.7 v 16.93333 a 8.466666,8.466666 0 0 0 8.466667,-8.46666 8.466666,8.466666 0 0 0 -8.466667,-8.46667 z" />
       <rect
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
-         id="rect1114"
-         width="21.166668"
-         height="8.4666662"
-         x="0"
-         y="-4.2333326" />
-      <rect
-         y="-4.233335"
-         x="-38.099983"
-         height="8.4666662"
-         width="21.166668"
-         id="rect1116"
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel" />
-      <path
-         id="path1118"
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
-         d="m 21.166667,-42.333334 -8.46667,8.466667 8.46667,8.466666 z" />
-      <rect
-         y="-38.099998"
-         x="-4.2333169"
-         height="8.4666662"
-         width="25.399984"
-         id="rect1120"
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.88248;stroke-linecap:round;stroke-linejoin:bevel" />
-      <rect
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.805591;stroke-linecap:round;stroke-linejoin:bevel"
          id="rect1122"
          width="21.166668"
          height="8.4666662"
-         x="-38.099998"
-         y="-38.099998" />
-      <rect
-         y="-4.2333326"
-         x="-4.2333169"
-         height="8.4666662"
-         width="25.399984"
-         id="rect1126"
-         style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.88248;stroke-linecap:round;stroke-linejoin:bevel" />
+         x="-93.133331"
+         y="-135.46666" />
     </g>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.88248;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect1126"
+       width="25.399984"
+       height="8.4666662"
+       x="-59.266647"
+       y="-101.59999" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -2113,7 +2113,7 @@
            d="M 43.360864,-237.06667 H 67.30821 l 16.933358,16.93336 h -23.94735 z" />
         <path
            d="m 19.163895,-237.0667 h 23.94735 l 16.933358,16.93336 h -23.94735 z"
-           style="fill:#fff780;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="rect1217" />
         <path
            d="M -4.7834548,-237.0667 H 19.163895 l 16.933358,16.93336 h -23.94735 z"
@@ -2121,7 +2121,7 @@
            id="rect1219" />
         <path
            d="m -28.730805,-237.0667 h 23.9473502 l 16.9333578,16.93336 h -23.947349 z"
-           style="fill:#fff780;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="rect1221" />
         <path
            d="m -52.678154,-237.0667 h 23.947349 l 16.933359,16.93336 h -23.94735 z"
@@ -2129,7 +2129,7 @@
            id="rect1223" />
         <path
            d="m -76.625504,-237.0667 h 23.94735 l 16.933358,16.93336 h -23.94735 z"
-           style="fill:#fff780;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="rect1225" />
         <path
            d="m -100.57285,-237.0667 h 23.947346 l 16.933358,16.93336 h -23.94735 z"
@@ -2137,7 +2137,7 @@
            id="rect1227" />
         <path
            d="m -101.60038,-237.0667 h 1.02753 l 16.933354,16.93336 h -17.960514 z"
-           style="fill:#fff780;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="rect1229" />
         <path
            id="path1575"
@@ -2145,7 +2145,7 @@
            d="m 187.04496,-237.06667 h 23.94735 l 0.67455,0.67455 3.6e-4,16.2588 -7.6889,1e-5 z" />
         <path
            id="path1577"
-           style="fill:#fff780;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m 163.09761,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z" />
         <path
            id="path1579"
@@ -2153,7 +2153,7 @@
            d="m 139.15026,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z" />
         <path
            id="path1581"
-           style="fill:#fff780;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m 115.20291,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z" />
         <path
            id="path1583"
@@ -2161,7 +2161,7 @@
            d="m 91.25556,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z" />
         <path
            id="path1585"
-           style="fill:#fff780;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m 67.30821,-237.06667 h 23.94735 l 16.93336,16.93336 H 84.241568 Z" />
       </g>
     </g>

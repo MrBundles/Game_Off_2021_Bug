@@ -21,11 +21,11 @@ triggered_offset = Vector2( 128, 0 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Panel_Body" type="KinematicBody2D" parent="."]
-position = Vector2( 128, 0 )
 
 [node name="Sprite" type="Sprite" parent="Panel_Body"]
 position = Vector2( -0.952, 0 )
 texture = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel_Body"]
+visible = false
 shape = SubResource( 2 )

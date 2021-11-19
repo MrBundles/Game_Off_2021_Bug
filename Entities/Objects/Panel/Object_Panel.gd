@@ -14,6 +14,7 @@ export var triggered = false setget set_triggered
 
 # panel appearance variables
 export(int, 1, 18) var length = 2 setget set_length
+export var color = Color(1,1,1,1) setget set_color
 
 # panel behavior variables
 export var triggered_offset = Vector2(0,0) setget set_triggered_offset
@@ -26,6 +27,7 @@ func _ready():
 	
 	# initialize setgets
 	self.triggered = triggered
+	self.color = color
 
 
 func _process(delta):
@@ -73,6 +75,12 @@ func set_length(new_val):
 	
 	if has_node("Panel_Body/CollisionShape2D"):
 		$Panel_Body/CollisionShape2D.shape.extents = Vector2(length * 32 / 2, 16)
+
+
+func set_color(new_val):
+	color = new_val
+	
+	modulate = color
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
