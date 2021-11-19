@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Entities/Objects/Panel/Object_Panel.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Objects/Panel/Panel.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+resource_local_to_scene = true
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+resource_local_to_scene = true
+extents = Vector2( 64, 16 )
+
+[node name="Object_Panel" type="Node2D"]
+script = ExtResource( 1 )
+length = 4
+triggered_offset = Vector2( 128, 0 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Panel_Body" type="KinematicBody2D" parent="."]
+position = Vector2( 128, 0 )
+
+[node name="Sprite" type="Sprite" parent="Panel_Body"]
+position = Vector2( -0.952, 0 )
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel_Body"]
+shape = SubResource( 2 )

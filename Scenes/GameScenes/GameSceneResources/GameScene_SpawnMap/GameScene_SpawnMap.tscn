@@ -3,7 +3,7 @@
 [ext_resource path="res://Resources/Tilesets/Spawn_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.gd" type="Script" id=2]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_4.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Switch/Object_Grabbable_Switch_0.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Objects/Switch/Object_Grabbable_Switch_0.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_7.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_2.tscn" type="PackedScene" id=7]
@@ -11,9 +11,9 @@
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_0.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_6.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_5.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Switch/Object_Grabbable_Switch_2.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Switch/Object_Grabbable_Switch_1.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Switch/Object_Grabbable_Switch_3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Entities/Objects/Switch/Object_Grabbable_Switch_2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Entities/Objects/Switch/Object_Grabbable_Switch_1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Entities/Objects/Switch/Object_Grabbable_Switch_3.tscn" type="PackedScene" id=14]
 
 [node name="SpawnMap" type="TileMap"]
 modulate = Color( 0.992157, 0, 1, 1 )
