@@ -7,6 +7,7 @@ class_name Button_Base
 
 # signals --------------------------------------------------------------------------------------------------------------
 signal button_base_hovered
+signal button_base_pressed
 
 # variables ------------------------------------------------------------------------------------------------------------
 var hovered = false setget set_hovered
@@ -42,7 +43,6 @@ func _ready():
 
 
 func _process(delta):
-#	print(pressed)
 	pass
 
 
@@ -55,8 +55,6 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------------------------------------------------
 func animate_button(button_pressed, button_hovered):
-	print(button_pressed)
-	
 	# tween variables
 	var tween_duration = .5
 	var tween_delay = 0.0
@@ -94,6 +92,7 @@ func set_hovered(new_val):
 	hovered = new_val
 	
 	animate_button(pressed, hovered)
+	emit_signal("button_base_hovered")
 
 
 func set_show_border(new_val):
@@ -138,6 +137,7 @@ func _on_ButtonBase_item_rect_changed():
 
 func _on_Button_Base_button_down():
 	animate_button(true, hovered)
+	emit_signal("button_base_pressed")
 
 
 func _on_Button_Base_button_up():

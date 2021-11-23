@@ -9,8 +9,8 @@ extends Node2D
 # variables ------------------------------------------------------------------------------------------------------------
 export(Array, PackedScene) var game_scene_array = []
 export(Array, PackedScene) var menu_scene_array = []
-var current_game_scene_id = 2
-var current_menu_scene_id = 0
+var current_game_scene_id = 0
+var current_menu_scene_id = GVM.MENU_SCENE_IDS.main
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -26,8 +26,8 @@ func _ready():
 	# initialize variables
 	
 	# load initial game and menu scenes
-	add_game_scene(current_game_scene_id)
-	add_menu_scene(current_menu_scene_id)
+	GSM.emit_signal("change_game_scene", current_game_scene_id)
+	GSM.emit_signal("change_menu_scene", current_menu_scene_id)
 
 
 func _process(delta):

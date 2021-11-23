@@ -6,6 +6,7 @@ enum INPUT_TYPES {null, left, right}
 enum EVENT_TRIGGER_TYPES {null, on, off, delay_on, delay_off, on_delay_off, off_delay_on}
 
 enum MENU_SCENE_IDS {null, main, level_select, settings, credits, pause}
+enum UI_BUTTON_IDS {null, back, level_select, pause, reset}
 
 # references -----------------------------------------------------------------------------------------------------------
 

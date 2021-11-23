@@ -42,5 +42,6 @@ func _get_configuration_warning():
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
-
-
+func _on_Button_GoTo_button_base_pressed():
+	GSM.emit_signal("change_game_scene", new_game_scene_id)
+	GSM.emit_signal("change_menu_scene", new_menu_scene_id)

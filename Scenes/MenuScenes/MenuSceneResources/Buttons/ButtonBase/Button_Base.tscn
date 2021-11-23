@@ -16,28 +16,24 @@ rect_pivot_offset = Vector2( 38, 35 )
 custom_fonts/font = SubResource( 1 )
 action_mode = 0
 icon = ExtResource( 4 )
+align = 0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": true
 }
-show_border = true
-animate_border = true
-border_size_normal = Vector2( -5, -5 )
-border_size_hovered = Vector2( 10, 10 )
-border_size_pressed = Vector2( 20, 20 )
-animate_rotation = true
-rotation_normal = -45.0
-rotation_pressed = 45.0
 
 [node name="FeatureFontSizeOverrider" parent="." instance=ExtResource( 3 )]
 
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Border" type="ColorRect" parent="."]
+visible = false
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 76.0
+margin_bottom = 70.0
 rect_pivot_offset = Vector2( 38, 35 )
 mouse_filter = 2
 __meta__ = {

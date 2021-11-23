@@ -1,14 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuScene_Base.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/MenuScenes/MenuScene_Settings.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GameScenes/GameScene02.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/MenuScenes/MenuScene_LevelSelect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/MenuScenes/MenuScene_Null.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/MenuScenes/MenuScene_Credits.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/MenuScenes/MenuScene_Pause.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/MenuScenes/MenuScene_Main.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_UI/Button_UI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/GameScenes/GameScene00.tscn" type="PackedScene" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 10 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
-game_scene_array = [ null, ExtResource( 2 ), ExtResource( 4 ) ]
-menu_scene_array = [ ExtResource( 3 ) ]
+game_scene_array = [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), null, null ]
+menu_scene_array = [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ) ]
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -24,4 +48,79 @@ __meta__ = {
 
 [node name="GameScenes" type="Node2D" parent="."]
 
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_right = 64
+custom_constants/margin_top = 64
+custom_constants/margin_left = 64
+custom_constants/margin_bottom = 64
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 1856.0
+margin_bottom = 1016.0
+mouse_filter = 2
+
+[node name="UIButtons" type="VBoxContainer" parent="UI/MarginContainer/HBoxContainer"]
+margin_right = 76.0
+margin_bottom = 952.0
+mouse_filter = 2
+custom_constants/separation = 32
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 76.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 1 )
+border_size_current = Vector2( -16, -16 )
+ui_button_id = 1
+visible_in_menu = true
+
+[node name="LevelSelectButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 102.0
+margin_right = 76.0
+margin_bottom = 172.0
+custom_fonts/font = SubResource( 2 )
+border_size_current = Vector2( -16, -16 )
+ui_button_id = 2
+visible_in_game = true
+
+[node name="PauseButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 204.0
+margin_right = 76.0
+margin_bottom = 274.0
+custom_fonts/font = SubResource( 3 )
+border_size_current = Vector2( -16, -16 )
+ui_button_id = 3
+visible_in_game = true
+
+[node name="ResetButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 306.0
+margin_right = 76.0
+margin_bottom = 376.0
+custom_fonts/font = SubResource( 4 )
+border_size_current = Vector2( -16, -16 )
+ui_button_id = 4
+visible_in_game = true
+
 [node name="MenuScenes" type="CanvasLayer" parent="."]
+layer = 2
