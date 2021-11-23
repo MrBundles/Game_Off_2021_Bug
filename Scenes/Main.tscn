@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=2]
@@ -12,6 +12,10 @@
 [ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_UI/Button_UI.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/GameScenes/GameScene00.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Play.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Pause.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Reset.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Level_Select.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -26,6 +30,10 @@ size = 32
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 32
 font_data = ExtResource( 10 )
 
@@ -54,24 +62,24 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-custom_constants/margin_right = 64
-custom_constants/margin_top = 64
-custom_constants/margin_left = 64
-custom_constants/margin_bottom = 64
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
-margin_left = 64.0
-margin_top = 64.0
-margin_right = 1856.0
-margin_bottom = 1016.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 1888.0
+margin_bottom = 1048.0
 mouse_filter = 2
 
 [node name="UIButtons" type="VBoxContainer" parent="UI/MarginContainer/HBoxContainer"]
-margin_right = 64.0
-margin_bottom = 952.0
+margin_right = 70.0
+margin_bottom = 1016.0
 mouse_filter = 2
 custom_constants/separation = 32
 __meta__ = {
@@ -82,45 +90,64 @@ __meta__ = {
 [node name="BackButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 70.0
+margin_bottom = 70.0
+rect_rotation = 90.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
+tween_duration_hovered = 1.0
+rotation_current = 90.0
+rotation_normal = 90.0
 ui_button_id = 1
 
 [node name="LevelSelectButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 96.0
-margin_right = 64.0
-margin_bottom = 160.0
+margin_top = 102.0
+margin_right = 70.0
+margin_bottom = 172.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
+icon = ExtResource( 16 )
 ui_button_id = 2
 
 [node name="PauseButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 192.0
-margin_right = 64.0
-margin_bottom = 256.0
+margin_top = 204.0
+margin_right = 70.0
+margin_bottom = 274.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
+icon = ExtResource( 14 )
 ui_button_id = 3
+
+[node name="PlayButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 306.0
+margin_right = 70.0
+margin_bottom = 376.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
+icon = ExtResource( 13 )
+ui_button_id = 4
 
 [node name="ResetButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 288.0
-margin_right = 64.0
-margin_bottom = 352.0
-custom_fonts/font = SubResource( 4 )
+margin_top = 408.0
+margin_right = 70.0
+margin_bottom = 478.0
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
-ui_button_id = 4
+icon = ExtResource( 15 )
+ui_button_id = 5
 
 [node name="MenuScenes" type="CanvasLayer" parent="."]
 layer = 2

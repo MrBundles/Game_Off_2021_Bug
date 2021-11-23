@@ -1,12 +1,5 @@
 tool
-extends Node
-
-# enums
-enum INPUT_TYPES {null, left, right}
-enum EVENT_TRIGGER_TYPES {null, on, off, delay_on, delay_off, on_delay_off, off_delay_on}
-
-enum MENU_SCENE_IDS {null, main, level_select, settings, credits, pause, quit}
-enum UI_BUTTON_IDS {null, back, level_select, pause, play, reset}
+extends Button_Base
 
 # references -----------------------------------------------------------------------------------------------------------
 
@@ -15,13 +8,7 @@ enum UI_BUTTON_IDS {null, back, level_select, pause, play, reset}
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-
-# theme management variables
-export(Array, Theme) var theme_array = []
-var current_theme_id = 0
-
-# worm variables
-var worm_hook_hovered = false
+export(int, 0, 256) var game_scene_id = 0 setget set_game_scene_id
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -50,7 +37,10 @@ func _get_configuration_warning():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
-
+func set_game_scene_id(new_val):
+	game_scene_id = new_val
+	
+	text = str(game_scene_id).pad_zeros(2)
 
 
 # signal functions -------------------------------------------------------------------------------------------------------

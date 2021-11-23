@@ -1,12 +1,4 @@
-tool
 extends Node
-
-# enums
-enum INPUT_TYPES {null, left, right}
-enum EVENT_TRIGGER_TYPES {null, on, off, delay_on, delay_off, on_delay_off, off_delay_on}
-
-enum MENU_SCENE_IDS {null, main, level_select, settings, credits, pause, quit}
-enum UI_BUTTON_IDS {null, back, level_select, pause, play, reset}
 
 # references -----------------------------------------------------------------------------------------------------------
 
@@ -16,12 +8,6 @@ enum UI_BUTTON_IDS {null, back, level_select, pause, play, reset}
 
 # variables ------------------------------------------------------------------------------------------------------------
 
-# theme management variables
-export(Array, Theme) var theme_array = []
-var current_theme_id = 0
-
-# worm variables
-var worm_hook_hovered = false
 
 
 # main functions -------------------------------------------------------------------------------------------------------

@@ -12,6 +12,11 @@ signal button_base_pressed
 # variables ------------------------------------------------------------------------------------------------------------
 var hovered = false setget set_hovered
 
+# tween duration time variables
+export var tween_duration_normal = 0.5
+export var tween_duration_hovered = 0.5
+export var tween_duration_pressed = 0.5
+
 # border animation variables
 export var show_border = false setget set_show_border
 export var animate_border = false
@@ -55,32 +60,31 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------------------------------------------------
 func animate_button(button_pressed, button_hovered):
-	# tween variables
-	var tween_duration = .5
-	var tween_delay = 0.0
-	
 	if has_node("Tween") and has_node("Border"):
 		$Tween.stop_all()
+		
+		# tween variables
+		var tween_delay = 0.0
 		
 		# handle border animations
 		if animate_border:
 			if button_pressed:
-				$Tween.interpolate_property(self, "border_size_current", border_size_current, border_size_pressed, tween_duration, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
+				$Tween.interpolate_property(self, "border_size_current", border_size_current, border_size_pressed, tween_duration_pressed, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
 			elif button_hovered:
-				$Tween.interpolate_property(self, "border_size_current", border_size_current, border_size_hovered, tween_duration, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
+				$Tween.interpolate_property(self, "border_size_current", border_size_current, border_size_hovered, tween_duration_hovered, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
 			else:
-				$Tween.interpolate_property(self, "border_size_current", border_size_current, border_size_normal, tween_duration, Tween.TRANS_QUART, Tween.EASE_OUT, tween_delay)
+				$Tween.interpolate_property(self, "border_size_current", border_size_current, border_size_normal, tween_duration_normal, Tween.TRANS_QUART, Tween.EASE_OUT, tween_delay)
 		else:
 			border_size_current = border_size_normal
 		
 		# handle rotation_animations
 		if animate_rotation:
 			if button_pressed:
-				$Tween.interpolate_property(self, "rotation_current", rotation_current, rotation_pressed, tween_duration, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
+				$Tween.interpolate_property(self, "rotation_current", rotation_current, rotation_pressed, tween_duration_pressed, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
 			elif button_hovered:
-				$Tween.interpolate_property(self, "rotation_current", rotation_current, rotation_hovered, tween_duration, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
+				$Tween.interpolate_property(self, "rotation_current", rotation_current, rotation_hovered, tween_duration_hovered, Tween.TRANS_ELASTIC, Tween.EASE_OUT, tween_delay)
 			else:
-				$Tween.interpolate_property(self, "rotation_current", rotation_current, rotation_normal, tween_duration, Tween.TRANS_QUART, Tween.EASE_OUT, tween_delay)
+				$Tween.interpolate_property(self, "rotation_current", rotation_current, rotation_normal, tween_duration_normal, Tween.TRANS_QUART, Tween.EASE_OUT, tween_delay)
 		else:
 			rotation_current = rotation_normal
 		
