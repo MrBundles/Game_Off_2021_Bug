@@ -21,6 +21,4 @@ script = ExtResource( 3 )
 font_size = 48
 
 [node name="Border" parent="." index="2"]
-margin_right = 63.9999
-margin_bottom = 59.0
 rect_pivot_offset = Vector2( 32, 29.5 )

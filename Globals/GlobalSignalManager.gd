@@ -24,6 +24,11 @@ signal break_worm
 signal event_trigger											# event_id, event_value
 
 
+# LevelSelect_Line2D signals
+signal point_handle_hovered										# point_handle_id, point_handle_hovered
+signal point_handle_pressed										# point_handle_id, point_handle_pressed
+
+
 # variables ------------------------------------------------------------------------------------------------------------
 
 

@@ -24,6 +24,7 @@ func _ready():
 	# initialize setgets
 	
 	# initialize variables
+	GVM.game_scene_qty = game_scene_array.size()
 	
 	# load initial game and menu scenes
 	GSM.emit_signal("change_game_scene", 0)
@@ -79,6 +80,8 @@ func _on_change_game_scene(new_game_scene_id):
 		current_game_scene_id = new_game_scene_id
 		clear_game_scenes()
 		add_game_scene(current_game_scene_id)
+		
+		GVM.current_game_scene_id = current_game_scene_id
 
 
 func _on_change_menu_scene(new_menu_scene_id):
@@ -91,6 +94,8 @@ func _on_change_menu_scene(new_menu_scene_id):
 		current_menu_scene_id = new_menu_scene_id
 		clear_menu_scenes()
 		add_menu_scene(current_menu_scene_id)
+		
+		GVM.current_menu_scene_id = current_menu_scene_id
 	
 	# pause the game if the new menu is the pause menu
 	get_tree().paused = new_menu_scene_id == GVM.MENU_SCENE_IDS.pause

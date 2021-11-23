@@ -40,8 +40,8 @@ func _ready():
 	# initialize setgets
 	self.hovered = hovered
 	self.show_border = show_border
-	self.border_size_current = border_size_current
-	self.rotation_current = rotation_current
+	self.border_size_current = border_size_normal
+	self.rotation_current = rotation_normal
 	
 	# initialize variables
 	_on_ButtonBase_item_rect_changed()

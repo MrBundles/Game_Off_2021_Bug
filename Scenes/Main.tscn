@@ -96,7 +96,6 @@ rect_rotation = 90.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
-tween_duration_hovered = 1.0
 rotation_current = 90.0
 rotation_normal = 90.0
 ui_button_id = 1
@@ -107,10 +106,16 @@ anchor_bottom = 0.0
 margin_top = 102.0
 margin_right = 70.0
 margin_bottom = 172.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
 icon = ExtResource( 16 )
+tween_duration_hovered = 2.5
+tween_duration_pressed = 2.0
+rotation_current = 0.0
+rotation_normal = 0.0
+rotation_hovered = -135.0
 ui_button_id = 2
 
 [node name="PauseButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
@@ -119,10 +124,16 @@ anchor_bottom = 0.0
 margin_top = 204.0
 margin_right = 70.0
 margin_bottom = 274.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
 icon = ExtResource( 14 )
+tween_duration_hovered = 2.0
+tween_duration_pressed = 1.5
+rotation_current = 0.0
+rotation_normal = 0.0
+rotation_hovered = 180.0
 ui_button_id = 3
 
 [node name="PlayButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
@@ -131,10 +142,16 @@ anchor_bottom = 0.0
 margin_top = 306.0
 margin_right = 70.0
 margin_bottom = 376.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
 icon = ExtResource( 13 )
+tween_duration_hovered = 2.5
+tween_duration_pressed = 2.0
+rotation_current = 0.0
+rotation_normal = 0.0
+rotation_hovered = 115.0
 ui_button_id = 4
 
 [node name="ResetButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]

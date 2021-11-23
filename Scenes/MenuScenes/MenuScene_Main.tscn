@@ -5,59 +5,66 @@
 [ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_GoTo/Button_GoTo.tscn" type="PackedScene" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-size = 128
+[sub_resource type="DynamicFont" id=9]
+size = 172
 font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.192157, 0.211765, 0.219608, 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=10]
 size = 64
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=11]
 size = 64
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=12]
 size = 64
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=13]
 size = 64
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=14]
 size = 48
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=15]
 size = 24
 font_data = ExtResource( 3 )
 
 [node name="MenuScene_Main" instance=ExtResource( 1 )]
 
 [node name="Title" parent="MarginContainer/VBoxContainer" index="0"]
-custom_fonts/font = SubResource( 1 )
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 9 )
+
+[node name="FeatureFontSizeOverrider" parent="MarginContainer/VBoxContainer/Title" index="0"]
+font_size = 172
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
-margin_top = 158.0
+margin_top = 212.0
 margin_right = 1792.0
 margin_bottom = 855.0
+mouse_filter = 2
 size_flags_vertical = 3
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
 margin_left = 726.0
 margin_right = 1066.0
-margin_bottom = 697.0
+margin_bottom = 643.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
-margin_top = 140.0
+margin_top = 113.0
 margin_right = 340.0
-margin_bottom = 556.0
+margin_bottom = 529.0
+mouse_filter = 2
 custom_constants/separation = 32
 
 [node name="LevelSelectButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Buttons" index="0" instance=ExtResource( 4 )]
@@ -69,7 +76,7 @@ anchor_bottom = 0.0
 margin_right = 340.0
 margin_bottom = 80.0
 custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 10 )
 text = "Level Select"
 new_menu_scene_id = 2
 
@@ -83,7 +90,7 @@ margin_top = 112.0
 margin_right = 340.0
 margin_bottom = 192.0
 custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 11 )
 text = "Settings"
 new_menu_scene_id = 3
 
@@ -97,7 +104,7 @@ margin_top = 224.0
 margin_right = 340.0
 margin_bottom = 304.0
 custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 12 )
 text = "Credits"
 new_menu_scene_id = 4
 
@@ -111,7 +118,7 @@ margin_top = 336.0
 margin_right = 340.0
 margin_bottom = 416.0
 custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 13 )
 text = "Quit"
 new_menu_scene_id = 6
 
@@ -119,11 +126,12 @@ new_menu_scene_id = 6
 margin_top = 859.0
 margin_right = 1792.0
 margin_bottom = 952.0
+mouse_filter = 2
 
 [node name="StudioLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterTextContainer" index="0"]
 margin_right = 1792.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 14 )
 text = "A Game By MrBundles"
 align = 1
 
@@ -134,7 +142,7 @@ font_size = 48
 margin_top = 63.0
 margin_right = 1792.0
 margin_bottom = 93.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 15 )
 text = "Rev_0.0"
 align = 1
 

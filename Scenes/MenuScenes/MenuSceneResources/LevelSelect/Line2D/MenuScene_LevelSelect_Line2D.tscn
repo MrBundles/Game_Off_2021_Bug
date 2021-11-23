@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/LevelSelect/Line2D/MenuScene_LevelSelect_Line2D.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/LevelSelect/PointHandle/MenuScene_LevelSelect_PointHandle.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Curve" id=1]
 max_value = 2.0
-_data = [ Vector2( 0, 2 ), 0.0, 0.0, 0, 0, Vector2( 0.309091, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.657143, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 2 ), 0.0, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 1.85455 ), 0.0, 0.0, 0, 0, Vector2( 0.251948, 0.781818 ), 0.0, 0.0, 0, 0, Vector2( 0.498701, 1.69091 ), 0.0, 0.0, 0, 0, Vector2( 0.750649, 0.763636 ), 0.0, 0.0, 0, 0, Vector2( 1, 2 ), 0.0, 0.0, 0, 0 ]
 
 [node name="MenuScene_LevelSelect_Line2D" type="Line2D"]
 position = Vector2( -0.725159, 122.653 )
@@ -12,8 +13,14 @@ scale = Vector2( 1.00517, 0.875666 )
 points = PoolVector2Array( 152.068, 652.819, 280.068, 528.819, 456.068, 538.819, 616.068, 652.819, 818.068, 576.819, 1040.07, 492.819, 1252.07, 550.819, 1364.07, 592.819, 1472.07, 636.819, 1674.07, 602.819, 1544.07, 322.819 )
 width = 11.942
 width_curve = SubResource( 1 )
+default_color = Color( 1, 0.403922, 0.576471, 1 )
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 antialiased = true
 script = ExtResource( 1 )
+point_handle = ExtResource( 2 )
+
+[node name="PointHandles" type="Node2D" parent="."]
+
+[node name="Tween" type="Tween" parent="."]

@@ -16,10 +16,15 @@ anchor_bottom = 0.102778
 rect_min_size = Vector2( 340, 80 )
 rect_pivot_offset = Vector2( 170, 40 )
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_hover = Color( 0.141176, 0.607843, 0.74902, 1 )
+custom_colors/font_color_pressed = Color( 0.141176, 0.607843, 0.74902, 1 )
 text = "Text"
 icon = null
 align = 1
 script = ExtResource( 3 )
+tween_duration_normal = 0.75
+tween_duration_hovered = 0.75
+tween_duration_pressed = 0.75
 show_border = true
 animate_border = true
 border_size_current = Vector2( -24, -24 )
@@ -37,6 +42,6 @@ margin_top = 24.0
 margin_right = -24.0
 margin_bottom = -24.0
 rect_pivot_offset = Vector2( 170, 40 )
-color = Color( 1, 0.403922, 0.576471, 1 )
+color = Color( 0.141176, 0.607843, 0.74902, 1 )
 
 [connection signal="button_base_pressed" from="." to="." method="_on_Button_GoTo_button_base_pressed"]
