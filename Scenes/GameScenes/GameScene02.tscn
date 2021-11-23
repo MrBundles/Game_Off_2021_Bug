@@ -95,6 +95,6 @@ color = Color( 1, 0.964706, 0.501961, 1 )
 modulate = Color( 1, 0.964706, 0.501961, 1 )
 position = Vector2( 1072, 304 )
 rotation = 1.5708
-event_trigger_type_grabbed = 1
+event_trigger_type_grabbed = 2
 event_delay_time_grabbed = 5.0
 color = Color( 1, 0.964706, 0.501961, 1 )

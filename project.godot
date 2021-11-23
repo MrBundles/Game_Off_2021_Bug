@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Button",
+"class": "Button_Base",
+"language": "GDScript",
+"path": "res://Scenes/MenuScenes/MenuSceneResources/Buttons/ButtonBase/Button_Base.gd"
+}, {
 "base": "RigidBody2D",
 "class": "Grabbable",
 "language": "GDScript",
 "path": "res://Entities/Objects/Grabbable/Object_Grabbable_Base.gd"
 } ]
 _global_script_class_icons={
+"Button_Base": "",
 "Grabbable": ""
 }
 

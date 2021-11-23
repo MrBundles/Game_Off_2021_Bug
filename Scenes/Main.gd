@@ -80,6 +80,9 @@ func _on_change_menu_scene(new_menu_scene_id):
 		current_menu_scene_id = new_menu_scene_id
 		clear_menu_scenes()
 		add_menu_scene(current_menu_scene_id)
+	
+	# pause the game if the new menu is the pause menu
+	get_tree().paused = new_menu_scene_id == GVM.MENU_SCENE_IDS.pause
 
 
 func _on_reload_game_scene():

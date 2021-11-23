@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuSceneBase.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuScene_Base.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GameScenes/GameScene02.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node2D"]

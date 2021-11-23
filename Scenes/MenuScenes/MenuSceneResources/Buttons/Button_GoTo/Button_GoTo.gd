@@ -1,11 +1,5 @@
 tool
-extends Node
-
-# enums
-enum INPUT_TYPES {null, left, right}
-enum EVENT_TRIGGER_TYPES {null, on, off, delay_on, delay_off, on_delay_off, off_delay_on}
-
-enum MENU_SCENE_IDS {null, main, level_select, settings, credits, pause}
+extends Button_Base
 
 # references -----------------------------------------------------------------------------------------------------------
 
@@ -14,13 +8,8 @@ enum MENU_SCENE_IDS {null, main, level_select, settings, credits, pause}
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-
-# theme management variables
-export(Array, Theme) var theme_array = []
-var current_theme_id = 0
-
-# worm variables
-var worm_hook_hovered = false
+export(int, 0, 256) var new_game_scene_id = 0
+export(GVM.MENU_SCENE_IDS) var new_menu_scene_id = GVM.MENU_SCENE_IDS.null
 
 
 # main functions -------------------------------------------------------------------------------------------------------
