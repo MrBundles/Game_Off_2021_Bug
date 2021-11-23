@@ -7,7 +7,7 @@
 [ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 64
+size = 128
 font_data = ExtResource( 4 )
 
 [node name="MenuSceneBase" type="Control"]
@@ -44,11 +44,11 @@ mouse_filter = 2
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 1792.0
-margin_bottom = 78.0
+margin_bottom = 154.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
 text = "Title"
 align = 1
 
 [node name="FeatureFontSizeOverrider" parent="MarginContainer/VBoxContainer/Title" instance=ExtResource( 5 )]
-font_size = 64
+font_size = 128

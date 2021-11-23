@@ -9,8 +9,8 @@ extends Node2D
 # variables ------------------------------------------------------------------------------------------------------------
 export(Array, PackedScene) var game_scene_array = []
 export(Array, PackedScene) var menu_scene_array = []
-var current_game_scene_id = 0
-var current_menu_scene_id = GVM.MENU_SCENE_IDS.main
+var current_game_scene_id = -1
+var current_menu_scene_id = -1
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -26,8 +26,8 @@ func _ready():
 	# initialize variables
 	
 	# load initial game and menu scenes
-	GSM.emit_signal("change_game_scene", current_game_scene_id)
-	GSM.emit_signal("change_menu_scene", current_menu_scene_id)
+	GSM.emit_signal("change_game_scene", 0)
+	GSM.emit_signal("change_menu_scene", GVM.MENU_SCENE_IDS.main)
 
 
 func _process(delta):
@@ -55,11 +55,17 @@ func clear_menu_scenes():
 
 
 func add_game_scene(new_game_scene_id):
+	if not new_game_scene_id < game_scene_array.size():
+		return
+	
 	var game_scene_instance = game_scene_array[new_game_scene_id].instance()
 	$GameScenes.add_child(game_scene_instance)
 
 
 func add_menu_scene(new_menu_scene_id):
+	if not new_menu_scene_id < menu_scene_array.size():
+		return
+	
 	var menu_scene_instance = menu_scene_array[new_menu_scene_id].instance()
 	$MenuScenes.add_child(menu_scene_instance)
 
@@ -76,6 +82,11 @@ func _on_change_game_scene(new_game_scene_id):
 
 
 func _on_change_menu_scene(new_menu_scene_id):
+	# check if new menu scene is quit, if so, quit the game
+	if new_menu_scene_id == GVM.MENU_SCENE_IDS.quit:
+		get_tree().quit()
+		return
+	
 	if new_menu_scene_id != current_menu_scene_id:
 		current_menu_scene_id = new_menu_scene_id
 		clear_menu_scenes()
