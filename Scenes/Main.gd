@@ -13,6 +13,9 @@ var current_game_scene_id = -1
 var current_menu_scene_id = -1
 var highest_unlocked_game_scene_id = 0 setget set_highest_unlocked_game_scene_id
 
+# level sample generation variables
+export var generate_game_scene_samples = false setget set_generate_game_scene_samples
+
 
 # main functions -------------------------------------------------------------------------------------------------------
 func _ready():
@@ -24,6 +27,7 @@ func _ready():
 	
 	# initialize setgets
 	self.highest_unlocked_game_scene_id = highest_unlocked_game_scene_id
+	self.generate_game_scene_samples = false
 	
 	# initialize variables
 	GVM.game_scene_qty = game_scene_array.size()
@@ -80,6 +84,39 @@ func set_highest_unlocked_game_scene_id(new_val):
 	GVM.highest_unlocked_game_scene_id = highest_unlocked_game_scene_id
 
 
+func set_generate_game_scene_samples(new_val):
+	generate_game_scene_samples = new_val
+	
+	if generate_game_scene_samples:
+		# save current game and menu scene ids
+		var _current_game_scene_id = current_game_scene_id
+		var _current_menu_scene_id = current_menu_scene_id
+		
+		_on_change_menu_scene(GVM.MENU_SCENE_IDS.null)
+		for j in range(5):
+			yield(get_tree(), "idle_frame")
+		
+		for i in range(game_scene_array.size()):
+			if not game_scene_array[i]:
+				return
+			
+			_on_change_game_scene(i)
+			for j in range(5):
+				yield(get_tree(), "idle_frame")
+			
+			# generate a sample texture from viewport
+			var game_scene_sample_image = get_viewport().get_texture().get_data()
+			game_scene_sample_image.flip_y()
+			game_scene_sample_image.save_png("res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/0")
+		
+		_on_change_game_scene(_current_game_scene_id)
+		_on_change_menu_scene(_current_menu_scene_id)
+		for j in range(5):
+			yield(get_tree(), "idle_frame")
+		
+		generate_game_scene_samples = false
+
+
 # signal functions -------------------------------------------------------------------------------------------------------
 func _on_change_game_scene(new_game_scene_id):
 	if new_game_scene_id != current_game_scene_id:
@@ -88,6 +125,7 @@ func _on_change_game_scene(new_game_scene_id):
 		add_game_scene(current_game_scene_id)
 		
 		GVM.current_game_scene_id = current_game_scene_id
+		print(current_game_scene_id)
 		
 		if current_game_scene_id > highest_unlocked_game_scene_id:
 			self.highest_unlocked_game_scene_id = current_game_scene_id

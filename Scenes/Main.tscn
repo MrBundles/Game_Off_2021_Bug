@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Play.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Pause.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Reset.png" type="Texture" id=15]
-[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Level_Select.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -87,43 +86,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+[node name="CenterContainer" type="CenterContainer" parent="UI/MarginContainer/HBoxContainer/UIButtons"]
+margin_right = 70.0
+margin_bottom = 70.0
+mouse_filter = 2
+
+[node name="LevelSelectButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
-rect_rotation = 0.0
+rect_rotation = 90.0
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
+rotation_current = 90.0
+rotation_normal = 90.0
+ui_button_id = 2
+
+[node name="BackButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer" instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 70.0
+margin_bottom = 70.0
+rect_rotation = 90.0
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
 rotation_current = 90.0
 rotation_normal = 90.0
 ui_button_id = 1
 
-[node name="LevelSelectButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CenterContainer2" type="CenterContainer" parent="UI/MarginContainer/HBoxContainer/UIButtons"]
 margin_top = 102.0
 margin_right = 70.0
 margin_bottom = 172.0
-rect_rotation = 0.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
-custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
-icon = ExtResource( 16 )
-tween_duration_hovered = 2.5
-tween_duration_pressed = 2.0
-rotation_current = 0.0
-rotation_normal = 0.0
-rotation_hovered = -135.0
-ui_button_id = 2
+mouse_filter = 2
 
-[node name="PauseButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+[node name="PauseButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer2" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 204.0
 margin_right = 70.0
-margin_bottom = 274.0
+margin_bottom = 70.0
 rect_rotation = 0.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
@@ -136,12 +140,11 @@ rotation_normal = 0.0
 rotation_hovered = 180.0
 ui_button_id = 3
 
-[node name="PlayButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+[node name="PlayButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer2" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 306.0
 margin_right = 70.0
-margin_bottom = 376.0
+margin_bottom = 70.0
 rect_rotation = 0.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
@@ -157,10 +160,9 @@ ui_button_id = 4
 [node name="ResetButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 408.0
+margin_top = 204.0
 margin_right = 70.0
-margin_bottom = 478.0
-rect_rotation = 0.0
+margin_bottom = 274.0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )

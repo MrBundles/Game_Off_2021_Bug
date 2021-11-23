@@ -26,7 +26,9 @@ export var line_width_locked = 16.0
 export var line_color_normal = Color(1,1,1,1)
 export var line_color_hovered = Color(1,1,1,1)
 export var line_color_pressed = Color(1,1,1,1)
-export var line_color_loked = Color(1,1,1,1)
+
+export var line_color_locked = Color(1,1,1,1)
+export var line_color_unloacked = Color(1,1,1,1)
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -77,7 +79,7 @@ func generate_points():
 	
 	# generate new points based on given params
 	for i in range(GVM.game_scene_qty - 1):
-		add_point(Vector2(i * point_spread, 0))
+		add_point(Vector2(i * point_spread, sin(i) * 48.0))
 		point_state_array.append(POINT_STATES.null)
 
 
@@ -115,8 +117,13 @@ func update_curve():
 func generate_gradient():
 	var gradient_instance = Gradient.new()
 	
+	# add points to gradient for each point on the line
 	for i in range(1, get_point_count() - 1):
-		gradient_instance.add_point(i * 1.0 / (get_point_count() - 1), line_color_normal)
+		gradient_instance.add_point(i * 1.0 / (get_point_count() - 1), line_color_locked)
+	
+	# ensure that each point on the line is the proper color
+	for i in range(gradient.get_point_count()):
+		gradient_instance.set_color(i, line_color_locked)
 	
 	gradient = gradient_instance
 
@@ -126,20 +133,11 @@ func update_gradient():
 		var line_color_target = Color(1,1,1,1)
 		var line_color_current = gradient.get_color(i)
 		
-		match point_state_array[i]:
-			POINT_STATES.null:
-				line_color_target = line_color_normal
-			POINT_STATES.hovered:
-				if i > GVM.highest_unlocked_game_scene_id:
-					line_color_target = line_color_loked
-				else:
-					line_color_target = line_color_hovered
-					
-			POINT_STATES.pressed:
-				if i > GVM.highest_unlocked_game_scene_id:
-					line_color_target = line_color_loked
-				else:
-					line_color_target = line_color_pressed
+		if i > GVM.highest_unlocked_game_scene_id:
+			line_color_target = line_color_locked
+		else:
+			line_color_target = line_color_unloacked
+		
 		
 		var line_color = Color(1,1,1,1)
 		line_color.r = lerp(line_color_current.r, line_color_target.r, 0.1)

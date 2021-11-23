@@ -25,13 +25,10 @@ end_cap_mode = 2
 antialiased = true
 script = ExtResource( 1 )
 point_handle = ExtResource( 2 )
-line_width_normal = 6.0
-line_width_hovered = 12.0
-line_width_pressed = 14.0
-line_width_locked = 10.0
+line_width_normal = 10.0
+line_width_pressed = 18.0
 line_color_normal = Color( 0.831373, 0.258824, 0.419608, 1 )
 line_color_hovered = Color( 0.141176, 0.607843, 0.74902, 1 )
-line_color_pressed = Color( 0.6, 0.905882, 1, 1 )
-line_color_loked = Color( 0.831373, 0.258824, 0.419608, 1 )
+line_color_pressed = Color( 0.141176, 0.607843, 0.74902, 1 )
 
 [node name="PointHandles" type="Node2D" parent="."]

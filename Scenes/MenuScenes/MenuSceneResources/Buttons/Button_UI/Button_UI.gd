@@ -48,7 +48,7 @@ func _on_change_menu_scene(new_menu_scene_id):
 	# set the visibility of the ui button. 
 	match ui_button_id:
 		GVM.UI_BUTTON_IDS.back:
-			button_visible = new_menu_scene_id != GVM.MENU_SCENE_IDS.null and new_menu_scene_id != GVM.MENU_SCENE_IDS.main
+			button_visible = new_menu_scene_id != GVM.MENU_SCENE_IDS.null and new_menu_scene_id != GVM.MENU_SCENE_IDS.main and new_menu_scene_id != GVM.MENU_SCENE_IDS.pause
 		
 		GVM.UI_BUTTON_IDS.level_select:
 			button_visible = new_menu_scene_id == GVM.MENU_SCENE_IDS.null or new_menu_scene_id == GVM.MENU_SCENE_IDS.pause
@@ -64,8 +64,13 @@ func _on_change_menu_scene(new_menu_scene_id):
 	
 	if button_visible:
 		modulate = Color(1,1,1,1)
+		disabled = false
+		mouse_filter = Control.MOUSE_FILTER_STOP
 	else:
 		modulate = Color(1,1,1,0)
+		disabled = true
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+		self.hovered = false
 
 
 func _on_Button_UI_button_base_pressed():
@@ -83,6 +88,7 @@ func _on_Button_UI_button_base_pressed():
 		
 		GVM.UI_BUTTON_IDS.play:
 			GSM.emit_signal("change_menu_scene", GVM.MENU_SCENE_IDS.null)
+			print("play")
 		
 		GVM.UI_BUTTON_IDS.reset:
 			GSM.emit_signal("reload_game_scene")

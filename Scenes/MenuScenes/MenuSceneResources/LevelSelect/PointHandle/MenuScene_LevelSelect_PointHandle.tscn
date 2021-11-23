@@ -8,11 +8,11 @@
 radius = 64.0
 
 [sub_resource type="DynamicFont" id=2]
-size = 32
+size = 64
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 32
+size = 64
 font_data = ExtResource( 2 )
 
 [node name="PointHandle" type="Area2D"]
@@ -23,10 +23,11 @@ handle_size = 128.0
 shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -55.4991
-margin_top = -107.635
-margin_right = 55.5009
-margin_bottom = -68.6348
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -105.953
+margin_top = -188.361
+margin_right = 105.047
+margin_bottom = -110.361
 custom_fonts/font = SubResource( 2 )
 text = "Level 01"
 align = 1
@@ -35,12 +36,14 @@ __meta__ = {
 }
 
 [node name="FeatureFontSizeOverrider" parent="Label" instance=ExtResource( 3 )]
+font_size = 64
 
 [node name="LockedLabel" type="Label" parent="."]
-margin_left = -56.3401
-margin_top = 77.3624
-margin_right = 54.6599
-margin_bottom = 116.362
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -94.1804
+margin_top = 105.112
+margin_right = 97.8196
+margin_bottom = 183.112
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.831373, 0.258824, 0.419608, 1 )
 text = "Locked"
@@ -50,6 +53,7 @@ __meta__ = {
 }
 
 [node name="FeatureFontSizeOverrider" parent="LockedLabel" instance=ExtResource( 3 )]
+font_size = 64
 
 [connection signal="mouse_entered" from="." to="." method="_on_PointHandle_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_PointHandle_mouse_exited"]
