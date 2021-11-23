@@ -40,6 +40,7 @@ font_data = ExtResource( 10 )
 script = ExtResource( 1 )
 game_scene_array = [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), null, null, null, null, null, null, null, null, null, null, null, null, null ]
 menu_scene_array = [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ) ]
+generate_game_scene_samples = true
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -55,7 +56,10 @@ __meta__ = {
 
 [node name="GameScenes" type="Node2D" parent="."]
 
+[node name="MenuScenes" type="CanvasLayer" parent="."]
+
 [node name="UI" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
 anchor_right = 1.0
@@ -96,7 +100,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
-rect_rotation = 90.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
@@ -109,7 +113,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
-rect_rotation = 90.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
@@ -137,7 +141,7 @@ tween_duration_hovered = 2.0
 tween_duration_pressed = 1.5
 rotation_current = 0.0
 rotation_normal = 0.0
-rotation_hovered = 180.0
+rotation_hovered = -180.0
 ui_button_id = 3
 
 [node name="PlayButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer2" instance=ExtResource( 11 )]
@@ -163,11 +167,9 @@ anchor_bottom = 0.0
 margin_top = 204.0
 margin_right = 70.0
 margin_bottom = 274.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
 icon = ExtResource( 15 )
 ui_button_id = 5
-
-[node name="MenuScenes" type="CanvasLayer" parent="."]
-layer = 2

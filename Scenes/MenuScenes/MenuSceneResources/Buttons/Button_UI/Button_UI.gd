@@ -88,7 +88,6 @@ func _on_Button_UI_button_base_pressed():
 		
 		GVM.UI_BUTTON_IDS.play:
 			GSM.emit_signal("change_menu_scene", GVM.MENU_SCENE_IDS.null)
-			print("play")
 		
 		GVM.UI_BUTTON_IDS.reset:
 			GSM.emit_signal("reload_game_scene")

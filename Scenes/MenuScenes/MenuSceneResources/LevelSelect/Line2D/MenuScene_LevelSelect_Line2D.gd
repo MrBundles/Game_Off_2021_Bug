@@ -21,7 +21,6 @@ export var point_spread = 64.0
 export var line_width_normal = 8.0
 export var line_width_hovered = 16.0
 export var line_width_pressed = 24.0
-export var line_width_locked = 16.0
 
 export var line_color_normal = Color(1,1,1,1)
 export var line_color_hovered = Color(1,1,1,1)
@@ -101,15 +100,9 @@ func update_curve():
 			POINT_STATES.null:
 				line_width_target = line_width_normal
 			POINT_STATES.hovered:
-				if i > GVM.highest_unlocked_game_scene_id:
-					line_width_target = line_width_locked
-				else:
-					line_width_target = line_width_hovered
+				line_width_target = line_width_hovered
 			POINT_STATES.pressed:
-				if i > GVM.highest_unlocked_game_scene_id:
-					line_width_target = line_width_locked
-				else:
-					line_width_target = line_width_pressed
+				line_width_target = line_width_pressed
 		
 		width_curve.set_point_value(i, lerp(line_width_current, line_width_target, 0.1))
 

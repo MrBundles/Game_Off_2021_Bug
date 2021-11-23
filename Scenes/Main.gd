@@ -51,18 +51,20 @@ func _get_configuration_warning():
 # helper functions ------------------------------------------------------------------------------------------------------
 func clear_game_scenes():
 	# clear all game scene children from under GameScenes node
-	for child in $GameScenes.get_children():
-		child.queue_free()
+	if has_node("GameScenes"):
+		for child in $GameScenes.get_children():
+			child.queue_free()
 
 
 func clear_menu_scenes():
 	# clear all menu scene children from under MenuScenes node
-	for child in $MenuScenes.get_children():
-		child.queue_free()
+	if has_node("MenuScenes"):
+		for child in $MenuScenes.get_children():
+			child.queue_free()
 
 
 func add_game_scene(new_game_scene_id):
-	if not new_game_scene_id < game_scene_array.size():
+	if not new_game_scene_id < game_scene_array.size() or not has_node("GameScenes"):
 		return
 	
 	var game_scene_instance = game_scene_array[new_game_scene_id].instance()
@@ -70,7 +72,7 @@ func add_game_scene(new_game_scene_id):
 
 
 func add_menu_scene(new_menu_scene_id):
-	if not new_menu_scene_id < menu_scene_array.size():
+	if not new_menu_scene_id < menu_scene_array.size() or not has_node("MenuScenes"):
 		return
 	
 	var menu_scene_instance = menu_scene_array[new_menu_scene_id].instance()
@@ -87,13 +89,13 @@ func set_highest_unlocked_game_scene_id(new_val):
 func set_generate_game_scene_samples(new_val):
 	generate_game_scene_samples = new_val
 	
-	if generate_game_scene_samples:
+	if generate_game_scene_samples and get_tree():
 		# save current game and menu scene ids
 		var _current_game_scene_id = current_game_scene_id
 		var _current_menu_scene_id = current_menu_scene_id
 		
 		_on_change_menu_scene(GVM.MENU_SCENE_IDS.null)
-		for j in range(5):
+		for j in range(50):
 			yield(get_tree(), "idle_frame")
 		
 		for i in range(game_scene_array.size()):
@@ -101,17 +103,19 @@ func set_generate_game_scene_samples(new_val):
 				return
 			
 			_on_change_game_scene(i)
-			for j in range(5):
+			for j in range(50):
 				yield(get_tree(), "idle_frame")
 			
 			# generate a sample texture from viewport
 			var game_scene_sample_image = get_viewport().get_texture().get_data()
 			game_scene_sample_image.flip_y()
-			game_scene_sample_image.save_png("res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/0")
+			var game_scene_sample_image_path = "res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/" + str(i) + ".png"
+			game_scene_sample_image.save_png(game_scene_sample_image_path)
 		
 		_on_change_game_scene(_current_game_scene_id)
+		print("current: " + str(current_game_scene_id) + "   _current: " + str(_current_game_scene_id))
 		_on_change_menu_scene(_current_menu_scene_id)
-		for j in range(5):
+		for j in range(50):
 			yield(get_tree(), "idle_frame")
 		
 		generate_game_scene_samples = false
@@ -125,7 +129,6 @@ func _on_change_game_scene(new_game_scene_id):
 		add_game_scene(current_game_scene_id)
 		
 		GVM.current_game_scene_id = current_game_scene_id
-		print(current_game_scene_id)
 		
 		if current_game_scene_id > highest_unlocked_game_scene_id:
 			self.highest_unlocked_game_scene_id = current_game_scene_id
@@ -145,7 +148,8 @@ func _on_change_menu_scene(new_menu_scene_id):
 		GVM.current_menu_scene_id = current_menu_scene_id
 	
 	# pause the game if the new menu is the pause menu
-	get_tree().paused = new_menu_scene_id == GVM.MENU_SCENE_IDS.pause
+	if get_tree():
+		get_tree().paused = new_menu_scene_id == GVM.MENU_SCENE_IDS.pause
 
 
 func _on_reload_game_scene():
