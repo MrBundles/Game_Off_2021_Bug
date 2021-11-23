@@ -11,6 +11,7 @@ export(Array, PackedScene) var game_scene_array = []
 export(Array, PackedScene) var menu_scene_array = []
 var current_game_scene_id = -1
 var current_menu_scene_id = -1
+var highest_unlocked_game_scene_id = 0 setget set_highest_unlocked_game_scene_id
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -22,6 +23,7 @@ func _ready():
 	GSM.connect("reload_menu_scene", self, "_on_reload_menu_scene")
 	
 	# initialize setgets
+	self.highest_unlocked_game_scene_id = highest_unlocked_game_scene_id
 	
 	# initialize variables
 	GVM.game_scene_qty = game_scene_array.size()
@@ -72,6 +74,10 @@ func add_menu_scene(new_menu_scene_id):
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_highest_unlocked_game_scene_id(new_val):
+	highest_unlocked_game_scene_id = new_val
+	
+	GVM.highest_unlocked_game_scene_id = highest_unlocked_game_scene_id
 
 
 # signal functions -------------------------------------------------------------------------------------------------------
@@ -82,6 +88,9 @@ func _on_change_game_scene(new_game_scene_id):
 		add_game_scene(current_game_scene_id)
 		
 		GVM.current_game_scene_id = current_game_scene_id
+		
+		if current_game_scene_id > highest_unlocked_game_scene_id:
+			self.highest_unlocked_game_scene_id = current_game_scene_id
 
 
 func _on_change_menu_scene(new_menu_scene_id):

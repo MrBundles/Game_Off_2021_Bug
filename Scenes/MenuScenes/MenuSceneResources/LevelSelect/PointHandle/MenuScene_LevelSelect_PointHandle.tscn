@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/LevelSelect/PointHandle/MenuScene_LevelSelect_PointHandle.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 64.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
 
 [node name="PointHandle" type="Area2D"]
 script = ExtResource( 1 )
@@ -11,6 +21,35 @@ handle_size = 128.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -55.4991
+margin_top = -107.635
+margin_right = 55.5009
+margin_bottom = -68.6348
+custom_fonts/font = SubResource( 2 )
+text = "Level 01"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FeatureFontSizeOverrider" parent="Label" instance=ExtResource( 3 )]
+
+[node name="LockedLabel" type="Label" parent="."]
+margin_left = -56.3401
+margin_top = 77.3624
+margin_right = 54.6599
+margin_bottom = 116.362
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.831373, 0.258824, 0.419608, 1 )
+text = "Locked"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FeatureFontSizeOverrider" parent="LockedLabel" instance=ExtResource( 3 )]
 
 [connection signal="mouse_entered" from="." to="." method="_on_PointHandle_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_PointHandle_mouse_exited"]

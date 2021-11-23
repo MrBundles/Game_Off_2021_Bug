@@ -27,6 +27,7 @@ var worm_hook_hovered = false
 var current_game_scene_id = -1
 var current_menu_scene_id = -1
 var game_scene_qty = 0
+var highest_unlocked_game_scene_id = -1
 
 
 # main functions -------------------------------------------------------------------------------------------------------

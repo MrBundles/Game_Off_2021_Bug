@@ -39,7 +39,7 @@ font_data = ExtResource( 10 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
-game_scene_array = [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), null, null ]
+game_scene_array = [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), null, null, null, null, null, null, null, null, null, null, null, null, null ]
 menu_scene_array = [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ) ]
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -92,7 +92,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
-rect_rotation = 90.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
@@ -160,6 +160,7 @@ anchor_bottom = 0.0
 margin_top = 408.0
 margin_right = 70.0
 margin_bottom = 478.0
+rect_rotation = 0.0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )

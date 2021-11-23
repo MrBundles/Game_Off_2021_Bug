@@ -31,8 +31,6 @@ mouse_filter = 2
 mouse_filter = 2
 
 [node name="MenuScene_LevelSelect_Line2D" parent="." index="2" instance=ExtResource( 3 )]
-position = Vector2( 500, 500 )
-point_spread = 128.0
-line_width_normal = 2.0
-line_width_hovered = 4.0
-line_width_pressed = 6.0
+position = Vector2( 220, 500 )
+default_color = Color( 0.945098, 0.968627, 0.929412, 1 )
+point_spread = 100.0
