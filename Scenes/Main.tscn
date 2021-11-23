@@ -40,7 +40,6 @@ font_data = ExtResource( 10 )
 script = ExtResource( 1 )
 game_scene_array = [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), null, null, null, null, null, null, null, null, null, null, null, null, null ]
 menu_scene_array = [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ) ]
-generate_game_scene_samples = true
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
 layer = -1

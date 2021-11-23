@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="CreditsLabel" type="Label"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Code"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FeatureFontSizeOverrider" parent="." instance=ExtResource( 1 )]
+font_size = 64
