@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Object_Grabbable_RigidBody_Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Jar/Warning.png" type="Texture" id=2]
+
+[node name="Object_Grabbable_RigidBody_Jar" instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 1 )
+mass = 15.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="CollisionPolygon2D" parent="." index="0"]
+visible = false
+
+[node name="Sprite" parent="." index="1"]
+modulate = Color( 0.584314, 0.74902, 0.788235, 1 )
+
+[node name="Warning" type="Sprite" parent="." index="2"]
+position = Vector2( 0.707125, 21.6618 )
+scale = Vector2( 0.819824, 0.819824 )
+texture = ExtResource( 2 )

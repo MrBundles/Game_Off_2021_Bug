@@ -15,7 +15,7 @@ export var color_left = Color(1,1,1,1)
 export var color_right = Color(1,1,1,1)
 export var color_left_outline = Color(1,1,1,1)
 export var color_right_outline = Color(1,1,1,1)
-export var color_outline_thickness = 4.0
+var color_outline_thickness = 3.0
 
 # segment quantity variables
 export var segment_qty = 5
@@ -31,13 +31,13 @@ export(GVM.INPUT_TYPES) var input_type = GVM.INPUT_TYPES.null
 export var move_force = 20.0
 
 # radius variables
-export var radius_stretch = 8.0
-export var radius_rest = 16.0 setget set_radius_rest
+var radius_stretch = 8.0
+var radius_rest = 16.0 setget set_radius_rest
 var radius = 16.0 setget set_radius
 
 # length variables
-export var length_stretch = 150.0 setget set_length_stretch
-export var length_rest = 50.0 setget set_length_rest
+var length_stretch = 65.0 setget set_length_stretch
+var length_rest = 26.0 setget set_length_rest
 var length = 50.0 setget set_length
 var stretch_dist = 1.0
 var stretch_dist_max = 1.0

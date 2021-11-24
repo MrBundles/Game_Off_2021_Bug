@@ -24,6 +24,7 @@ anchor_right = 0.0364583
 anchor_bottom = 0.0648148
 rect_rotation = 215.0
 rect_pivot_offset = Vector2( 35, 35 )
+focus_mode = 0
 mouse_filter = 1
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )

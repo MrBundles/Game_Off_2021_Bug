@@ -56,13 +56,11 @@ margin_bottom = 760.0
 size_flags_vertical = 3
 theme = ExtResource( 5 )
 scroll_horizontal_enabled = false
-scroll_vertical = 16
 script = ExtResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer" index="0"]
-margin_top = -16.0
 margin_right = 1221.0
-margin_bottom = 1349.0
+margin_bottom = 1365.0
 custom_constants/separation = 0
 
 [node name="ProgrammingCredits" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="0" instance=ExtResource( 3 )]
@@ -99,7 +97,7 @@ custom_fonts/font = SubResource( 4 )
 text = "
 
 MUSIC
-Kevin MacLeod"
+My Lovely Wife"
 
 [node name="EffectsCredits" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="3" instance=ExtResource( 3 )]
 anchor_right = 0.0

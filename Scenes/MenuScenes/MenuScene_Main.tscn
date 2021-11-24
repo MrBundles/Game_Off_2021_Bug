@@ -1,73 +1,105 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuScene_Base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_GoTo/Button_GoTo.tscn" type="PackedScene" id=4]
 
-[sub_resource type="DynamicFont" id=9]
-size = 172
+[sub_resource type="DynamicFont" id=1]
+size = 250
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+resource_local_to_scene = true
+bg_color = Color( 0.831373, 0.258824, 0.419608, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=3]
+size = 72
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+resource_local_to_scene = true
+bg_color = Color( 0.831373, 0.258824, 0.419608, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=5]
+size = 72
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+resource_local_to_scene = true
+bg_color = Color( 0.831373, 0.258824, 0.419608, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=7]
+size = 72
 font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.192157, 0.211765, 0.219608, 1 )
+resource_local_to_scene = true
+bg_color = Color( 0.831373, 0.258824, 0.419608, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=9]
+size = 72
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=10]
-size = 64
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=11]
-size = 64
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=12]
-size = 64
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=13]
-size = 64
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=14]
 size = 48
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=11]
 size = 24
 font_data = ExtResource( 3 )
 
 [node name="MenuScene_Main" instance=ExtResource( 1 )]
 
 [node name="VBoxContainer" parent="MarginContainer" index="0"]
-margin_bottom = 1037.0
+margin_bottom = 1017.0
 
 [node name="Title" parent="MarginContainer/VBoxContainer" index="0"]
-margin_bottom = 208.0
-custom_fonts/font = SubResource( 9 )
+modulate = Color( 0.141176, 0.607843, 0.74902, 1 )
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 1 )
+text = "SQWORM"
 
 [node name="FeatureFontSizeOverrider" parent="MarginContainer/VBoxContainer/Title" index="0"]
-font_size = 172
+font_size = 250
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
-margin_top = 212.0
+margin_top = 304.0
 margin_right = 1792.0
-margin_bottom = 876.0
+margin_bottom = 856.0
 mouse_filter = 2
 size_flags_vertical = 3
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
-margin_left = 723.0
-margin_right = 1068.0
-margin_bottom = 664.0
+margin_left = 696.0
+margin_right = 1096.0
+margin_bottom = 552.0
 mouse_filter = 2
 alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
-margin_right = 345.0
-margin_bottom = 664.0
+margin_top = 28.0
+margin_right = 400.0
+margin_bottom = 524.0
 mouse_filter = 2
-custom_constants/separation = 32
+custom_constants/separation = 48
 
 [node name="LevelSelectButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Buttons" index="0" instance=ExtResource( 4 )]
 pause_mode = 0
@@ -75,12 +107,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 345.0
-margin_bottom = 142.0
-rect_pivot_offset = Vector2( 172.5, 71 )
-custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 10 )
-text = "Level Select"
+margin_right = 400.0
+margin_bottom = 88.0
+theme = null
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 new_menu_scene_id = 2
 
 [node name="SettingsButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Buttons" index="1" instance=ExtResource( 4 )]
@@ -89,12 +120,12 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 174.0
-margin_right = 345.0
-margin_bottom = 316.0
-rect_pivot_offset = Vector2( 172.5, 71 )
-custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 11 )
+margin_top = 136.0
+margin_right = 400.0
+margin_bottom = 224.0
+theme = null
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Settings"
 new_menu_scene_id = 3
 
@@ -104,12 +135,12 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 348.0
-margin_right = 345.0
-margin_bottom = 490.0
-rect_pivot_offset = Vector2( 172.5, 71 )
-custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 12 )
+margin_top = 272.0
+margin_right = 400.0
+margin_bottom = 360.0
+theme = null
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "Credits"
 new_menu_scene_id = 4
 
@@ -119,25 +150,25 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 522.0
-margin_right = 345.0
-margin_bottom = 664.0
-rect_pivot_offset = Vector2( 172.5, 71 )
-custom_styles/hover = SubResource( 8 )
-custom_fonts/font = SubResource( 13 )
+margin_top = 408.0
+margin_right = 400.0
+margin_bottom = 496.0
+theme = null
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 text = "Quit"
 new_menu_scene_id = 6
 
 [node name="FooterTextContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" index="2"]
-margin_top = 880.0
+margin_top = 860.0
 margin_right = 1792.0
-margin_bottom = 973.0
+margin_bottom = 953.0
 mouse_filter = 2
 
 [node name="StudioLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterTextContainer" index="0"]
 margin_right = 1792.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 10 )
 text = "A Game By MrBundles"
 align = 1
 
@@ -148,7 +179,7 @@ font_size = 48
 margin_top = 63.0
 margin_right = 1792.0
 margin_bottom = 93.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 11 )
 text = "Rev 0.0"
 align = 1
 

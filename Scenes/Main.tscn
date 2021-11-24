@@ -41,6 +41,10 @@ script = ExtResource( 1 )
 game_scene_array = [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), null, null, null, null, null, null, null, null, null, null, null, null, null ]
 menu_scene_array = [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ) ]
 
+[node name="GameTween" type="Tween" parent="."]
+
+[node name="MenuTween" type="Tween" parent="."]
+
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
 layer = -1
 
@@ -95,11 +99,14 @@ margin_bottom = 70.0
 mouse_filter = 2
 
 [node name="LevelSelectButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer" instance=ExtResource( 11 )]
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
 rect_rotation = 0.0
+theme = null
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
@@ -108,11 +115,14 @@ rotation_normal = 90.0
 ui_button_id = 2
 
 [node name="BackButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer" instance=ExtResource( 11 )]
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
 rect_rotation = 0.0
+theme = null
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
@@ -127,11 +137,14 @@ margin_bottom = 172.0
 mouse_filter = 2
 
 [node name="PauseButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer2" instance=ExtResource( 11 )]
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
 rect_rotation = 0.0
+theme = null
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
@@ -144,11 +157,14 @@ rotation_hovered = -180.0
 ui_button_id = 3
 
 [node name="PlayButton" parent="UI/MarginContainer/HBoxContainer/UIButtons/CenterContainer2" instance=ExtResource( 11 )]
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 70.0
 margin_bottom = 70.0
 rect_rotation = 0.0
+theme = null
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )
@@ -161,12 +177,15 @@ rotation_hovered = 115.0
 ui_button_id = 4
 
 [node name="ResetButton" parent="UI/MarginContainer/HBoxContainer/UIButtons" instance=ExtResource( 11 )]
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 204.0
 margin_right = 70.0
 margin_bottom = 274.0
 rect_rotation = 0.0
+theme = null
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_hover = Color( 1, 0.403922, 0.576471, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.403922, 0.576471, 1 )

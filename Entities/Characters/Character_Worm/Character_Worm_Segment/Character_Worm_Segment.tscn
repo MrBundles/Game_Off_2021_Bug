@@ -22,11 +22,8 @@ color_left = Color( 0.34902, 0.847059, 1, 1 )
 color_right = Color( 1, 0.403922, 0.576471, 1 )
 color_left_outline = Color( 0.247059, 0.729412, 0.87451, 1 )
 color_right_outline = Color( 0.917647, 0.333333, 0.498039, 1 )
-color_outline_thickness = 3.0
 segment_qty = 3
 move_force = 28.0
-length_stretch = 65.0
-length_rest = 26.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.5, 0 )
