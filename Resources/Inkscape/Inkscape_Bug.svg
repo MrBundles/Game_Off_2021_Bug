@@ -17,6 +17,11 @@
   <defs
      id="defs2" />
   <sodipodi:namedview
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-global="false"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="false"
+     inkscape:snap-bbox="true"
      showborder="false"
      inkscape:window-maximized="1"
      inkscape:window-y="261"
@@ -27,9 +32,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="-1914.6335"
-     inkscape:cx="-105.52263"
-     inkscape:zoom="0.33009243"
+     inkscape:cy="-1571.521"
+     inkscape:cx="119.17338"
+     inkscape:zoom="0.66018486"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -2176,14 +2181,329 @@
          x="-100.62352"
          y="-478.46603"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583">Icons</tspan></text>
-    <circle
+    <g
        inkscape:export-ydpi="48"
        inkscape:export-xdpi="48"
        inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
-       r="33.866665"
-       cy="-423.33331"
-       cx="-67.73333"
-       id="path1115"
-       style="fill:#ffffff;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel" />
+       id="g1123">
+      <ellipse
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1115"
+         cx="-84.666672"
+         cy="-440.26666"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         inkscape:export-xdpi="48"
+         inkscape:export-ydpi="48"
+         rx="16.933334"
+         ry="16.933331" />
+      <path
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.46196;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -82.974158,-431.48579 -8.780871,-8.78087 8.780872,-8.78088"
+         id="path1119" />
+    </g>
+    <path
+       d="m 11.066664,-541.88923 a 9.6002302,9.6002302 0 0 0 -6.1019532,2.1885 l 1.4086998,1.51104 a 7.5395835,7.5395835 0 0 1 4.6932534,-1.63867 7.5395835,7.5395835 0 0 1 7.53959,7.53959 7.5395835,7.5395835 0 0 1 -7.53959,7.53959 7.5395835,7.5395835 0 0 1 -7.5395906,-7.53959 7.5395835,7.5395835 0 0 1 0.00159,-0.14161 l -2.0427711,-0.4718 a 9.6002302,9.6002302 0 0 0 -0.019675,0.61341 9.6002302,9.6002302 0 0 0 9.6004487,9.60046 9.6002302,9.6002302 0 0 0 9.600448,-9.60046 9.6002302,9.6002302 0 0 0 -9.600448,-9.60046 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.88475;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle1160" />
+    <path
+       sodipodi:nodetypes="ccc"
+       style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:2.32604;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 9.7034,-537.79614 H 4.953355 v -4.75005"
+       id="path1164" />
+    <path
+       id="path1186"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.88475;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 75.066219,-508 a 9.6002302,9.6002302 0 0 0 -9.600449,9.60046 9.6002302,9.6002302 0 0 0 9.600449,9.60046 9.6002302,9.6002302 0 0 0 9.600448,-9.60046 A 9.6002302,9.6002302 0 0 0 75.066219,-508 Z m 0,2.06086 a 7.5395835,7.5395835 0 0 1 7.53959,7.5396 7.5395835,7.5395835 0 0 1 -7.53959,7.53959 7.5395835,7.5395835 0 0 1 -7.539591,-7.53959 7.5395835,7.5395835 0 0 1 7.539591,-7.5396 z" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.1675;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle1204"
+       cx="-39.07523"
+       cy="-533.14764"
+       r="11.122145" />
+    <circle
+       r="8.0727301"
+       cy="-533.14764"
+       cx="-39.07523"
+       id="circle1206"
+       style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.92819;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Reset.png"
+       id="g1227">
+      <ellipse
+         ry="16.933331"
+         rx="16.933334"
+         inkscape:export-ydpi="48"
+         inkscape:export-xdpi="48"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         cy="-438.61667"
+         cx="-32.216667"
+         id="ellipse1125"
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g1221"
+         transform="translate(-53.25776,44.033452)">
+        <path
+           transform="scale(0.26458333)"
+           d="m 79.460938,-1866.2266 a 42.036454,42.036454 0 0 0 -36.042969,20.5098 l 9.632812,6.3574 a 30.511106,30.511106 0 0 1 26.386719,-15.3418 30.511106,30.511106 0 0 1 0.08594,0 30.511106,30.511106 0 0 1 30.50976,30.5117 30.511106,30.511106 0 0 1 -30.50976,30.5118 30.511106,30.511106 0 0 1 -30.50586,-29.9414 l -11.52539,0.1054 a 42.036454,42.036454 0 0 0 42.03125,41.3614 42.036454,42.036454 0 0 0 42.03515,-42.0372 42.036454,42.036454 0 0 0 -42.03515,-42.0371 42.036454,42.036454 0 0 0 -0.0625,0 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.19213;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1153" />
+        <path
+           id="path1211"
+           d="m 16.869966,-486.54469 h -5.557134 v -5.55713"
+           style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:2.72126;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Pause.png"
+       id="g1247">
+      <ellipse
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1131"
+         cx="18.583338"
+         cy="-438.61667"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         inkscape:export-xdpi="48"
+         inkscape:export-ydpi="48"
+         rx="16.933334"
+         ry="16.933331" />
+      <g
+         id="g1241"
+         transform="translate(-0.79375022)">
+        <path
+           id="path1229"
+           d="m 14.826104,-446.15477 v 15.07621"
+           style="fill:none;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 23.928072,-446.15477 v 15.07621"
+           id="path1231" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Play.png"
+       id="g1302">
+      <ellipse
+         ry="16.933331"
+         rx="16.933334"
+         inkscape:export-ydpi="48"
+         inkscape:export-xdpi="48"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         cy="-438.61667"
+         cx="69.383339"
+         id="ellipse1137"
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.47463;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1251"
+         sodipodi:sides="3"
+         sodipodi:cx="68.854263"
+         sodipodi:cy="-438.61667"
+         sodipodi:r1="8.2037296"
+         sodipodi:r2="4.1018648"
+         sodipodi:arg1="0"
+         sodipodi:arg2="1.0471976"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 77.057993,-438.61667 -12.305595,7.10464 v -14.20928 z"
+         inkscape:transform-center-x="-2.0509323"
+         inkscape:transform-center-y="5.9945359e-06" />
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Level_Select.png"
+       id="g1298">
+      <ellipse
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1249"
+         cx="120.18333"
+         cy="-438.61667"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         inkscape:export-xdpi="48"
+         inkscape:export-ydpi="48"
+         rx="16.933334"
+         ry="16.933331" />
+      <g
+         id="g1285"
+         transform="matrix(0.21219002,0,0,0.21219019,86.049026,-329.02751)">
+        <rect
+           y="-558.79999"
+           x="118.53333"
+           height="16.933332"
+           width="16.933332"
+           id="rect1258"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1260"
+           width="16.933332"
+           height="16.933332"
+           x="152.40001"
+           y="-558.79999" />
+        <rect
+           y="-558.79999"
+           x="186.26666"
+           height="16.933332"
+           width="16.933332"
+           id="rect1262"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1264"
+           width="16.933332"
+           height="16.933332"
+           x="118.53333"
+           y="-524.93335" />
+        <rect
+           y="-524.93335"
+           x="152.40001"
+           height="16.933332"
+           width="16.933332"
+           id="rect1266"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1268"
+           width="16.933332"
+           height="16.933332"
+           x="186.26666"
+           y="-524.93335" />
+        <rect
+           y="-491.06665"
+           x="118.53333"
+           height="16.933332"
+           width="16.933332"
+           id="rect1270"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1272"
+           width="16.933332"
+           height="16.933332"
+           x="152.40001"
+           y="-491.06665" />
+        <rect
+           y="-491.06665"
+           x="186.26666"
+           height="16.933332"
+           width="16.933332"
+           id="rect1274"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Bidirectional.png"
+       id="g1324">
+      <ellipse
+         ry="16.933331"
+         rx="16.933334"
+         inkscape:export-ydpi="48"
+         inkscape:export-xdpi="48"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         cy="-438.61667"
+         cx="170.98334"
+         id="ellipse1304"
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g1318"
+         transform="translate(-38.792978,18.583331)">
+        <path
+           style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:2.98115;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 206.98064,-449.63866 -7.56134,-7.56134 7.56134,-7.56135"
+           id="path1306" />
+        <path
+           id="path1314"
+           d="m 212.57199,-464.76134 7.56134,7.56134 -7.56134,7.56135"
+           style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:2.98115;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Sound_On.png"
+       id="g1448">
+      <ellipse
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse1326"
+         cx="-83.016663"
+         cy="-387.81668"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         inkscape:export-xdpi="48"
+         inkscape:export-ydpi="48"
+         rx="16.933334"
+         ry="16.933331" />
+      <g
+         id="g1413"
+         transform="matrix(1.4709457,0,0,1.4709457,-15.489763,178.17295)">
+        <path
+           d="m -44.48776,-390.94286 -5.32247,4.03735 v -0.1638 h -3.485763 v 4.57977 h 3.485763 v -0.16379 l 5.32247,4.03735 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.846134;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1340" />
+        <g
+           transform="matrix(0.09390435,0,0,0.09390435,26.304397,-342.64141)"
+           id="g1391">
+          <path
+             id="rect1362"
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:13.5534;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m -2776.2363,-1831.7637 -22.627,22.627 A 159.99999,159.99999 0 0 1 -2752,-1696 a 159.99999,159.99999 0 0 1 -46.8633,113.1367 l 22.627,22.627 A 192.00003,192.00003 0 0 0 -2720,-1696 a 192.00003,192.00003 0 0 0 -56.2363,-135.7637 z"
+             transform="scale(0.26458333)" />
+          <path
+             id="path1350"
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:13.5534;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m -2685.7266,-1922.2734 -22.6269,22.6269 A 287.99999,287.99999 0 0 1 -2624,-1696 a 287.99999,287.99999 0 0 1 -84.3535,203.6465 l 22.6269,22.6269 A 319.99999,319.99999 0 0 0 -2592,-1696 a 319.99999,319.99999 0 0 0 -93.7266,-226.2734 z"
+             transform="scale(0.26458333)" />
+          <path
+             id="path1354"
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:15.4896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m -2730.9805,-1877.0195 -22.6289,22.6289 A 224,224 0 0 1 -2688,-1696 a 224,224 0 0 1 -65.6094,158.3906 l 22.6289,22.6289 A 255.99999,255.99999 0 0 0 -2656,-1696 a 255.99999,255.99999 0 0 0 -74.9805,-181.0195 z"
+             transform="scale(0.26458333)" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Sound_Off.png"
+       id="g1454">
+      <g
+         id="g1404"
+         transform="matrix(1.4709457,0,0,1.4709457,0.21709071,178.17295)">
+        <path
+           transform="scale(0.26458333)"
+           d="m -74.691406,-1477.5801 -18.332032,13.9063 18.332032,18.33 z m -33.291014,14.6406 v 17.3106 h 13.173826 v -0.6191 l 20.117188,15.2578 v -6.9453 l -25.003906,-25.004 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.19799;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1394" />
+        <rect
+           transform="rotate(-45)"
+           ry="0.693003"
+           y="-297.3736"
+           x="255.79572"
+           height="19.404081"
+           width="1.386006"
+           id="rect1396"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09823;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+      <ellipse
+         ry="16.933331"
+         rx="16.933334"
+         inkscape:export-ydpi="48"
+         inkscape:export-xdpi="48"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Scenes\MenuScenes\MenuSceneResources\Buttons\Button_Icons\Arrow_Left.png"
+         cy="-387.81668"
+         cx="-32.216667"
+         id="ellipse1406"
+         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
   </g>
 </svg>

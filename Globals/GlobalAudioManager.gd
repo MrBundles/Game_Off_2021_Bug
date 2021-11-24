@@ -5,34 +5,6 @@ extends Node
 
 # signals --------------------------------------------------------------------------------------------------------------
 
-# scene management signals
-signal change_game_scene										# new_game_scene_id
-signal change_menu_scene										# new_menu_scene_id
-signal reload_game_scene
-signal reload_menu_scene
-
-
-# theme management signals
-signal change_theme												# new_theme_id
-
-
-# audio signals
-signal set_bus_volume											# bus_id, bus_volume
-signal set_bus_mute												# bus_id, bus_mute
-
-
-# worm signals
-signal break_worm
-
-
-# event signals
-signal event_trigger											# event_id, event_value
-
-
-# LevelSelect_Line2D signals
-signal point_handle_hovered										# point_handle_id, point_handle_hovered
-signal point_handle_pressed										# point_handle_id, point_handle_pressed
-
 
 # variables ------------------------------------------------------------------------------------------------------------
 

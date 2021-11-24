@@ -35,6 +35,7 @@ config/icon="res://icon.png"
 GSM="*res://Globals/GlobalSignalManager.gd"
 GVM="*res://Globals/GlobalVariableManager.tscn"
 GEM="*res://Globals/GlobalEventManager.tscn"
+GAM="*res://Globals/GlobalAudioManager.tscn"
 
 [display]
 

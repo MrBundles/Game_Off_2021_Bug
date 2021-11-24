@@ -1,9 +1,55 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Settings/MenuScene_Settings_VolumeSlider.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Resources/Themes/DefaultTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Entities/Features/FeatureThemeSetter/FeatureThemeSetter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Mute/Button_Mute.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
 
 [node name="VolumeSlider" type="HBoxContainer"]
+theme = ExtResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="FeatureThemeSetter" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 15.0
+margin_right = 192.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 1 )
+text = "Music Volume "
+
+[node name="FeatureFontSizeOverrider" parent="Label" instance=ExtResource( 6 )]
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 196.0
+margin_right = 696.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 500, 32 )
+min_value = -60.0
+max_value = 0.0
+step = 10.0
+
+[node name="Button_Mute" parent="." instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 700.0
+margin_right = 770.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 2 )
