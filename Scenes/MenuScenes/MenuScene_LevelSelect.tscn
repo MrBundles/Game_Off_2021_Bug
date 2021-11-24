@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuScene_Base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=2]
@@ -11,7 +11,27 @@
 size = 128
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="StyleBoxFlat" id=2]
+resource_local_to_scene = true
+bg_color = Color( 0.192157, 0.211765, 0.219608, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+resource_local_to_scene = true
+bg_color = Color( 0.831373, 0.258824, 0.419608, 1 )
+border_width_left = 32
+border_width_top = 32
+border_width_bottom = 32
+border_color = Color( 0.831373, 0.258824, 0.419608, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+resource_local_to_scene = true
+bg_color = Color( 0.141176, 0.607843, 0.74902, 1 )
+border_width_left = 32
+border_width_top = 32
+border_width_bottom = 32
+border_color = Color( 0.141176, 0.607843, 0.74902, 1 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 64
 font_data = ExtResource( 2 )
 
@@ -45,7 +65,10 @@ margin_top = 0.0
 margin_right = 0.0
 margin_bottom = 0.0
 rect_pivot_offset = Vector2( 960, 540 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "01"
 icon = ExtResource( 4 )
 game_scene_id = 1

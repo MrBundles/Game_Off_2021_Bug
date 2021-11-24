@@ -3,7 +3,6 @@
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/LevelSelect/SampleRect/MenuScene_LevelSelect_SampleRect.gd" type="Script" id=1]
 
 [node name="SampleRect" type="TextureRect"]
-modulate = Color( 1, 1, 1, 0.0941176 )
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,3 +12,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+color_mod = Color( 1, 1, 1, 0.160784 )
+
+[node name="Tween" type="Tween" parent="."]
