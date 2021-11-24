@@ -8,8 +8,8 @@ extends Control
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-export(int, 0, 255) var event_id_worm_enter = 0
-export(int, 0, 255) var event_id_worm_exit = 0
+export(int, 0, 255) var event_id_worm_enter = 0 setget set_event_id_worm_enter
+export(int, 0, 255) var event_id_worm_exit = 0 setget set_event_id_worm_exit
 export(GVM.EVENT_TRIGGER_TYPES) var event_trigger_type_worm_enter = GVM.EVENT_TRIGGER_TYPES.on
 export(GVM.EVENT_TRIGGER_TYPES) var event_trigger_type_worm_exit = GVM.EVENT_TRIGGER_TYPES.off
 export var event_delay_time_worm_enter = 0.0
@@ -24,6 +24,8 @@ func _ready():
 	# connect signals
 	
 	# initialize setgets
+	self.event_id_worm_enter = event_id_worm_enter
+	self.event_id_worm_exit = event_id_worm_exit
 	
 	# initialize variables
 	_on_EventTriggerArea_item_rect_changed()
@@ -45,7 +47,22 @@ func _get_configuration_warning():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_event_id_worm_enter(new_val):
+	event_id_worm_enter = new_val
+	
+	if has_node("VBoxContainer/enter_label") and Engine.editor_hint:
+		$VBoxContainer/enter_label.text = "event_id_worm_enter: " + str(event_id_worm_enter)
+	else:
+		$VBoxContainer/enter_label.text = ""
 
+
+func set_event_id_worm_exit(new_val):
+	event_id_worm_exit = new_val
+	
+	if has_node("VBoxContainer/exit_label") and Engine.editor_hint:
+		$VBoxContainer/exit_label.text = "event_id_worm_exit: " + str(event_id_worm_exit)
+	else:
+		$VBoxContainer/exit_label.text = ""
 
 
 # signal functions -------------------------------------------------------------------------------------------------------

@@ -9,9 +9,7 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 96, 32, 32 )
 
-[node name="Object_Grabbable_Base" type="RigidBody2D" groups=[
-"grabbable",
-]]
+[node name="Object_Grabbable_Base" type="RigidBody2D"]
 modulate = Color( 1, 0.686275, 0.541176, 1 )
 mode = 1
 script = ExtResource( 1 )

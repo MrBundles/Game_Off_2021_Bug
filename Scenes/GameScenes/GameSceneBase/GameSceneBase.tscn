@@ -6,6 +6,8 @@
 
 [node name="GameSceneBase" type="Node2D"]
 
+[node name="Environment" type="Node2D" parent="."]
+
 [node name="SpawnMap" parent="." instance=ExtResource( 2 )]
 cell_size = Vector2( 32, 32 )
 
@@ -25,5 +27,3 @@ format = 1
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="RigidBodies" type="Node2D" parent="."]
-
-[node name="Environment" type="Node2D" parent="."]

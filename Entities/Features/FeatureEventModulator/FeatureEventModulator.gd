@@ -1,5 +1,5 @@
 tool
-extends Node
+extends Node2D
 
 # references -----------------------------------------------------------------------------------------------------------
 
@@ -8,7 +8,7 @@ extends Node
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-export(int, 0, 255) var event_id = 0
+export(int, 0, 255) var event_id = 0 setget set_event_id
 export(GVM.EVENT_MODULATOR_TYPES) var event_modulator_type = GVM.EVENT_MODULATOR_TYPES.true_show__false_hide
 var modulate_current = Color(1,1,1,1) setget set_modulate_current
 export var value = false setget set_value
@@ -24,6 +24,7 @@ func _ready():
 	GSM.connect("event_trigger", self, "_on_event_trigger")
 	
 	# initialize setgets
+	self.event_id = event_id
 	self.value = value
 	tween_duration = 1.0		# we initialize the tween_duration to 0.0s so that the initial transition is immediate
 	
@@ -36,7 +37,7 @@ func _process(delta):
 
 
 func _get_configuration_warning():
-	if not get_parent() is Control:
+	if 0:
 		return "Feature can only be added to a Control Node"
 	else:
 		return ""
@@ -47,10 +48,19 @@ func _get_configuration_warning():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_event_id(new_val):
+	event_id = new_val
+	
+	if has_node("Label") and Engine.editor_hint and get_parent():
+		$Label.text = "event_id: " + str(event_id)
+	else:
+		$Label.text = ""
+
+
 func set_modulate_current(new_val):
 	modulate_current = new_val
 	
-	if get_parent() and "modulate" in get_parent():
+	if get_parent() and "modulate" in get_parent() and not Engine.editor_hint:
 		get_parent().modulate = modulate_current
 
 

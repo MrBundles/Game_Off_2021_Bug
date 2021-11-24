@@ -8,9 +8,6 @@ modulate = Color( 1, 1, 1, 1 )
 mass = 15.0
 color = Color( 1, 1, 1, 1 )
 
-[node name="CollisionPolygon2D" parent="." index="0"]
-visible = false
-
 [node name="Sprite" parent="." index="1"]
 modulate = Color( 0.584314, 0.74902, 0.788235, 1 )
 
