@@ -7,6 +7,9 @@ extends RigidBody2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
+
+export var worm_id = 0
+
 # color variables
 export var color_grab_available = Color(1,1,1,1)
 export var color_grab_active = Color(1,1,1,1)
@@ -41,6 +44,7 @@ var broken = false
 func _ready():
 	# connect signals
 	GSM.connect("break_worm", self, "_on_break_worm")
+	GSM.connect("evaporate_worm", self, "_on_evaporate_worm")
 	
 	# initialize setgets
 	self.invert_depth = invert_depth
@@ -198,6 +202,10 @@ func _on_break_worm():
 	self.invert_depth = false
 	move_force = move_force / 1.5
 	broken = true
+
+
+func _on_evaporate_worm():
+	queue_free()
 
 
 func _on_Area2D_body_entered(body):

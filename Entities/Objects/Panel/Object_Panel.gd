@@ -9,7 +9,8 @@ extends Node2D
 
 # variables ------------------------------------------------------------------------------------------------------------
 # event variables
-export(int, 0, 256) var event_id = 0
+export(int, 0, 256) var event_id = 0 setget set_event_id
+export(GVM.EVENT_PANEL_TYPES) var event_panel_type = GVM.EVENT_PANEL_TYPES.true_open__false_close
 export var triggered = false setget set_triggered
 
 # panel appearance variables
@@ -26,6 +27,7 @@ func _ready():
 	GSM.connect("event_trigger", self, "_on_event_trigger")
 	
 	# initialize setgets
+	self.event_id = event_id
 	self.triggered = triggered
 	self.color = color
 
@@ -46,6 +48,16 @@ func _get_configuration_warning():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_event_id(new_val):
+	event_id = new_val
+	
+	if has_node("Label"):
+		if Engine.editor_hint:
+			$Label.text = "event_id: " + str(event_id)
+		else:
+			$Label.text = ""
+
+
 func set_triggered_offset(new_val):
 	triggered_offset = new_val
 	
@@ -59,10 +71,18 @@ func set_triggered(new_val):
 	if has_node("Tween") and has_node("Panel_Body"):
 		$Tween.stop_all()
 		
-		if triggered:
-			$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, triggered_offset, .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
-		else:
-			$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, Vector2(0,0), .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+		match event_panel_type:
+			GVM.EVENT_PANEL_TYPES.true_open__false_close:
+				if triggered:
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, triggered_offset, .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+				else:
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, Vector2(0,0), .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+			
+			GVM.EVENT_PANEL_TYPES.true_close__false_open:
+				if triggered:
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, Vector2(0,0), .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+				else:
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, triggered_offset, .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
 			
 		$Tween.start()
 
@@ -85,7 +105,5 @@ func set_color(new_val):
 
 # signal functions -------------------------------------------------------------------------------------------------------
 func _on_event_trigger(_event_id, event_value):
-	if _event_id != event_id:
-		return
-	
-	self.triggered = event_value
+	if _event_id == event_id:
+		self.triggered = event_value

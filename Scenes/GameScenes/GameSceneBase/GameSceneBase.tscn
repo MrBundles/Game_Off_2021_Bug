@@ -1,25 +1,37 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Resources/Tilesets/Default_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Tilesets/Default_Tileset_No_Collisions.tres" type="TileSet" id=3]
+[ext_resource path="res://Entities/Environment/Pickup/Environment_Pickup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_5.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_7.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_6.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_0.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_4.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Entities/Objects/Win/Object_Win.tscn" type="PackedScene" id=13]
 
 [node name="GameSceneBase" type="Node2D"]
 
-[node name="Environment" type="Node2D" parent="."]
+[node name="Object_Win" parent="." instance=ExtResource( 13 )]
+event_id = 100
+
+[node name="Environment_Background" type="Node2D" parent="."]
 
 [node name="SpawnMap" parent="." instance=ExtResource( 2 )]
 cell_size = Vector2( 32, 32 )
+spawn_scenes = [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 4 ) ]
 
 [node name="TileMap_With_Collisions" type="TileMap" parent="."]
-z_index = 1
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -1, 72, 0, -65536, 72, 0, -65535, 72, 0, -65534, 72, 0, -65533, 72, 0, -65532, 72, 0, -65531, 72, 0, -65530, 72, 0, -65529, 72, 0, -65528, 72, 0, -65527, 72, 0, -65526, 72, 0, -65525, 72, 0, -65524, 72, 0, -65523, 72, 0, -65522, 72, 0, -65521, 72, 0, -65520, 72, 0, -65519, 72, 0, -65518, 72, 0, -65517, 72, 0, -65516, 72, 0, -65515, 72, 0, -65514, 72, 0, -65513, 72, 0, -65512, 72, 0, -65511, 72, 0, -65510, 72, 0, -65509, 72, 0, -65508, 72, 0, -65507, 72, 0, -65506, 72, 0, -65505, 72, 0, -65504, 72, 0, -65503, 72, 0, -65502, 72, 0, -65501, 72, 0, -65500, 72, 0, -65499, 72, 0, -65498, 72, 0, -65497, 72, 0, -65496, 72, 0, -65495, 72, 0, -65494, 72, 0, -65493, 72, 0, -65492, 72, 0, -65491, 72, 0, -65490, 72, 0, -65489, 72, 0, -65488, 72, 0, -65487, 72, 0, -65486, 72, 0, -65485, 72, 0, -65484, 72, 0, -65483, 72, 0, -65482, 72, 0, -65481, 72, 0, -65480, 72, 0, -65479, 72, 0, -65478, 72, 0, -65477, 72, 0, -65476, 72, 0, 65535, 72, 0, 60, 72, 0, 131071, 72, 0, 65596, 72, 0, 196607, 72, 0, 131132, 72, 0, 262143, 72, 0, 196668, 72, 0, 327679, 72, 0, 262204, 72, 0, 393215, 72, 0, 327740, 72, 0, 458751, 72, 0, 393276, 72, 0, 524287, 72, 0, 458812, 72, 0, 589823, 72, 0, 524348, 72, 0, 655359, 72, 0, 589884, 72, 0, 720895, 72, 0, 655420, 72, 0, 786431, 72, 0, 720956, 72, 0, 851967, 72, 0, 786492, 72, 0, 917503, 72, 0, 852028, 72, 0, 983039, 72, 0, 917564, 72, 0, 1048575, 72, 0, 983100, 72, 0, 1114111, 72, 0, 1048636, 72, 0, 1179647, 72, 0, 1114172, 72, 0, 1245183, 72, 0, 1179708, 72, 0, 1310719, 72, 0, 1245244, 72, 0, 1376255, 72, 0, 1310780, 72, 0, 1441791, 72, 0, 1376316, 72, 0, 1507327, 72, 0, 1441852, 72, 0, 1572863, 72, 0, 1507388, 72, 0, 1638399, 72, 0, 1572924, 72, 0, 1703935, 72, 0, 1638460, 72, 0, 1769471, 72, 0, 1703996, 72, 0, 1835007, 72, 0, 1769532, 72, 0, 1900543, 72, 0, 1835068, 72, 0, 1966079, 72, 0, 1900604, 72, 0, 2031615, 72, 0, 1966140, 72, 0, 2097151, 72, 0, 2031676, 72, 0, 2162687, 72, 0, 2097212, 72, 0, 2228223, 72, 0, 2162688, 72, 0, 2162689, 72, 0, 2162690, 72, 0, 2162691, 72, 0, 2162692, 72, 0, 2162693, 72, 0, 2162694, 72, 0, 2162695, 72, 0, 2162696, 72, 0, 2162697, 72, 0, 2162698, 72, 0, 2162699, 72, 0, 2162700, 72, 0, 2162701, 72, 0, 2162702, 72, 0, 2162703, 72, 0, 2162704, 72, 0, 2162705, 72, 0, 2162706, 72, 0, 2162707, 72, 0, 2162708, 72, 0, 2162709, 72, 0, 2162710, 72, 0, 2162711, 72, 0, 2162712, 72, 0, 2162713, 72, 0, 2162714, 72, 0, 2162715, 72, 0, 2162716, 72, 0, 2162717, 72, 0, 2162718, 72, 0, 2162719, 72, 0, 2162720, 72, 0, 2162721, 72, 0, 2162722, 72, 0, 2162723, 72, 0, 2162724, 72, 0, 2162725, 72, 0, 2162726, 72, 0, 2162727, 72, 0, 2162728, 72, 0, 2162729, 72, 0, 2162730, 72, 0, 2162731, 72, 0, 2162732, 72, 0, 2162733, 72, 0, 2162734, 72, 0, 2162735, 72, 0, 2162736, 72, 0, 2162737, 72, 0, 2162738, 72, 0, 2162739, 72, 0, 2162740, 72, 0, 2162741, 72, 0, 2162742, 72, 0, 2162743, 72, 0, 2162744, 72, 0, 2162745, 72, 0, 2162746, 72, 0, 2162747, 72, 0, 2162748, 72, 0 )
 
 [node name="TileMap_Without_Collisions" type="TileMap" parent="."]
-z_index = 2
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -27,3 +39,5 @@ format = 1
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="RigidBodies" type="Node2D" parent="."]
+
+[node name="Environment_Foreground" type="Node2D" parent="."]

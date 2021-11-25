@@ -5,12 +5,13 @@
 [ext_resource path="res://Entities/Environment/Label/Environment_Label.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 1, 0.964706, 0.501961, 1 )
+resource_local_to_scene = true
+bg_color = Color( 0.141176, 0.607843, 0.74902, 1 )
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
-border_color = Color( 1, 0.964706, 0.501961, 1 )
+border_color = Color( 0.141176, 0.607843, 0.74902, 1 )
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16

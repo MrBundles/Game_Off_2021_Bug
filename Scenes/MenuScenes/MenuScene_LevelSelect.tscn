@@ -25,9 +25,8 @@ mouse_filter = 2
 size_flags_vertical = 3
 
 [node name="MenuScene_LevelSelect_Line2D" parent="." index="2" instance=ExtResource( 3 )]
-position = Vector2( 260, 400 )
+position = Vector2( 260, 450 )
 points = PoolVector2Array(  )
-default_color = Color( 0.945098, 0.968627, 0.929412, 1 )
 point_spread = 100.0
 line_color_locked = Color( 0.831373, 0.258824, 0.419608, 1 )
 line_color_unloacked = Color( 0.141176, 0.607843, 0.74902, 1 )

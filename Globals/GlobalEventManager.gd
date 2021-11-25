@@ -14,6 +14,8 @@ export(PackedScene) var event_timer_scene
 func _ready():
 	# connect signals
 	GSM.connect("event_trigger", self, "_on_event_trigger")
+	GSM.connect("change_game_scene", self, "_on_change_game_scene")
+	GSM.connect("reload_game_scene", self, "_on_reload_game_scene")
 	
 	# initialize setgets
 	
@@ -76,6 +78,11 @@ func remove_duplicate_event_timers(event_id_to_remove):
 			timer.queue_free()
 
 
+func clear_all_event_timers():
+	for timer in $EventTimers.get_children():
+		timer.queue_free()
+
+
 # set/get functions ------------------------------------------------------------------------------------------------------
 
 
@@ -83,3 +90,11 @@ func remove_duplicate_event_timers(event_id_to_remove):
 # signal functions -------------------------------------------------------------------------------------------------------
 func _on_event_trigger(event_id, event_value):
 	print("event_id: " + str(event_id) + "    event_value: " + str(event_value))
+
+
+func _on_change_game_scene(new_game_scene_id):
+	clear_all_event_timers()
+
+
+func _on_reload_game_scene():
+	clear_all_event_timers()

@@ -13,7 +13,7 @@ font_data = ExtResource( 2 )
 [node name="ColorRect" type="ColorRect" parent="." index="1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 1, 1, 1, 0.121569 )
+color = Color( 0.192157, 0.211765, 0.219608, 0.835294 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

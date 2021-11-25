@@ -11,13 +11,16 @@ resource_local_to_scene = true
 radius = 8.0
 height = 1.0
 
-[node name="Character_Worm_Segment" type="RigidBody2D"]
+[node name="Character_Worm_Segment" type="RigidBody2D" groups=[
+"worm",
+]]
 physics_material_override = SubResource( 1 )
 gravity_scale = 4.0
 can_sleep = false
 script = ExtResource( 1 )
 worm_segment_path = "res://Entities/Characters/Character_Worm/Character_Worm_Segment/Character_Worm_Segment.tscn"
 worm_handle_path = "res://Entities/Characters/Character_Worm/Character_Worm_Handle/Character_Worm_Handle.tscn"
+worm_particle_path = "res://Entities/Characters/Character_Worm/Character_Worm_Particle/Character_Worm_Particle.tscn"
 color_left = Color( 0.34902, 0.847059, 1, 1 )
 color_right = Color( 1, 0.403922, 0.576471, 1 )
 color_left_outline = Color( 0.247059, 0.729412, 0.87451, 1 )

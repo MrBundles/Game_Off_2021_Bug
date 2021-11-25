@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GameScenes/_GameScene01.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_Settings.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/GameScenes/GameScene02.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_LevelSelect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_Null.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_Credits.tscn" type="PackedScene" id=7]
@@ -38,7 +38,8 @@ font_data = ExtResource( 10 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
-game_scene_array = [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), null, null, null, null, null, null, null, null, null, null, null, null, null ]
+revision_minor = 3
+game_scene_array = [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 2 ), null, null, null, null, null, null, null, null, null, null, null, null, null ]
 menu_scene_array = [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ) ]
 
 [node name="GameTween" type="Tween" parent="."]

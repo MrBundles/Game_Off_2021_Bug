@@ -34,6 +34,15 @@ signal point_handle_hovered										# point_handle_id, point_handle_hovered
 signal point_handle_pressed										# point_handle_id, point_handle_pressed
 
 
+# pickup signals
+signal pickup_collected
+
+
+# win signals
+signal level_completed
+signal evaporate_worm
+
+
 # variables ------------------------------------------------------------------------------------------------------------
 
 

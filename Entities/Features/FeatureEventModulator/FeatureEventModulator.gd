@@ -14,7 +14,7 @@ var modulate_current = Color(1,1,1,1) setget set_modulate_current
 export var value = false setget set_value
 
 # tween variables
-var tween_duration = 0.0
+var tween_duration = 1.0
 var tween_delay = 0.0
 
 
@@ -25,9 +25,13 @@ func _ready():
 	
 	# initialize setgets
 	self.event_id = event_id
-	self.value = value
-	tween_duration = 1.0		# we initialize the tween_duration to 0.0s so that the initial transition is immediate
 	
+	match event_modulator_type:
+		GVM.EVENT_MODULATOR_TYPES.true_show__false_hide:
+			self.modulate_current = Color(1,1,1,int(value))
+		GVM.EVENT_MODULATOR_TYPES.true_hide__false_show:
+			self.modulate_current = Color(1,1,1,int(value))
+		
 	# initialize variables
 	pass
 

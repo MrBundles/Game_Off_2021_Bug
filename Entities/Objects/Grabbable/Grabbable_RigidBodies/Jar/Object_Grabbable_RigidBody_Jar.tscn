@@ -12,6 +12,6 @@ color = Color( 1, 1, 1, 1 )
 modulate = Color( 0.584314, 0.74902, 0.788235, 1 )
 
 [node name="Warning" type="Sprite" parent="." index="2"]
-position = Vector2( 0.707125, 21.6618 )
+position = Vector2( 0, 21.662 )
 scale = Vector2( 0.819824, 0.819824 )
 texture = ExtResource( 2 )

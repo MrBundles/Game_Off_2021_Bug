@@ -48,7 +48,18 @@ func _on_Environment_Pickup_body_entered(body):
 	if body.is_in_group("worm"):
 		if pickup_particle_scene:
 			var pickup_particle_scene_instance = pickup_particle_scene.instance()
-			pickup_particle_scene_instance.global_position = global_position
+			pickup_particle_scene_instance.global_position = global_position + Vector2(32,32)
+			pickup_particle_scene_instance.z_index = z_index
 			get_tree().root.add_child(pickup_particle_scene_instance)
 		
-		queue_free()
+		if has_node("CPUParticles2D"):
+			$CPUParticles2D.emitting = false
+		
+		if has_node("Timer"):
+			$Timer.start()
+		
+		GSM.emit_signal("pickup_collected")
+
+
+func _on_Timer_timeout():
+	queue_free()

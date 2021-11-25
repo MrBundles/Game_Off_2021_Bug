@@ -9,6 +9,9 @@ extends RigidBody2D
 # scene paths
 export(String, FILE) var worm_segment_path
 export(String, FILE) var worm_handle_path
+export(String, FILE) var worm_particle_path
+
+export var worm_id = 0
 
 # color variables
 export var color_left = Color(1,1,1,1)
@@ -47,6 +50,7 @@ var stretch_dist_max = 1.0
 func _ready():
 	# connect signals
 	GSM.connect("break_worm", self, "_on_break_worm")
+	GSM.connect("evaporate_worm", self, "_on_evaporate_worm")
 	
 	# initialize setgets
 	self.invert_depth = invert_depth
@@ -107,7 +111,7 @@ func _get_configuration_warning():
 
 # helper functions ------------------------------------------------------------------------------------------------------
 func get_input():
-	if Engine.editor_hint:
+	if Engine.editor_hint or not has_node("DampedSpringJoint2D"):
 		return
 	
 	match input_type:
@@ -130,6 +134,8 @@ func generate_segments():
 	
 	if segment_qty > 1:																					# if there is more than one segment left, instantiate another segment
 		var worm_segment_instance = load(worm_segment_path).instance()									# create worm instance
+		
+		worm_segment_instance.worm_id = worm_id
 		
 		worm_segment_instance.color_left = color_left
 		worm_segment_instance.color_right = color_right
@@ -158,6 +164,9 @@ func generate_segments():
 	
 	else:																								# if this is the last segment, instantiate a handle for the endpoint
 		var worm_handle_instance = load(worm_handle_path).instance()
+		
+		worm_handle_instance.worm_id = worm_id
+		
 		worm_handle_instance.radius = radius															# set handle radius
 		worm_handle_instance.move_force = move_force													# set handle move_force
 		
@@ -257,3 +266,20 @@ func set_length(new_val):
 # signal functions -------------------------------------------------------------------------------------------------------
 func _on_break_worm():
 	self.invert_depth = false
+
+
+func _on_evaporate_worm():
+	if worm_particle_path:
+		var worm_particle_instance : CPUParticles2D = load(worm_particle_path).instance()
+		worm_particle_instance.global_position = global_position + Vector2($ChildSegmentPosition.position.x / 2, 0).rotated(rotation)
+		worm_particle_instance.emission_rect_extents = Vector2($ChildSegmentPosition.position.x / 2, radius)
+		
+		match input_type:
+			GVM.INPUT_TYPES.left:
+				worm_particle_instance.color = color_left
+			GVM.INPUT_TYPES.right:
+				worm_particle_instance.color = color_right
+		
+		get_tree().root.add_child(worm_particle_instance)
+	
+	queue_free()

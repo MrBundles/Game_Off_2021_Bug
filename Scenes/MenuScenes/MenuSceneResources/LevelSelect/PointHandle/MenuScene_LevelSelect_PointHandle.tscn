@@ -39,6 +39,7 @@ __meta__ = {
 font_size = 64
 
 [node name="LockedLabel" type="Label" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -94.1804
 margin_top = 105.112

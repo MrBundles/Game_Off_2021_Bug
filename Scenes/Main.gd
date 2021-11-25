@@ -7,11 +7,13 @@ extends Node2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
+export(int, 0, 256) var revision_major = 0 setget set_revision_major
+export(int, 0, 256) var revision_minor = 0 setget set_revision_minor
 export(Array, PackedScene) var game_scene_array = []
 export(Array, PackedScene) var menu_scene_array = []
 var current_game_scene_id = -1
 var current_menu_scene_id = -1
-var highest_unlocked_game_scene_id = 5 setget set_highest_unlocked_game_scene_id
+var highest_unlocked_game_scene_id = 0 setget set_highest_unlocked_game_scene_id
 
 # level sample generation variables
 export var generate_game_scene_samples = false setget set_generate_game_scene_samples
@@ -24,8 +26,11 @@ func _ready():
 	GSM.connect("change_menu_scene", self, "_on_change_menu_scene")
 	GSM.connect("reload_game_scene", self, "_on_reload_game_scene")
 	GSM.connect("reload_menu_scene", self, "_on_reload_menu_scene")
+	GSM.connect("level_completed", self, "_on_level_completed")
 	
 	# initialize setgets
+	self.revision_major = revision_major
+	self.revision_minor = revision_minor
 	self.highest_unlocked_game_scene_id = highest_unlocked_game_scene_id
 	self.generate_game_scene_samples = false
 	
@@ -64,7 +69,7 @@ func clear_menu_scenes():
 
 
 func add_game_scene(new_game_scene_id):
-	if not new_game_scene_id < game_scene_array.size() or not has_node("GameScenes"):
+	if not new_game_scene_id < game_scene_array.size() or not game_scene_array[new_game_scene_id] or not has_node("GameScenes"):
 		return
 	
 	var game_scene_instance = game_scene_array[new_game_scene_id].instance()
@@ -72,7 +77,7 @@ func add_game_scene(new_game_scene_id):
 
 
 func add_menu_scene(new_menu_scene_id):
-	if not new_menu_scene_id < menu_scene_array.size() or not has_node("MenuScenes"):
+	if not new_menu_scene_id < menu_scene_array.size() or not menu_scene_array[new_menu_scene_id] or not has_node("MenuScenes"):
 		return
 	
 	var menu_scene_instance = menu_scene_array[new_menu_scene_id].instance()
@@ -80,6 +85,18 @@ func add_menu_scene(new_menu_scene_id):
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_revision_major(new_val):
+	revision_major = new_val
+	
+	GVM.revision_major = revision_major
+
+
+func set_revision_minor(new_val):
+	revision_minor = new_val
+	
+	GVM.revision_minor = revision_minor
+
+
 func set_highest_unlocked_game_scene_id(new_val):
 	highest_unlocked_game_scene_id = new_val
 	
@@ -95,7 +112,7 @@ func set_generate_game_scene_samples(new_val):
 		var _current_menu_scene_id = current_menu_scene_id
 		
 		_on_change_menu_scene(GVM.MENU_SCENE_IDS.null)
-		for j in range(50):
+		for j in range(5):
 			yield(get_tree(), "idle_frame")
 		
 		for i in range(game_scene_array.size()):
@@ -103,7 +120,7 @@ func set_generate_game_scene_samples(new_val):
 				return
 			
 			_on_change_game_scene(i)
-			for j in range(50):
+			for j in range(5):
 				yield(get_tree(), "idle_frame")
 			
 			# generate a sample texture from viewport
@@ -115,7 +132,7 @@ func set_generate_game_scene_samples(new_val):
 		_on_change_game_scene(_current_game_scene_id)
 		print("current: " + str(current_game_scene_id) + "   _current: " + str(_current_game_scene_id))
 		_on_change_menu_scene(_current_menu_scene_id)
-		for j in range(50):
+		for j in range(5):
 			yield(get_tree(), "idle_frame")
 		
 		generate_game_scene_samples = false
@@ -160,3 +177,12 @@ func _on_reload_game_scene():
 func _on_reload_menu_scene():
 	clear_menu_scenes()
 	add_menu_scene(current_menu_scene_id)
+
+
+func _on_level_completed():
+	if current_game_scene_id + 1 < game_scene_array.size():
+		if current_game_scene_id + 1 > highest_unlocked_game_scene_id:
+			highest_unlocked_game_scene_id = current_game_scene_id + 1
+		
+		GSM.emit_signal("change_game_scene", current_game_scene_id + 1)
+

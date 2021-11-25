@@ -15,7 +15,7 @@
    viewBox="0 0 210 297"
    height="297mm"
    width="210mm"
-   inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Objects\Grabbable\Grabbable_RigidBodies\Jar\Jar.png"
+   inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Pickup\Triangle.png"
    inkscape:export-xdpi="48"
    inkscape:export-ydpi="48">
   <defs
@@ -138,9 +138,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="-4304.8612"
-     inkscape:cx="-19.955003"
-     inkscape:zoom="0.66018488"
+     inkscape:cy="-330.89139"
+     inkscape:cx="504.38955"
+     inkscape:zoom="0.46682121"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -2821,6 +2821,9 @@
        style="fill:#ffffff;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
        sodipodi:type="star" />
     <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Pickup\Triangle.png"
        inkscape:transform-center-y="1.988e-05"
        d="m 16.933333,-1185.3334 -14.6646969,-25.4 29.3293919,0 z"
        inkscape:randomized="0"
@@ -2870,5 +2873,33 @@
        id="path1210"
        style="fill:#ffffff;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
        sodipodi:type="star" />
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Button_Body.png"
+       y="-101.59998"
+       x="110.06667"
+       height="8.4666443"
+       width="101.6"
+       id="rect1213"
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.720541;stroke-linecap:round;stroke-linejoin:bevel" />
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Button_Base.png"
+       d="m 101.59998,-93.133321 -14.664729,8.46667 h 14.664729 118.53333 14.66475 l -14.66475,-8.46667 z"
+       style="fill:#ffffff;fill-opacity:0.984314;stroke-width:0.72054;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect1261" />
+    <text
+       id="text1282"
+       y="-144.293"
+       x="91.541702"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         y="-144.293"
+         x="91.541702"
+         id="tspan1280"
+         sodipodi:role="line">Buttons</tspan></text>
   </g>
 </svg>

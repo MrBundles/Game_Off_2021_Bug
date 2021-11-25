@@ -38,6 +38,9 @@ func update_sample_texture(point_handle_id):
 	# load and set button_icon if the given id has a valid associated sample image
 	if point_handle_id < game_scene_sample_array.size():
 		texture = game_scene_sample_array[point_handle_id]
+	
+	if has_node("ColorRect"):
+		$ColorRect.visible = point_handle_id > GVM.highest_unlocked_game_scene_id
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------

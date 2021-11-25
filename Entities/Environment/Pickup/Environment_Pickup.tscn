@@ -1,40 +1,47 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entities/Environment/Pickup/Circle.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Environment/Pickup/Environment_Pickup.gd" type="Script" id=2]
+[ext_resource path="res://Entities/Environment/Pickup/Environment_Pickup_Particle.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.0
 
-[sub_resource type="Curve" id=2]
-max_value = 2.0
-_data = [ Vector2( 0, 1.99545 ), 0.0, 0.0, 0, 0, Vector2( 0.509333, 0.286364 ), 0.0, 0.0, 0, 0, Vector2( 0.989333, 1.88636 ), 0.0, 0.0, 0, 0 ]
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 0.748864 ), 0.0, 0.0, 0, 0, Vector2( 0.501333, 0.257955 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.767045 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.498667, 0.386364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [node name="Environment_Pickup" type="Area2D"]
-position = Vector2( 1192.14, 676.233 )
+z_index = 10
 script = ExtResource( 2 )
+pickup_particle_scene = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 32, 32 )
 shape = SubResource( 1 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 32, 32 )
 amount = 48
+lifetime = 0.75
+randomness = 0.4
 texture = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 24.0
 spread = 180.0
 gravity = Vector2( 0, 0 )
-initial_velocity = 200.0
+initial_velocity = 25.0
 initial_velocity_random = 0.5
-angular_velocity = 720.0
-angular_velocity_random = 0.97
-orbit_velocity = 1.0
-orbit_velocity_random = 0.66
-orbit_velocity_curve = SubResource( 2 )
+orbit_velocity_random = 0.82
+orbit_velocity_curve = SubResource( 4 )
 scale_amount = 0.01
 scale_amount_random = 1.0
 scale_amount_curve = SubResource( 3 )
 color = Color( 1, 0.964706, 0.501961, 1 )
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_Environment_Pickup_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -29,3 +29,15 @@ texture = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Panel_Body"]
 visible = false
 shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -64.0
+margin_top = -32.0
+margin_right = 54.0
+margin_bottom = -18.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+text = "event_id: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
