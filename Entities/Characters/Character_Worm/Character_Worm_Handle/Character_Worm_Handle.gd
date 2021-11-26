@@ -21,11 +21,17 @@ export var color_left_outline = Color(1,1,1,1)
 export var color_right_outline = Color(1,1,1,1)
 export var color_outline_thickness = 4.0
 
+export var color_force = Color(1,1,1,1)
+var color_force_current = Color(1,1,1,0)
+export var width_force = 1.0
+var width_force_current = 1.0
+
 # input type variables
 export(GVM.INPUT_TYPES) var input_type = GVM.INPUT_TYPES.null
 
 # move force on handle
 export var move_force = 20.0
+var move_force_current = 0.0
 
 # when toggled, this bit will cause the hangle to be drawn under its parent segment rather than on top
 export var invert_depth = false setget set_invert_depth
@@ -38,6 +44,8 @@ var bodies = []
 var bodies_grabbed = []
 
 var broken = false
+
+export(Curve) var move_force_curve
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -64,6 +72,26 @@ func _physics_process(delta):
 
 
 func _draw():
+	# draw force vector
+	var color_force_target = color_left_outline
+	var width_force_target = 0.0
+	
+	if Input.is_action_pressed("left_click") or Input.is_action_pressed("right_click"):
+		color_force_target.a = color_force.a
+		width_force_target = move_force_current / move_force * width_force
+	else:
+		color_force_target.a = 0
+		width_force_target = 0
+	
+	color_force_current = lerp(color_force_current, color_force_target, .1)
+	width_force_current = lerp(width_force_current, width_force_target, .1)
+	
+	var snip_length = 12
+	for i in range(1, clamp(Vector2(0,0).distance_to(get_local_mouse_position()) / snip_length, 4, 8)):
+		var line_length = get_local_mouse_position().normalized() * i * snip_length
+		draw_circle(line_length, clamp(width_force_current - i * .75, 2, width_force_current), color_force_current)
+#		draw_line(Vector2(0,0), line_length, color_force_current, width_force_current - i, true)
+	
 	# draw grab handles
 	var grab_available = bodies.size() > 0
 	var grab_active = bodies_grabbed.size() > 0
@@ -78,11 +106,10 @@ func _draw():
 		GVM.INPUT_TYPES.left:
 			draw_circle(Vector2(0,0), radius, color_left_outline)
 			draw_circle(Vector2(0,0), radius - color_outline_thickness, color_left)
-		
+			
 		GVM.INPUT_TYPES.right:
 			draw_circle(Vector2(0,0), radius, color_right_outline)
 			draw_circle(Vector2(0,0), radius - color_outline_thickness, color_right)
-
 
 func _get_configuration_warning():
 	if 0:
@@ -102,13 +129,20 @@ func get_input():
 	if GVM.worm_hook_hovered:
 		return
 	
+	# set stretch_force, this is the minimum force needed to keep the segments stretched
+	var stretch_force = .35
+	
+	# update move_force_current
+	move_force_current = clamp(($Timer.time_left + stretch_force) * move_force * nerf_mult, 0, move_force)
+	
 	match input_type:
 		GVM.INPUT_TYPES.left:
 			if Input.is_action_just_pressed("left_click"):
 				clear_pins()
+				$Timer.start()
 			
 			if Input.is_action_pressed("left_click"):
-				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force * nerf_mult)
+				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force_current)
 				
 			elif bodies.size() > 0 and Input.is_action_just_released("left_click"):
 				for b in bodies:
@@ -117,9 +151,10 @@ func get_input():
 		GVM.INPUT_TYPES.right:
 			if Input.is_action_just_pressed("right_click"):
 				clear_pins()
+				$Timer.start()
 			
 			if Input.is_action_pressed("right_click"):
-				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force * nerf_mult)
+				apply_central_impulse(global_position.direction_to(get_global_mouse_position()).normalized() * move_force_current)
 			
 			elif bodies.size() > 0 and Input.is_action_just_released("right_click"):
 				for b in bodies:
@@ -217,3 +252,8 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body in bodies:
 		bodies.remove(bodies.find(body))
+
+
+func _on_Timer_timeout():
+	if has_node("Timer"):
+		$Timer.stop()

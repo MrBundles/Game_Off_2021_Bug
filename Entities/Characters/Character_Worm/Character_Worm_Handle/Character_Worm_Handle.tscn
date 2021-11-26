@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Handle/Character_Worm_Handle.gd" type="Script" id=1]
 
@@ -6,16 +6,20 @@
 resource_local_to_scene = true
 friction = 0.5
 
-[sub_resource type="CircleShape2D" id=2]
-resource_local_to_scene = true
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -3.18068, 0.0, 0, 0 ]
 
 [sub_resource type="CircleShape2D" id=3]
+resource_local_to_scene = true
+
+[sub_resource type="CircleShape2D" id=4]
 resource_local_to_scene = true
 radius = 16.0
 
 [node name="Character_Worm_Handle" type="RigidBody2D" groups=[
 "worm",
 ]]
+scale = Vector2( 1.00227, 1.03289 )
 collision_layer = 2
 physics_material_override = SubResource( 1 )
 gravity_scale = 5.0
@@ -26,18 +30,24 @@ script = ExtResource( 1 )
 color_grab_available = Color( 1, 1, 1, 0.156863 )
 color_grab_active = Color( 1, 1, 1, 0.313726 )
 color_grab_outline_thickness = 10.0
+color_force = Color( 0.141176, 0.607843, 0.74902, 1 )
+width_force = 10.0
+move_force_curve = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="PinJoints" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="mouse_entered" from="." to="." method="_on_Character_Worm_Handle_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Character_Worm_Handle_mouse_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
