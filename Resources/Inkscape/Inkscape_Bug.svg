@@ -20,6 +20,142 @@
    inkscape:export-ydpi="48">
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1516"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1514"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,9.3015942,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,2.7021324,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       hide_knots="false"
+       only_selected="false"
+       apply_with_radius="true"
+       apply_no_radius="true"
+       use_knot_distance="true"
+       flexible="false"
+       chamfer_steps="1"
+       radius="0"
+       mode="F"
+       method="auto"
+       unit="px"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1504"
+       effect="fillet_chamfer" />
+    <inkscape:path-effect
+       hide_knots="false"
+       only_selected="false"
+       apply_with_radius="true"
+       apply_no_radius="true"
+       use_knot_distance="true"
+       flexible="false"
+       chamfer_steps="1"
+       radius="0"
+       mode="F"
+       method="auto"
+       unit="px"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,9.3015942,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,2.7021324,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1502"
+       effect="fillet_chamfer" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1492"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1490"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,9.3015942,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,2.7021324,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       hide_knots="false"
+       only_selected="false"
+       apply_with_radius="true"
+       apply_no_radius="true"
+       use_knot_distance="true"
+       flexible="false"
+       chamfer_steps="1"
+       radius="0"
+       mode="F"
+       method="auto"
+       unit="px"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1420"
+       effect="fillet_chamfer" />
+    <inkscape:path-effect
+       hide_knots="false"
+       only_selected="false"
+       apply_with_radius="true"
+       apply_no_radius="true"
+       use_knot_distance="true"
+       flexible="false"
+       chamfer_steps="1"
+       radius="0"
+       mode="F"
+       method="auto"
+       unit="px"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,9.3015942,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,2.7021324,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1394"
+       effect="fillet_chamfer" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient1417">
@@ -138,9 +274,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="-330.89139"
-     inkscape:cx="504.38955"
-     inkscape:zoom="0.46682121"
+     inkscape:cy="-1654.0478"
+     inkscape:cx="1333.9826"
+     inkscape:zoom="0.70710678"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -2495,7 +2631,7 @@
          cy="-438.61667"
          cx="170.98334"
          id="ellipse1304"
-         style="fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <g
          id="g1318"
          transform="translate(-38.792978,18.583331)">
@@ -2901,5 +3037,605 @@
          x="91.541702"
          id="tspan1280"
          sodipodi:role="line">Buttons</tspan></text>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Inkscape\Misc Graphics\Mouse_No_Click.png"
+       transform="translate(-143.40153,99.702296)"
+       id="g1290">
+      <path
+         id="path1284"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.66171;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 1264,-4096 v 243.8438 a 320.00002,127.9998 0 0 0 144,-16.9903 V -3968 c 0,-70.9119 -57.0879,-128 -128,-128 z m 144,258.5176 a 352.00001,160.00023 0 0 1 -160,17.4863 352.00001,160.00023 0 0 1 -160,-17.4844 V -3744 a 160.00021,160.00023 0 0 0 160,160 160.00021,160.00023 0 0 0 160,-160 160.00021,160.00023 0 0 0 0,-0.3047 z"
+         transform="scale(0.26458333)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:6.61458;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 330.2,-1089.0253 c 0,0 -4.54781,-5.8173 0.28339,-15.1631 6.98357,-13.5093 7.3586,-14.7947 7.33311,-18.5987 -0.0791,-11.8117 -8.1483,-18.3152 -8.1483,-18.3152"
+         id="path1286"
+         sodipodi:nodetypes="cssc" />
+      <path
+         id="path1288"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.439661;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 321.73333,-1083.7333 c -18.76216,0 -33.86667,15.1045 -33.86667,33.8667 v 8.4666 17.6884 a 84.666671,33.866613 0 0 0 38.1,4.4953 v -64.517 z" />
+    </g>
+    <text
+       id="text1294"
+       y="-474.49301"
+       x="248.14197"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan1296"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         y="-474.49301"
+         x="248.14197"
+         sodipodi:role="line">Button Icons</tspan></text>
+    <path
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\win.png"
+       transform="scale(-1)"
+       inkscape:transform-center-y="-1.1619684e-05"
+       inkscape:transform-center-x="-1.7367912e-05"
+       d="m -270.93333,429.22928 11.12797,-4.27897 -0.63079,11.9056 7.50828,9.26105 -11.51783,3.07912 -6.4876,10.00262 -6.48762,-10.0026 -11.51783,-3.07909 7.50825,-9.26107 -0.63081,-11.90561 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="-0.942479"
+       sodipodi:arg1="-1.5707975"
+       sodipodi:r2="18.932041"
+       sodipodi:r1="11.03738"
+       sodipodi:cy="440.26666"
+       sodipodi:cx="-270.93332"
+       sodipodi:sides="5"
+       id="path1302"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+       sodipodi:type="star" />
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\open_panel_up.png"
+       id="g1340">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect1304"
+         width="16.933332"
+         height="25.399981"
+         x="304.79999"
+         y="-457.19998" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.23132;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1306"
+         width="16.721008"
+         height="50.078156"
+         x="304.90616"
+         y="-456.83908" />
+      <g
+         id="g1333"
+         transform="translate(71.892446,-16.886387)">
+        <rect
+           ry="0"
+           y="-406.44693"
+           x="239.2516"
+           height="16.980932"
+           width="4.2452359"
+           id="rect1308"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.294987;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0,-0.50140562,0.50140562,0,440.21731,-285.52369)"
+           inkscape:transform-center-y="-2.0509402"
+           inkscape:transform-center-x="-6.9873473e-06"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="4.1018648"
+           sodipodi:r1="8.2037296"
+           sodipodi:cy="-396.57132"
+           sodipodi:cx="241.16853"
+           sodipodi:sides="3"
+           id="path1251-6"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.47464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star"
+           d="m 249.37226,-396.57132 -12.30559,7.10464 v -14.20928 z" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\open_panel_down.png"
+       transform="rotate(180,330.14692,-431.98046)"
+       id="g1352">
+      <rect
+         y="-457.19998"
+         x="304.79999"
+         height="25.399981"
+         width="16.933332"
+         id="rect1342"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel" />
+      <rect
+         y="-456.83908"
+         x="304.90616"
+         height="50.078156"
+         width="16.721008"
+         id="rect1344"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.23132;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="translate(71.892446,-16.886387)"
+         id="g1350">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.294987;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1346"
+           width="4.2452359"
+           height="16.980932"
+           x="239.2516"
+           y="-406.44693"
+           ry="0" />
+        <path
+           d="m 249.37226,-396.57132 -12.30559,7.10464 v -14.20928 z"
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.47464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1348"
+           sodipodi:sides="3"
+           sodipodi:cx="241.16853"
+           sodipodi:cy="-396.57132"
+           sodipodi:r1="8.2037296"
+           sodipodi:r2="4.1018648"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-x="-6.9873473e-06"
+           inkscape:transform-center-y="-2.0509402"
+           transform="matrix(0,-0.50140562,0.50140562,0,440.21731,-285.52369)" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\open_panel_right.png"
+       id="g1366"
+       transform="rotate(90,364.30021,-397.80595)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect1354"
+         width="16.933332"
+         height="25.399981"
+         x="304.79999"
+         y="-457.19998" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.23132;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1356"
+         width="16.721008"
+         height="50.078156"
+         x="304.90616"
+         y="-456.83908" />
+      <g
+         id="g1364"
+         transform="translate(71.892446,-16.886387)">
+        <rect
+           ry="0"
+           y="-406.44693"
+           x="239.2516"
+           height="16.980932"
+           width="4.2452359"
+           id="rect1358"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.294987;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0,-0.50140562,0.50140562,0,440.21731,-285.52369)"
+           inkscape:transform-center-y="-2.0509402"
+           inkscape:transform-center-x="-6.9873473e-06"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="4.1018648"
+           sodipodi:r1="8.2037296"
+           sodipodi:cy="-396.57132"
+           sodipodi:cx="241.16853"
+           sodipodi:sides="3"
+           id="path1362"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.47464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star"
+           d="m 249.37226,-396.57132 -12.30559,7.10464 v -14.20928 z" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\open_panel_left.png"
+       transform="rotate(-90,364.19405,-465.90021)"
+       id="g1378">
+      <rect
+         y="-457.19998"
+         x="304.79999"
+         height="25.399981"
+         width="16.933332"
+         id="rect1368"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.720542;stroke-linecap:round;stroke-linejoin:bevel" />
+      <rect
+         y="-456.83908"
+         x="304.90616"
+         height="50.078156"
+         width="16.721008"
+         id="rect1370"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.23132;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="translate(71.892446,-16.886387)"
+         id="g1376">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.294987;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1372"
+           width="4.2452359"
+           height="16.980932"
+           x="239.2516"
+           y="-406.44693"
+           ry="0" />
+        <path
+           d="m 249.37226,-396.57132 -12.30559,7.10464 v -14.20928 z"
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.47464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1374"
+           sodipodi:sides="3"
+           sodipodi:cx="241.16853"
+           sodipodi:cy="-396.57132"
+           sodipodi:r1="8.2037296"
+           sodipodi:r2="4.1018648"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-x="-6.9873473e-06"
+           inkscape:transform-center-y="-2.0509402"
+           transform="matrix(0,-0.50140562,0.50140562,0,440.21731,-285.52369)" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\gravity_up.png"
+       id="g1550">
+      <g
+         id="g1425"
+         transform="matrix(0.45763024,-0.72008237,0.72008237,0.45763024,607.34365,116.30951)">
+        <path
+           inkscape:original-d="m 1784.5254,-1860.748 a 34.809903,44.449565 17.447921 0 0 -21.0703,7.7265 44.449565,34.809903 72.552079 0 0 -29.3262,-6.459 44.449565,34.809903 72.552079 0 0 -19.8809,52.8418 44.449565,34.809903 72.552079 0 0 46.5372,31.9668 44.449565,34.809903 72.552079 0 0 2.6738,-0.998 34.809903,44.449565 17.447921 0 0 2.6699,0.9961 34.809903,44.449565 17.447921 0 0 46.5371,-31.9668 34.809903,44.449565 17.447921 0 0 -19.8808,-52.8418 34.809903,44.449565 17.447921 0 0 -8.2598,-1.2656 z"
+           inkscape:path-effect="#path-effect1394"
+           transform="scale(0.26458333)"
+           d="m 1784.5254,-1860.748 c -4.3987,-0.01 -8.8506,0.9907 -13.1327,2.9189 -4.6733,2.1042 -11.202,2.1042 -15.8756,6e-4 -7.0663,-3.1806 -14.5338,-3.8057 -21.3882,-1.652 -18.3406,5.7642 -27.2416,29.4224 -19.8809,52.8418 7.3608,23.42 28.1965,37.7322 46.5372,31.9668 0.049,-0.015 0.097,-0.031 0.146,-0.046 1.4203,-0.4558 3.6354,-0.4561 5.0559,-6e-4 0.047,0.015 0.094,0.03 0.1418,0.045 18.3406,5.7653 39.1763,-8.5469 46.5371,-31.9668 7.3607,-23.4194 -1.5403,-47.0775 -19.8808,-52.8418 -2.6549,-0.8344 -5.4279,-1.2593 -8.2598,-1.2656 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.85134;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="path1380" />
+        <path
+           d="m 474.2382,-499.47312 a 4.9243264,4.9243264 0 0 0 -4.75632,1.27431 4.9243264,4.9243264 0 0 0 -1.2743,4.75632 4.9243264,4.9243264 0 0 0 4.75632,-1.2743 4.9243264,4.9243264 0 0 0 1.2743,-4.75633 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.592663;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="path1396" />
+        <path
+           sodipodi:nodetypes="ccsccc"
+           inkscape:original-d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           inkscape:path-effect="#path-effect1420"
+           d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.25153;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="circle1408" />
+      </g>
+      <g
+         id="g1479"
+         transform="matrix(-1,0,0,1,935.36648,0.63940293)">
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1465"
+           sodipodi:sides="3"
+           sodipodi:cx="474.22775"
+           sodipodi:cy="-440.09561"
+           sodipodi:r1="4.1133962"
+           sodipodi:r2="2.0566981"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-y="4.0311446"
+           transform="matrix(0,-0.4824662,1.9655008,0,1326.2414,-196.1188)"
+           inkscape:transform-center-x="-6.9832406e-06"
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z" />
+        <path
+           transform="matrix(0,-0.34870566,1.4205788,0,1086.4236,-255.32369)"
+           inkscape:transform-center-y="2.9135277"
+           inkscape:transform-center-x="-4.1778772e-06"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="2.0566981"
+           sodipodi:r1="4.1133962"
+           sodipodi:cy="-440.09561"
+           sodipodi:cx="474.22775"
+           sodipodi:sides="3"
+           id="path1467"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star"
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z" />
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1469"
+           sodipodi:sides="3"
+           sodipodi:cx="474.22775"
+           sodipodi:cy="-440.09561"
+           sodipodi:r1="4.1133962"
+           sodipodi:r2="2.0566981"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-x="-3.3520256e-06"
+           inkscape:transform-center-y="1.7959198"
+           transform="matrix(0,-0.21494504,0.87565645,0,846.6057,-315.58695)"
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\gravity_down.png"
+       id="g1561">
+      <g
+         transform="matrix(0.45763024,-0.72008237,0.72008237,0.45763024,658.14368,116.30954)"
+         id="g1488">
+        <path
+           id="path1481"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.85134;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           d="m 1784.5254,-1860.748 c -4.3987,-0.01 -8.8506,0.9907 -13.1327,2.9189 -4.6733,2.1042 -11.202,2.1042 -15.8756,6e-4 -7.0663,-3.1806 -14.5338,-3.8057 -21.3882,-1.652 -18.3406,5.7642 -27.2416,29.4224 -19.8809,52.8418 7.3608,23.42 28.1965,37.7322 46.5372,31.9668 0.049,-0.015 0.097,-0.031 0.146,-0.046 1.4203,-0.4558 3.6354,-0.4561 5.0559,-6e-4 0.047,0.015 0.094,0.03 0.1418,0.045 18.3406,5.7653 39.1763,-8.5469 46.5371,-31.9668 7.3607,-23.4194 -1.5403,-47.0775 -19.8808,-52.8418 -2.6549,-0.8344 -5.4279,-1.2593 -8.2598,-1.2656 z"
+           transform="scale(0.26458333)"
+           inkscape:path-effect="#path-effect1490"
+           inkscape:original-d="m 1784.5254,-1860.748 a 34.809903,44.449565 17.447921 0 0 -21.0703,7.7265 44.449565,34.809903 72.552079 0 0 -29.3262,-6.459 44.449565,34.809903 72.552079 0 0 -19.8809,52.8418 44.449565,34.809903 72.552079 0 0 46.5372,31.9668 44.449565,34.809903 72.552079 0 0 2.6738,-0.998 34.809903,44.449565 17.447921 0 0 2.6699,0.9961 34.809903,44.449565 17.447921 0 0 46.5371,-31.9668 34.809903,44.449565 17.447921 0 0 -19.8808,-52.8418 34.809903,44.449565 17.447921 0 0 -8.2598,-1.2656 z" />
+        <path
+           id="path1484"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.592663;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           d="m 474.2382,-499.47312 a 4.9243264,4.9243264 0 0 0 -4.75632,1.27431 4.9243264,4.9243264 0 0 0 -1.2743,4.75632 4.9243264,4.9243264 0 0 0 4.75632,-1.2743 4.9243264,4.9243264 0 0 0 1.2743,-4.75633 z" />
+        <path
+           id="path1486"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.25153;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           inkscape:path-effect="#path-effect1492"
+           inkscape:original-d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           sodipodi:nodetypes="ccsccc" />
+      </g>
+      <g
+         transform="matrix(1,0,0,-1,63.700231,-881.44064)"
+         id="g1524">
+        <path
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z"
+           inkscape:transform-center-x="-6.9832406e-06"
+           transform="matrix(0,-0.4824662,1.9655008,0,1326.2414,-196.1188)"
+           inkscape:transform-center-y="4.0311446"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="2.0566981"
+           sodipodi:r1="4.1133962"
+           sodipodi:cy="-440.09561"
+           sodipodi:cx="474.22775"
+           sodipodi:sides="3"
+           id="path1518"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star" />
+        <path
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z"
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1520"
+           sodipodi:sides="3"
+           sodipodi:cx="474.22775"
+           sodipodi:cy="-440.09561"
+           sodipodi:r1="4.1133962"
+           sodipodi:r2="2.0566981"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-x="-4.1778772e-06"
+           inkscape:transform-center-y="2.9135277"
+           transform="matrix(0,-0.34870566,1.4205788,0,1086.4236,-255.32369)" />
+        <path
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z"
+           transform="matrix(0,-0.21494504,0.87565645,0,846.6057,-315.58695)"
+           inkscape:transform-center-y="1.7959198"
+           inkscape:transform-center-x="-3.3520256e-06"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="2.0566981"
+           sodipodi:r1="4.1133962"
+           sodipodi:cy="-440.09561"
+           sodipodi:cx="474.22775"
+           sodipodi:sides="3"
+           id="path1522"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\gravity_right.png"
+       id="g1571">
+      <g
+         id="g1500"
+         transform="matrix(0.45763024,-0.72008237,0.72008237,0.45763024,725.87702,116.30954)">
+        <path
+           inkscape:original-d="m 1784.5254,-1860.748 a 34.809903,44.449565 17.447921 0 0 -21.0703,7.7265 44.449565,34.809903 72.552079 0 0 -29.3262,-6.459 44.449565,34.809903 72.552079 0 0 -19.8809,52.8418 44.449565,34.809903 72.552079 0 0 46.5372,31.9668 44.449565,34.809903 72.552079 0 0 2.6738,-0.998 34.809903,44.449565 17.447921 0 0 2.6699,0.9961 34.809903,44.449565 17.447921 0 0 46.5371,-31.9668 34.809903,44.449565 17.447921 0 0 -19.8808,-52.8418 34.809903,44.449565 17.447921 0 0 -8.2598,-1.2656 z"
+           inkscape:path-effect="#path-effect1502"
+           transform="scale(0.26458333)"
+           d="m 1784.5254,-1860.748 c -4.3987,-0.01 -8.8506,0.9907 -13.1327,2.9189 -4.6733,2.1042 -11.202,2.1042 -15.8756,6e-4 -7.0663,-3.1806 -14.5338,-3.8057 -21.3882,-1.652 -18.3406,5.7642 -27.2416,29.4224 -19.8809,52.8418 7.3608,23.42 28.1965,37.7322 46.5372,31.9668 0.049,-0.015 0.097,-0.031 0.146,-0.046 1.4203,-0.4558 3.6354,-0.4561 5.0559,-6e-4 0.047,0.015 0.094,0.03 0.1418,0.045 18.3406,5.7653 39.1763,-8.5469 46.5371,-31.9668 7.3607,-23.4194 -1.5403,-47.0775 -19.8808,-52.8418 -2.6549,-0.8344 -5.4279,-1.2593 -8.2598,-1.2656 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.85134;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="path1494" />
+        <path
+           d="m 474.2382,-499.47312 a 4.9243264,4.9243264 0 0 0 -4.75632,1.27431 4.9243264,4.9243264 0 0 0 -1.2743,4.75632 4.9243264,4.9243264 0 0 0 4.75632,-1.2743 4.9243264,4.9243264 0 0 0 1.2743,-4.75633 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.592663;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="path1496" />
+        <path
+           sodipodi:nodetypes="ccsccc"
+           inkscape:original-d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           inkscape:path-effect="#path-effect1504"
+           d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.25153;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="path1498" />
+      </g>
+      <g
+         id="g1532"
+         transform="matrix(0,-1,-1,0,148.69899,20.966455)">
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1526"
+           sodipodi:sides="3"
+           sodipodi:cx="474.22775"
+           sodipodi:cy="-440.09561"
+           sodipodi:r1="4.1133962"
+           sodipodi:r2="2.0566981"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-y="4.0311446"
+           transform="matrix(0,-0.4824662,1.9655008,0,1326.2414,-196.1188)"
+           inkscape:transform-center-x="-6.9832406e-06"
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z" />
+        <path
+           transform="matrix(0,-0.34870566,1.4205788,0,1086.4236,-255.32369)"
+           inkscape:transform-center-y="2.9135277"
+           inkscape:transform-center-x="-4.1778772e-06"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="2.0566981"
+           sodipodi:r1="4.1133962"
+           sodipodi:cy="-440.09561"
+           sodipodi:cx="474.22775"
+           sodipodi:sides="3"
+           id="path1528"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star"
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z" />
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1530"
+           sodipodi:sides="3"
+           sodipodi:cx="474.22775"
+           sodipodi:cy="-440.09561"
+           sodipodi:r1="4.1133962"
+           sodipodi:r2="2.0566981"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-x="-3.3520256e-06"
+           inkscape:transform-center-y="1.7959198"
+           transform="matrix(0,-0.21494504,0.87565645,0,846.6057,-315.58695)"
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Button\Icons\gravity_left.png"
+       id="g1581">
+      <g
+         transform="matrix(0.45763024,-0.72008237,0.72008237,0.45763024,759.74368,116.30954)"
+         id="g1512">
+        <path
+           id="path1506"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.85134;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           d="m 1784.5254,-1860.748 c -4.3987,-0.01 -8.8506,0.9907 -13.1327,2.9189 -4.6733,2.1042 -11.202,2.1042 -15.8756,6e-4 -7.0663,-3.1806 -14.5338,-3.8057 -21.3882,-1.652 -18.3406,5.7642 -27.2416,29.4224 -19.8809,52.8418 7.3608,23.42 28.1965,37.7322 46.5372,31.9668 0.049,-0.015 0.097,-0.031 0.146,-0.046 1.4203,-0.4558 3.6354,-0.4561 5.0559,-6e-4 0.047,0.015 0.094,0.03 0.1418,0.045 18.3406,5.7653 39.1763,-8.5469 46.5371,-31.9668 7.3607,-23.4194 -1.5403,-47.0775 -19.8808,-52.8418 -2.6549,-0.8344 -5.4279,-1.2593 -8.2598,-1.2656 z"
+           transform="scale(0.26458333)"
+           inkscape:path-effect="#path-effect1514"
+           inkscape:original-d="m 1784.5254,-1860.748 a 34.809903,44.449565 17.447921 0 0 -21.0703,7.7265 44.449565,34.809903 72.552079 0 0 -29.3262,-6.459 44.449565,34.809903 72.552079 0 0 -19.8809,52.8418 44.449565,34.809903 72.552079 0 0 46.5372,31.9668 44.449565,34.809903 72.552079 0 0 2.6738,-0.998 34.809903,44.449565 17.447921 0 0 2.6699,0.9961 34.809903,44.449565 17.447921 0 0 46.5371,-31.9668 34.809903,44.449565 17.447921 0 0 -19.8808,-52.8418 34.809903,44.449565 17.447921 0 0 -8.2598,-1.2656 z" />
+        <path
+           id="path1508"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.592663;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           d="m 474.2382,-499.47312 a 4.9243264,4.9243264 0 0 0 -4.75632,1.27431 4.9243264,4.9243264 0 0 0 -1.2743,4.75632 4.9243264,4.9243264 0 0 0 4.75632,-1.2743 4.9243264,4.9243264 0 0 0 1.2743,-4.75633 z" />
+        <path
+           id="path1510"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.25153;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           inkscape:path-effect="#path-effect1516"
+           inkscape:original-d="m 462.28183,-501.65223 c -0.6253,0.64722 -1.13436,1.39739 -1.5048,2.21755 3.39368,0.93858 5.67008,3.93774 5.67012,7.4588 7e-5,0.0176 0.23622,0.0883 0.23616,0.10593 0.19158,-0.72266 0.12613,-1.43146 0.12627,-2.17909 -7e-5,-3.17309 -1.73788,-6.09134 -4.52769,-7.60313 z"
+           sodipodi:nodetypes="ccsccc" />
+      </g>
+      <g
+         transform="rotate(-90,544.14041,-523.17395)"
+         id="g1540">
+        <path
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z"
+           inkscape:transform-center-x="-6.9832406e-06"
+           transform="matrix(0,-0.4824662,1.9655008,0,1326.2414,-196.1188)"
+           inkscape:transform-center-y="4.0311446"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="2.0566981"
+           sodipodi:r1="4.1133962"
+           sodipodi:cy="-440.09561"
+           sodipodi:cx="474.22775"
+           sodipodi:sides="3"
+           id="path1534"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star" />
+        <path
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z"
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path1536"
+           sodipodi:sides="3"
+           sodipodi:cx="474.22775"
+           sodipodi:cy="-440.09561"
+           sodipodi:r1="4.1133962"
+           sodipodi:r2="2.0566981"
+           sodipodi:arg1="0"
+           sodipodi:arg2="1.0471976"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           inkscape:transform-center-x="-4.1778772e-06"
+           inkscape:transform-center-y="2.9135277"
+           transform="matrix(0,-0.34870566,1.4205788,0,1086.4236,-255.32369)" />
+        <path
+           d="m 478.34115,-440.09561 -6.1701,3.5623 v -7.12461 z"
+           transform="matrix(0,-0.21494504,0.87565645,0,846.6057,-315.58695)"
+           inkscape:transform-center-y="1.7959198"
+           inkscape:transform-center-x="-3.3520256e-06"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0471976"
+           sodipodi:arg1="0"
+           sodipodi:r2="2.0566981"
+           sodipodi:r1="4.1133962"
+           sodipodi:cy="-440.09561"
+           sodipodi:cx="474.22775"
+           sodipodi:sides="3"
+           id="path1538"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.7422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star" />
+      </g>
+    </g>
   </g>
 </svg>

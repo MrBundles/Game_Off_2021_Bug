@@ -13,7 +13,7 @@ export(Array, PackedScene) var game_scene_array = []
 export(Array, PackedScene) var menu_scene_array = []
 var current_game_scene_id = -1
 var current_menu_scene_id = -1
-var highest_unlocked_game_scene_id = 0 setget set_highest_unlocked_game_scene_id
+var highest_unlocked_game_scene_id = 20 setget set_highest_unlocked_game_scene_id
 
 # level sample generation variables
 export var generate_game_scene_samples = false setget set_generate_game_scene_samples
