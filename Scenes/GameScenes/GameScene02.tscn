@@ -65,6 +65,7 @@ icon_id = 3
 event_trigger_type_pressed = 1
 
 [node name="Environment_Label" parent="Environment_Foreground" index="2" instance=ExtResource( 5 )]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 784.0
 margin_top = 224.0
 margin_right = 1129.0
