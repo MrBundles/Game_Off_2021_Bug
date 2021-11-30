@@ -48,6 +48,10 @@ func _on_set_bus_mute(bus_id, bus_mute):
 
 
 func _on_set_bus_volume(bus_id, bus_volume):
+	print(bus_id)
 	if bus_volume != AudioServer.get_bus_volume_db(bus_id):
 		AudioServer.set_bus_volume_db(bus_id, bus_volume)
+	
+	if bus_id == GVM.AUDIO_BUS_IDS.effects:
+		$SFXSampleASP.play()
 

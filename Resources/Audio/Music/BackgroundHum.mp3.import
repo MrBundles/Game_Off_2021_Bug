@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BackgroundHum.mp3-d605ebd859ad022018b14ecaecb36c4d.mp3str"
+
+[deps]
+
+source_file="res://Resources/Audio/Music/BackgroundHum.mp3"
+dest_files=[ "res://.import/BackgroundHum.mp3-d605ebd859ad022018b14ecaecb36c4d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

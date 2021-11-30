@@ -10,7 +10,7 @@ enum EVENT_PANEL_TYPES {null, true_open__false_close, true_close__false_open}
 enum MENU_SCENE_IDS {null, main, level_select, settings, credits, pause, quit}
 enum UI_BUTTON_IDS {null, back, level_select, pause, play, reset}
 
-enum AUDIO_BUS_IDS {master, music, effects}
+enum AUDIO_BUS_IDS {master, reverb, music, effects}
 
 # references -----------------------------------------------------------------------------------------------------------
 

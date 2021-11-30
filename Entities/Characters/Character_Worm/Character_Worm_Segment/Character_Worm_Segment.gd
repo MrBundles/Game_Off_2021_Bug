@@ -28,7 +28,7 @@ var first_segment = true
 export var invert_depth = false setget set_invert_depth
 
 # input type variables
-export(GVM.INPUT_TYPES) var input_type = GVM.INPUT_TYPES.null
+export(GVM.INPUT_TYPES) var input_type = GVM.INPUT_TYPES.null setget set_input_type
 
 # move force on worm handles
 export var move_force = 20.0
@@ -53,6 +53,7 @@ func _ready():
 	GSM.connect("evaporate_worm", self, "_on_evaporate_worm")
 	
 	# initialize setgets
+	self.input_type = input_type
 	self.invert_depth = invert_depth
 	self.radius_rest = radius_rest
 #	self.radius = radius						# don't have to call this setget as it is called in the radius_rest setter function
@@ -205,6 +206,16 @@ func update_collision_shape():
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------
+func set_input_type(new_val):
+	input_type = new_val
+	
+	match input_type:
+		GVM.INPUT_TYPES.left:
+			add_to_group("left")
+		GVM.INPUT_TYPES.right:
+			add_to_group("right")
+
+
 func set_invert_depth(new_val):
 	invert_depth = new_val
 	

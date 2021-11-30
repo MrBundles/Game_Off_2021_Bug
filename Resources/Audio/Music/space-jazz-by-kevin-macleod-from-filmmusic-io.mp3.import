@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/space-jazz-by-kevin-macleod-from-filmmusic-io.mp3-56f39dde17e00bd776185f05702a2172.mp3str"
+
+[deps]
+
+source_file="res://Resources/Audio/Music/space-jazz-by-kevin-macleod-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/space-jazz-by-kevin-macleod-from-filmmusic-io.mp3-56f39dde17e00bd776185f05702a2172.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

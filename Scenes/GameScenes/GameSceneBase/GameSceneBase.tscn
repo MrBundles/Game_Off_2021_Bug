@@ -1,20 +1,14 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Tilesets/Default_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Tilesets/Default_Tileset_No_Collisions.tres" type="TileSet" id=3]
-[ext_resource path="res://Entities/Environment/Pickup/Environment_Pickup.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_5.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_7.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_6.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_0.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_4.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_2.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_3.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Entities/Objects/Win/Object_Win.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_VisualEffects/GameScene_VisualEffects.tscn" type="PackedScene" id=14]
 
 [node name="GameSceneBase" type="Node2D"]
+
+[node name="GameScene_VisualEffects" parent="." instance=ExtResource( 14 )]
 
 [node name="Object_Win" parent="." instance=ExtResource( 13 )]
 event_id = 100
@@ -23,7 +17,6 @@ event_id = 100
 
 [node name="SpawnMap" parent="." instance=ExtResource( 2 )]
 cell_size = Vector2( 32, 32 )
-spawn_scenes = [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 4 ) ]
 
 [node name="TileMap_With_Collisions" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

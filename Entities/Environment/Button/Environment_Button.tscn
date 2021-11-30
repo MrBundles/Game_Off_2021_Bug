@@ -22,8 +22,8 @@ extents = Vector2( 48, 16 )
 script = ExtResource( 3 )
 icons = [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ) ]
 color_worm = Color( 0.603922, 0.384314, 0.819608, 1 )
-color_left = Color( 0.831373, 0.258824, 0.419608, 1 )
-color_right = Color( 0.141176, 0.607843, 0.74902, 1 )
+color_left = Color( 0.247059, 0.729412, 0.87451, 1 )
+color_right = Color( 0.917647, 0.333333, 0.498039, 1 )
 color_rigid = Color( 0.84, 0.48986, 0.3276, 1 )
 color_disabled = Color( 0.945098, 0.968627, 0.929412, 1 )
 
@@ -37,7 +37,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0.603922, 0.384314, 0.819608, 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
@@ -85,6 +85,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.945098, 0.968627, 0.929412, 1 )
 position = Vector2( 0, -72 )
+scale = Vector2( 0.65, 0.65 )
 texture = ExtResource( 11 )
 
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

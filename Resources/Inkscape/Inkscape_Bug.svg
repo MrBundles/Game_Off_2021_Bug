@@ -272,11 +272,11 @@
      inkscape:window-width="1920"
      showgrid="true"
      inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1605"
      inkscape:document-units="mm"
-     inkscape:cy="-1654.0478"
-     inkscape:cx="1333.9826"
-     inkscape:zoom="0.70710678"
+     inkscape:cy="321.55341"
+     inkscape:cx="329.23508"
+     inkscape:zoom="0.35355339"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -1225,7 +1225,7 @@
          height="16.933332"
          width="16.933332"
          id="rect1339"
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Default_Tileset_Grayscale.png"
          inkscape:export-xdpi="48"
          inkscape:export-ydpi="48" />
@@ -1306,7 +1306,7 @@
          inkscape:export-ydpi="48" />
       <path
          id="path1359"
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          d="m 127,152.4 v 16.93333 h 16.93333 z"
          inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Default_Tileset_Grayscale.png"
          inkscape:export-xdpi="48"
@@ -1362,7 +1362,7 @@
          inkscape:export-ydpi="48" />
       <path
          d="m 127,203.2 v 16.93333 a 16.933332,16.933332 0 0 0 0.0785,0 A 16.933332,16.933332 0 0 0 143.93333,203.2 Z"
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          id="path1375"
          inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Default_Tileset_Grayscale.png"
          inkscape:export-xdpi="48"
@@ -1453,14 +1453,14 @@
          inkscape:export-ydpi="48" />
       <path
          d="m 93.133331,186.26667 a 33.866664,33.866664 0 0 0 0,0.0858 A 33.866664,33.866664 0 0 0 127,220.13333 V 203.2 h -16.93334 v -16.93333 z"
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          id="path1401"
          inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Default_Tileset_Grayscale.png"
          inkscape:export-xdpi="48"
          inkscape:export-ydpi="48" />
       <path
          d="M 127,152.4 93.133324,169.33333 H 127 Z"
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          id="path1403"
          inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Default_Tileset_Grayscale.png"
          inkscape:export-xdpi="48"
@@ -1642,7 +1642,7 @@
          inkscape:export-xdpi="48"
          inkscape:export-ydpi="48" />
       <rect
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          id="rect1445"
          width="16.933332"
          height="16.933332"
@@ -1657,12 +1657,12 @@
          height="16.933332"
          width="16.933332"
          id="rect1447"
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Resources\Tilesets\Default_Tileset_Grayscale.png"
          inkscape:export-xdpi="48"
          inkscape:export-ydpi="48" />
       <rect
-         style="fill:#f1f7ed;fill-opacity:0.984314;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
+         style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel"
          id="rect1449"
          width="16.933332"
          height="16.933332"
@@ -2159,6 +2159,65 @@
          cx="-67.733353"
          cy="-21.16663"
          r="4.2333331" />
+      <rect
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+         id="rect1585"
+         width="33.866665"
+         height="33.866665"
+         x="-42.333332"
+         y="-46.566666"
+         ry="8.4666643" />
+      <rect
+         ry="8.4666643"
+         y="-46.566666"
+         x="8.4666862"
+         height="50.799999"
+         width="50.799999"
+         id="rect1587"
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:1.5285;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+      <rect
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:2.038;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+         id="rect1589"
+         width="67.733345"
+         height="67.73333"
+         x="76.200027"
+         y="-46.566666"
+         ry="8.4666643" />
+      <rect
+         ry="8.4666643"
+         y="-46.566666"
+         x="160.86668"
+         height="84.666664"
+         width="84.666672"
+         id="rect1591"
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:2.5475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+      <circle
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+         id="path1593"
+         cx="279.40002"
+         cy="-29.633333"
+         r="16.933332" />
+      <ellipse
+         cy="-21.16667"
+         cx="338.66672"
+         id="circle1595"
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:1.5285;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+         rx="25.399998"
+         ry="25.4" />
+      <ellipse
+         ry="33.866673"
+         rx="33.866676"
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:2.038;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+         id="ellipse1597"
+         cx="414.8667"
+         cy="-12.7" />
+      <ellipse
+         cy="-4.2333331"
+         cx="508.00003"
+         id="ellipse1599"
+         style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:2.5475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+         rx="42.333328"
+         ry="42.333332" />
     </g>
     <rect
        y="-77.828888"
@@ -2356,59 +2415,59 @@
          id="g1605">
         <path
            d="M 43.360864,-237.06667 H 67.30821 l 16.933358,16.93336 h -23.94735 z"
-           style="fill:#313638;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1587" />
         <path
            id="rect1217"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m 19.163895,-237.0667 h 23.94735 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1219"
-           style="fill:#313638;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="M -4.7834548,-237.0667 H 19.163895 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1221"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m -28.730805,-237.0667 h 23.9473502 l 16.9333578,16.93336 h -23.947349 z" />
         <path
            id="rect1223"
-           style="fill:#313638;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m -52.678154,-237.0667 h 23.947349 l 16.933359,16.93336 h -23.94735 z" />
         <path
            id="rect1225"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m -76.625504,-237.0667 h 23.94735 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1227"
-           style="fill:#313638;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m -100.57285,-237.0667 h 23.947346 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1229"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m -101.60038,-237.0667 h 1.02753 l 16.933354,16.93336 h -17.960514 z" />
         <path
            d="m 187.04496,-237.06667 h 23.94735 l 0.67455,0.67455 3.6e-4,16.2588 -7.6889,1e-5 z"
-           style="fill:#313638;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1575" />
         <path
            d="m 163.09761,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1577" />
         <path
            d="m 139.15026,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
-           style="fill:#313638;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1579" />
         <path
            d="m 115.20291,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1581" />
         <path
            d="m 91.25556,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
-           style="fill:#313638;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1583" />
         <path
            d="m 67.30821,-237.06667 h 23.94735 l 16.93336,16.93336 H 84.241568 Z"
-           style="fill:#ffffff;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#f1f7ed;fill-opacity:1;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1585" />
       </g>
     </g>
@@ -3637,5 +3696,16 @@
            sodipodi:type="star" />
       </g>
     </g>
+    <rect
+       inkscape:export-ydpi="48"
+       inkscape:export-xdpi="48"
+       inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Pickup\Square.png"
+       ry="1.9814062e-05"
+       y="-1168.4"
+       x="-101.6"
+       height="33.866665"
+       width="33.866665"
+       id="rect1583"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
   </g>
 </svg>

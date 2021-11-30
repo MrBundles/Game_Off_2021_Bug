@@ -50,8 +50,8 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
-margin_left = 285.0
-margin_right = 1506.0
+margin_left = 89.0
+margin_right = 1702.0
 margin_bottom = 760.0
 size_flags_vertical = 3
 theme = ExtResource( 5 )
@@ -59,14 +59,14 @@ scroll_horizontal_enabled = false
 script = ExtResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer" index="0"]
-margin_right = 1221.0
-margin_bottom = 1365.0
+margin_right = 1613.0
+margin_bottom = 1527.0
 custom_constants/separation = 0
 
 [node name="ProgrammingCredits" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="0" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1221.0
+margin_right = 1613.0
 margin_bottom = 321.0
 custom_fonts/font = SubResource( 2 )
 text = "
@@ -78,7 +78,7 @@ All code created in GDScript during Jam Period"
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 321.0
-margin_right = 1221.0
+margin_right = 1613.0
 margin_bottom = 723.0
 custom_fonts/font = SubResource( 3 )
 text = "
@@ -91,20 +91,22 @@ autowrap = true
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 723.0
-margin_right = 1221.0
-margin_bottom = 1044.0
+margin_right = 1613.0
+margin_bottom = 1206.0
 custom_fonts/font = SubResource( 4 )
 text = "
 
 MUSIC
-My Lovely Wife"
+Space Jazz by Kevin MacLeod
+Link: https://incompetech.filmmusic.io/song/8328-space-jazz
+License: https://filmmusic.io/standard-license"
 
 [node name="EffectsCredits" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/VBoxContainer" index="3" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1044.0
-margin_right = 1221.0
-margin_bottom = 1365.0
+margin_top = 1206.0
+margin_right = 1613.0
+margin_bottom = 1527.0
 custom_fonts/font = SubResource( 5 )
 text = "
 

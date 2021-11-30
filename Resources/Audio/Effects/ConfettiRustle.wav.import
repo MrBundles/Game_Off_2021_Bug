@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ConfettiRustle.wav-a9d2d2de7ec48e04e4124a5fa4474453.sample"
+
+[deps]
+
+source_file="res://Resources/Audio/Effects/ConfettiRustle.wav"
+dest_files=[ "res://.import/ConfettiRustle.wav-a9d2d2de7ec48e04e4124a5fa4474453.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
