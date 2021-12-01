@@ -65,6 +65,9 @@ func _ready():
 	if not Engine.editor_hint:
 		generate_segments()
 		init_stretch_dist_max()
+	
+	if GVM.float_mode:
+		gravity_scale = 0
 
 
 func _process(delta):
@@ -294,3 +297,12 @@ func _on_evaporate_worm():
 		get_tree().root.add_child(worm_particle_instance)
 	
 	queue_free()
+
+
+func _on_Character_Worm_Segment_body_entered(body):
+	print(body.name)
+	$WormFartASP.play()
+
+
+func _on_Character_Worm_Segment_body_exited(body):
+	pass # Replace with function body.

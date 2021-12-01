@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WormFart.wav-560fd2fe965bb31ea1df659184200a23.sample"
+
+[deps]
+
+source_file="res://Resources/Audio/Effects/WormFart.wav"
+dest_files=[ "res://.import/WormFart.wav-560fd2fe965bb31ea1df659184200a23.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

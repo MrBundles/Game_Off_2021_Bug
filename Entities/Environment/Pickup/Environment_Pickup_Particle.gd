@@ -18,6 +18,7 @@ func _ready():
 	
 	# initialize variables
 	emitting = true
+	$PickupPuffASP.play()
 
 
 func _process(delta):

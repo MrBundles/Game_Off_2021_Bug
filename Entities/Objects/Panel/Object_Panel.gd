@@ -66,7 +66,16 @@ func set_triggered_offset(new_val):
 
 
 func set_triggered(new_val):
+	var no_audio_flag = false
+	
+	if triggered == new_val:
+		no_audio_flag = true
+	
 	triggered = new_val
+	
+	# tween variables
+	var tween_duration_time = .65
+	var tween_delay_time = 0.0
 	
 	if has_node("Tween") and has_node("Panel_Body"):
 		$Tween.stop_all()
@@ -74,17 +83,24 @@ func set_triggered(new_val):
 		match event_panel_type:
 			GVM.EVENT_PANEL_TYPES.true_open__false_close:
 				if triggered:
-					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, triggered_offset, .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, triggered_offset, tween_duration_time, Tween.TRANS_QUINT, Tween.EASE_OUT, tween_delay_time)
 				else:
-					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, Vector2(0,0), .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, Vector2(0,0), tween_duration_time, Tween.TRANS_QUINT, Tween.EASE_OUT, tween_delay_time)
 			
 			GVM.EVENT_PANEL_TYPES.true_close__false_open:
 				if triggered:
-					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, Vector2(0,0), .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, Vector2(0,0), tween_duration_time, Tween.TRANS_QUINT, Tween.EASE_OUT, tween_delay_time)
 				else:
-					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, triggered_offset, .5, Tween.TRANS_QUINT, Tween.EASE_OUT)
+					$Tween.interpolate_property($Panel_Body, "position", $Panel_Body.position, triggered_offset, tween_duration_time, Tween.TRANS_QUINT, Tween.EASE_OUT, tween_delay_time)
 			
 		$Tween.start()
+	
+	# handle audio
+	if not Engine.editor_hint and not no_audio_flag:
+		if triggered:
+			$PanelOpenASP.play()
+		else:
+			$PanelCloseASP.play()
 
 
 func set_length(new_val):
@@ -94,7 +110,7 @@ func set_length(new_val):
 		$Panel_Body/Sprite.texture.region.size = Vector2(length * 32, 32)
 	
 	if has_node("Panel_Body/CollisionShape2D"):
-		$Panel_Body/CollisionShape2D.shape.extents = Vector2(length * 32 / 2, 16)
+		$Panel_Body/CollisionShape2D.shape.extents = Vector2(length * 32 / 2, 15)
 
 
 func set_color(new_val):

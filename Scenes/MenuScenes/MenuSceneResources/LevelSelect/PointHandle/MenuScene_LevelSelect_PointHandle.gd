@@ -91,6 +91,11 @@ func set_hovered(new_val):
 	hovered = new_val
 	
 	GSM.emit_signal("point_handle_hovered", point_handle_id, hovered)
+	
+	if hovered:
+		$LevelHoverOnASP.play()
+	else:
+		$LevelHoverOffASP.play()
 
 
 func set_pressed(new_val):
@@ -100,6 +105,8 @@ func set_pressed(new_val):
 	pressed = new_val
 	
 	GSM.emit_signal("point_handle_pressed", point_handle_id, pressed)
+	
+	$LevelPressASP.play()
 	
 	if not point_handle_id > GVM.highest_unlocked_game_scene_id:
 		GSM.emit_signal("change_game_scene", point_handle_id + 1)

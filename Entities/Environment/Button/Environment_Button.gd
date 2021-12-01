@@ -70,19 +70,22 @@ func _get_configuration_warning():
 
 # set/get functions ------------------------------------------------------------------------------------------------------
 func set_pressed(new_val):
+	if pressed == new_val:
+		return
+	
 	pressed = new_val
 	
 	if has_node("Tween") and has_node("KinematicBody2D"):
 		$Tween.stop_all()
 		
 		# tween variables
-		var tween_duration_time = 0.5
+		var tween_duration_time = 0.25
 		var tween_delay_time = 0.0
 		
 		if pressed:
-			$Tween.interpolate_property($KinematicBody2D, "position", $KinematicBody2D.position, button_position_pressed, tween_duration_time, Tween.TRANS_QUAD, Tween.EASE_OUT, tween_delay_time)
+			$Tween.interpolate_property($KinematicBody2D, "position", $KinematicBody2D.position, button_position_pressed, tween_duration_time, Tween.TRANS_QUAD, Tween.EASE_IN, tween_delay_time)
 		else:
-			$Tween.interpolate_property($KinematicBody2D, "position", $KinematicBody2D.position, button_position_released, tween_duration_time, Tween.TRANS_QUAD, Tween.EASE_OUT, tween_delay_time)
+			$Tween.interpolate_property($KinematicBody2D, "position", $KinematicBody2D.position, button_position_released, tween_duration_time, Tween.TRANS_QUAD, Tween.EASE_IN, tween_delay_time)
 		
 		$Tween.start()
 
@@ -143,7 +146,7 @@ func set_event_id_released(new_val):
 
 # signal functions -------------------------------------------------------------------------------------------------------
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("worm"):
+	if body.is_in_group(trigger_group_name):
 		if not body in bodies_present:
 			bodies_present.append(body)
 		
@@ -157,14 +160,18 @@ func _on_Area2D_body_exited(body):
 		if body in bodies_present:
 			bodies_present.remove(bodies_present.find(body))
 		
-		if bodies_present.size() == 0 and not (oneshot and oneshot_flag):
+		if bodies_present.size() < 2 and not (oneshot and oneshot_flag):
 			self.pressed = false
+			$GameButtonReleaseASP.play()
+	
+	print(bodies_present)
 
 
 func _on_Tween_tween_completed(object, key):
 	if pressed:
 		GEM.event_trigger(event_id_pressed, event_trigger_type_pressed, event_delay_time_pressed)
 		$Sprite.modulate = color_button
+		$GameButtonPressASP.play()
 	else:
 		GEM.event_trigger(event_id_released, event_trigger_type_released, event_delay_time_released)
 		$Sprite.modulate = color_disabled

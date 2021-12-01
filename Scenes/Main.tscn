@@ -1,9 +1,9 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/GameScenes/GameScene02.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GameScenes/GameScene_PanelOpenIntro.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_Settings.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/GameScenes/GameScene01.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GameScenes/GameScene_Intro.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_LevelSelect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_Null.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/MenuScenes/MenuScene_Credits.tscn" type="PackedScene" id=7]
@@ -16,6 +16,18 @@
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Pause.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/Buttons/Button_Icons/Reset.png" type="Texture" id=15]
 [ext_resource path="res://Resources/Shaders/Stars.gdshader" type="Shader" id=16]
+[ext_resource path="res://Scenes/GameScenes/GameScene_PanelOpenPractice.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/GameScenes/GameScene_PracticeMovement.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/GameScenes/GameScene_PanelOpenRigidBodyIntro.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/GameScenes/GameScene_PanelOpenRigidBodyPractice.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/GameScenes/GameScene_SwitchIntro.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/GameScenes/GameScene_SecondWormIntro.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/GameScenes/GameScene_SecondWormPractice.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/GameScenes/GameScene_JointWormIntro.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/GameScenes/GameScene_JointWormPractice.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/GameScenes/GameScene_GravityPractice.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/GameScenes/GameScene_GravityIntro.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/GameScenes/GameScene_SplitWormIntro.tscn" type="PackedScene" id=28]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 16 )
@@ -229,7 +241,8 @@ font_data = ExtResource( 10 )
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 revision_major = 1
-game_scene_array = [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 2 ), null, null, null, null, null, null, null, null, null, null, null, null, null ]
+revision_minor = 2
+game_scene_array = [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 26 ) ]
 menu_scene_array = [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ) ]
 highest_unlocked_game_scene_id = 4
 

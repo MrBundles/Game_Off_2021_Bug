@@ -4,7 +4,9 @@
 [ext_resource path="res://Entities/Objects/Switch/Object_Switch_Body.tscn" type="PackedScene" id=2]
 
 [node name="Object_Switch" type="Node2D"]
+modulate = Color( 0.67451, 0.905882, 0.752941, 1 )
 script = ExtResource( 1 )
+color = Color( 0.67451, 0.905882, 0.752941, 1 )
 grabbed_offset = Vector2( 16, 0 )
 
 [node name="Tween" type="Tween" parent="."]

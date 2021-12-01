@@ -1,11 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneBase/MenuScene_Base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/LevelSelect/Line2D/MenuScene_LevelSelect_Line2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/1.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/3.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/LevelSelect/SampleRect/MenuScene_LevelSelect_SampleRect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/2.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/4.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/5.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/13.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/8.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/9.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/10.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/11.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/12.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/14.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/15.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/6.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_Samples/7.png" type="Texture" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 128
@@ -80,4 +93,4 @@ rect_min_size = Vector2( 640, 360 )
 texture = ExtResource( 4 )
 color_mod = Color( 1, 1, 1, 1 )
 tween_duration = 0.25
-game_scene_sample_array = [ ExtResource( 4 ), ExtResource( 7 ), null, null, null, null, null, null, null, null, null ]
+game_scene_sample_array = [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 17 ) ]

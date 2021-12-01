@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Resources/Tilesets/Spawn_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/GameScenes/GameSceneResources/GameScene_SpawnMap/GameScene_SpawnMap.gd" type="Script" id=2]
@@ -11,11 +11,19 @@
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_0.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_6.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_Tiles/Object_Grabbable_Tile_5.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Boxes/Object_Grabbable_RigidBody_Box2x2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Boxes/Object_Grabbable_RigidBody_Box4x4.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Boxes/Object_Grabbable_RigidBody_Box3x3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Boxes/Object_Grabbable_RigidBody_Box5x5.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Balls/Object_Grabbable_RigidBody_Ball2x2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Balls/Object_Grabbable_RigidBody_Ball4x4.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Balls/Object_Grabbable_RigidBody_Ball5x5.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Balls/Object_Grabbable_RigidBody_Ball3x3.tscn" type="PackedScene" id=19]
 
 [node name="SpawnMap" type="TileMap"]
 modulate = Color( 0.992157, 0, 1, 1 )
 tile_set = ExtResource( 1 )
 format = 1
 script = ExtResource( 2 )
-spawn_scenes = [ ExtResource( 9 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 6 ), null, null, null, null, null, null, null, null, ExtResource( 4 ) ]
+spawn_scenes = [ ExtResource( 9 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 4 ) ]
 color_editor = Color( 0.992157, 0, 1, 1 )

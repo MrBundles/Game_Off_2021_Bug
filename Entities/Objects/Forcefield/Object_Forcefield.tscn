@@ -1,22 +1,22 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Entities/Objects/Forcefield/Object_Forcefield.gd" type="Script" id=1]
 
-[sub_resource type="OpenSimplexNoise" id=7]
+[sub_resource type="OpenSimplexNoise" id=1]
 resource_local_to_scene = true
 period = 75.3
 persistence = 0.0
 
-[sub_resource type="NoiseTexture" id=8]
+[sub_resource type="NoiseTexture" id=2]
 resource_local_to_scene = true
 seamless = true
-noise = SubResource( 7 )
+noise = SubResource( 1 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=3]
 resource_local_to_scene = true
 extents = Vector2( 266, 535 )
 
-[sub_resource type="Shader" id=10]
+[sub_resource type="Shader" id=4]
 resource_local_to_scene = true
 code = "/* 
 Original shader from Fubucci – https://www.febucci.com/2019/05/fire-shader/ 
@@ -56,158 +56,24 @@ void fragment()
 	COLOR = color;
 }"
 
-[sub_resource type="Gradient" id=11]
+[sub_resource type="Gradient" id=5]
 offsets = PoolRealArray( 0, 0.0477941, 0.503676, 0.948529, 1 )
 colors = PoolColorArray( 0, 0, 0, 1, 0.726563, 0.726563, 0.726563, 1, 0.46875, 0.46875, 0.46875, 1, 0.722656, 0.711365, 0.711365, 1, 0, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=12]
+[sub_resource type="GradientTexture" id=6]
 resource_local_to_scene = true
-gradient = SubResource( 11 )
+gradient = SubResource( 5 )
 
-[sub_resource type="ShaderMaterial" id=13]
+[sub_resource type="ShaderMaterial" id=7]
 resource_local_to_scene = true
-shader = SubResource( 10 )
+shader = SubResource( 4 )
 shader_param/speed = 1.618
 shader_param/brighter_color = Color( 0.945098, 0.968627, 0.929412, 0 )
 shader_param/middle_color = Color( 0.6, 0.905882, 1, 0.133333 )
 shader_param/darker_color = Color( 0.6, 0.905882, 1, 0.203922 )
 shader_param/spread = 0.65
-shader_param/noise_tex = SubResource( 8 )
-shader_param/gradient_tex = SubResource( 12 )
-
-[sub_resource type="Shader" id=5]
-code = "/*
-Shader from Godot Shaders - the free shader library.
-godotshaders.com/shader/energy-beams
-
-This shader is under CC0 license. Feel free to use, improve and 
-change this shader according to your needs and consider sharing 
-the modified result to godotshaders.com.
-*/
-
-shader_type canvas_item;
-render_mode blend_add; // Remove this if you want to use HDR glow instead (use \"Glow\" and \"Outline Glow\" sliders)
-
-uniform int beams = 2; // How many beams the energy field should have
-
-uniform float energy = 3.0; // How much the beams will travel up and down
-uniform int roughness : hint_range(1, 10) = 3; // How compact the noise texture will be
-uniform int frequency = 10; // Amount of \"ripples\" in the beams
-
-uniform float speed = 1.0; // Animation speed
-uniform float thickness : hint_range(0.0, 0.1) = 0.006; // Thickness of the main beam
-uniform float outline_thickness : hint_range(0.0, 0.1) = 0.03; //Thickness of the outline color
-uniform float beam_difference : hint_range(0.0, 1.0) = 0.0; // The thickness difference between the main beam and the other, if there are more than one beam. The closer to 1 the smaller the thickness difference.
-
-uniform float glow : hint_range(0.0, 3.0) = 0.0; // Use together with WorldEnvironment's Glow feature
-uniform float outline_glow : hint_range(0.0, 3.0) = 0.0;
-
-uniform vec4 color : hint_color = vec4(0.91, 1.0, 1.0, 1.0);
-uniform vec4 outline_color : hint_color = vec4(0.5, 1.0, 0.96, 1.0);
-
-uniform float progress : hint_range(0.0, 1.0) = 1.0;
-
-uniform float y_offset : hint_range (-0.5, 0.5) = 0.0; // Position of the beam
-uniform float fixed_edge_size : hint_range(0.0, 0.5) = 0.05; // How close to the edge should the beam be still before the animatino starts
-uniform vec2 noise_scale = vec2(1.0); // If the object (for example the ColorRect or Sprite node) is compressed use this to compensate for the noise texture being compressed.
-
-float random(vec2 uv) {
-    return fract(sin(dot(uv.xy,
-        vec2(12.9898,78.233))) *
-            43758.5453123);
-}
-
-float noise(vec2 uv) {
-    vec2 uv_index = floor(uv);
-    vec2 uv_fract = fract(uv);
-
-    // Four corners in 2D of a tile
-    float a = random(uv_index);
-    float b = random(uv_index + vec2(1.0, 0.0));
-    float c = random(uv_index + vec2(0.0, 1.0));
-    float d = random(uv_index + vec2(1.0, 1.0));
-
-    vec2 blur = smoothstep(0.0, 1.0, uv_fract);
-
-    return mix(a, b, blur.x) +
-            (c - a) * blur.y * (1.0 - blur.x) +
-            (d - b) * blur.x * blur.y;
-}
-
-float fbm(vec2 uv, float time) {
-    int octaves = roughness;
-    float amp = 0.01 * energy * progress;
-    float freq = float(frequency);
-	float value = 0.0;
-	
-    for(int i = 0; i < octaves; i++) {
-        value += amp * noise(freq * vec2(uv.x, uv.y + time));
-        amp *= 0.5;
-        freq *= 2.0;
-    }
-    return value;
-}
-
-vec4 difference(vec4 base, vec4 blend){
-	return abs(base - blend);
-}
-
-vec4 bolt(vec2 uv, float time, float i)
-{
-	// Setup the beam locking to the edges.
-	float falloff = smoothstep(0.0, fixed_edge_size, uv.x) * smoothstep(0.0, fixed_edge_size, 1.0 - uv.x);
-	
-	// Use Fractal Brownian Motion to create a \"cloud texture\" and use Difference blend mode to make the beam
-	vec4 clouds = vec4(fbm((uv + vec2(i) ) * noise_scale, time * speed)) * falloff;
-	vec4 diff_clouds = difference(clouds, vec4(uv.y - 0.5 + y_offset + (uv.y * falloff * 0.02 * energy * progress)));
-	
-	// Create a new noise to mask the beams on low \"progress\" values. To make a \"turn-off\" effect more visually interesting.
-	vec4 clouds2 = vec4(fbm((uv * 2.0) * noise_scale, time * 1.)) * 5.0;
-	diff_clouds += smoothstep(0.0, 0.8, clouds2) * 0.1 * (1.-progress);
-	
-	// Set thickness of the beams. First beam is the Thickness size and all following beams are sized with beam_difference
-	float thickness2 =  1. - ( thickness / (min(i + beam_difference, 1.0) + (1.0-beam_difference))) * progress ;
-	vec4 beam = clamp(smoothstep(thickness2, thickness2 + 0.005 * progress, 1.0 - diff_clouds), vec4(0.0), vec4(1.0));
-	
-	//Set the beam outlines
-	vec4 beam_outline;
-	float outline = thickness2 - (outline_thickness * progress);
-	beam_outline = clamp(smoothstep(outline, outline + 0.04, 1.0 - diff_clouds), 0.0, 1.0);
-	beam_outline = clamp(beam_outline - beam, 0.0, 1.0);
-	
-	// Merge the beam and the outline and return to the fragment function
-	return (beam * (color + vec4(glow, glow, glow, 0.))) + (beam_outline * (outline_color + vec4(outline_glow, outline_glow, outline_glow, 0.)));
-}
-
-void fragment()
-{	
-	vec4 beam = vec4(0.0);
-	
-	for (int i = 0; i < beams; i++){
-		beam = max(beam, bolt(UV, TIME, float(i)));
-	}
-	
-	COLOR = beam;
-}"
-
-[sub_resource type="ShaderMaterial" id=6]
-shader = SubResource( 5 )
-shader_param/beams = 4
-shader_param/energy = 10.041
-shader_param/roughness = 1
-shader_param/frequency = 10
-shader_param/speed = 0.75
-shader_param/thickness = 0.002
-shader_param/outline_thickness = 0.03
-shader_param/beam_difference = 0.0
-shader_param/glow = 0.0
-shader_param/outline_glow = 0.0
-shader_param/color = Color( 0.91, 1, 1, 1 )
-shader_param/outline_color = Color( 0.5, 1, 0.96, 1 )
-shader_param/progress = 1.0
-shader_param/y_offset = 0.0
-shader_param/fixed_edge_size = 0.226
-shader_param/noise_scale = Vector2( 1, 1 )
+shader_param/noise_tex = SubResource( 2 )
+shader_param/gradient_tex = SubResource( 6 )
 
 [node name="Object_Forcefield" type="NinePatchRect"]
 margin_left = -7.0
@@ -219,7 +85,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 speed = 1.618
-noise_tex = SubResource( 8 )
+noise_tex = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
@@ -228,84 +94,14 @@ space_override = 3
 gravity_vec = Vector2( 0, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 9 )
-
-[node name="ColorRect_Fire" type="ColorRect" parent="."]
-visible = false
-material = SubResource( 13 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.67451, 0.905882, 0.752941, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+shape = SubResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 6 )
-margin_left = 26.1626
-margin_top = -411.466
-margin_right = 558.163
-margin_bottom = 658.534
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
-use_parent_material = true
-margin_left = -4.75671
-margin_top = 145.083
-margin_right = 527.243
-margin_bottom = 1215.08
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect3" type="ColorRect" parent="ColorRect"]
-use_parent_material = true
-margin_left = -4.75671
-margin_top = 297.302
-margin_right = 527.243
-margin_bottom = 1367.3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect4" type="ColorRect" parent="ColorRect"]
-use_parent_material = true
-margin_left = -14.2704
-margin_top = 440.007
-margin_right = 517.73
-margin_bottom = 1510.01
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect5" type="ColorRect" parent="ColorRect"]
-use_parent_material = true
-margin_left = -19.0272
-margin_top = 599.361
-margin_right = 512.973
-margin_bottom = 1669.36
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect6" type="ColorRect" parent="ColorRect"]
-use_parent_material = true
-margin_left = -19.0272
-margin_top = 751.579
-margin_right = 512.973
-margin_bottom = 1821.58
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect7" type="ColorRect" parent="ColorRect"]
-use_parent_material = true
-margin_left = -21.4056
-margin_top = 908.555
-margin_right = 510.594
-margin_bottom = 1978.55
+material = SubResource( 7 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 0.964706, 0.501961, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

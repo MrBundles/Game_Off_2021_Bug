@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Entities/Environment/Pickup/Circle.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Environment/Pickup/Environment_Pickup_Particle.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Audio/Effects/PickupPuff.wav" type="AudioStream" id=3]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 0.354545 ), 0.0, 0.0668449, 0, 0, Vector2( 0.469333, 0.209091 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=2]
 radius = 32.0
 
 [node name="Environment_Pickup_Particle" type="CPUParticles2D"]
@@ -25,7 +26,7 @@ orbit_velocity = 1.0
 orbit_velocity_random = 1.0
 scale_amount = 0.01
 scale_amount_random = 1.0
-scale_amount_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 1 )
 color = Color( 1, 0.964706, 0.501961, 1 )
 script = ExtResource( 2 )
 
@@ -33,6 +34,11 @@ script = ExtResource( 2 )
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
+
+[node name="PickupPuffASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -6.0
+bus = "Effects"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

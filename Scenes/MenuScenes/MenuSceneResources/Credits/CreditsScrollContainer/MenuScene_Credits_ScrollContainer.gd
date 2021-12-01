@@ -62,3 +62,4 @@ func on_scroll_min():
 # signal functions -------------------------------------------------------------------------------------------------------
 func _on_ScrollContainer_SpeedSlider_value_changed(value):
 	scroll_speed = value
+	$ScrollASP.play()

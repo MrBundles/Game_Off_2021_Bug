@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Entities/Characters/Character_Worm/Character_Worm_Handle/Character_Worm_Handle.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Audio/Effects/PickupPuff.wav" type="AudioStream" id=2]
+[ext_resource path="res://Resources/Audio/Effects/WormLand.wav" type="AudioStream" id=3]
+[ext_resource path="res://Resources/Audio/Effects/WormShortLand.wav" type="AudioStream" id=4]
 
 [sub_resource type="PhysicsMaterial" id=1]
 resource_local_to_scene = true
@@ -27,8 +30,8 @@ contacts_reported = 5
 contact_monitor = true
 can_sleep = false
 script = ExtResource( 1 )
-color_grab_available = Color( 1, 1, 1, 0.156863 )
-color_grab_active = Color( 1, 1, 1, 0.313726 )
+color_grab_available = Color( 1, 0.964706, 0.501961, 1 )
+color_grab_active = Color( 0.364, 0.91, 0.546, 1 )
 color_grab_outline_thickness = 10.0
 color_force = Color( 0.141176, 0.607843, 0.74902, 1 )
 width_force = 10.0
@@ -46,8 +49,25 @@ shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="EvaporateWormASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -6.0
+
+[node name="WormFartASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Effects"
+
+[node name="WormLandASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Effects"
+
+[node name="WormShortLandASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "Effects"
+
 [connection signal="mouse_entered" from="." to="." method="_on_Character_Worm_Handle_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Character_Worm_Handle_mouse_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="finished" from="EvaporateWormASP" to="." method="_on_EvaporateWormASP_finished"]

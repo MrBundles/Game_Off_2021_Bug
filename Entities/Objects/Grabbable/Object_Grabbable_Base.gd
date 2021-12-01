@@ -10,6 +10,7 @@ class_name Grabbable
 
 # variables ------------------------------------------------------------------------------------------------------------
 export var grabbable = true setget set_grabbable
+export var rigidbody = false
 export var color = Color(1,1,1,1) setget set_color
 export var tile_rotation_degrees = 0.0 setget set_tile_rotation_degrees
 export var tile_flip = false setget set_tile_flip
@@ -94,11 +95,12 @@ func set_tile_flip(new_val):
 		else:
 			$Sprite.scale.x = 1
 	
-	if has_node("CollisionPolygon2D"):
-		if tile_flip:
-			$CollisionPolygon2D.scale.x = -1
-		else:
-			$CollisionPolygon2D.scale.x = 1
+	if not rigidbody:
+		if has_node("CollisionPolygon2D"):
+			if tile_flip:
+				$CollisionPolygon2D.scale.x = -1
+			else:
+				$CollisionPolygon2D.scale.x = 1
 
 
 func set_child_position_init(new_val):

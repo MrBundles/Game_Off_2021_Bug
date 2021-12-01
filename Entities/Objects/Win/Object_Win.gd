@@ -56,6 +56,8 @@ func _on_event_trigger(_event_id, event_value):
 		
 		if has_node("Timer"):
 			$Timer.start()
+		
+		$LevelWinASP.play()
 
 
 func _on_Timer_timeout():

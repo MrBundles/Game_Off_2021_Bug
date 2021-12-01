@@ -7,7 +7,7 @@ extends Node2D
 
 
 # variables ------------------------------------------------------------------------------------------------------------
-export var event_id_confetti = 0
+export var event_id_confetti = -1
 export(Color) var color_confetti setget set_color_confetti
 
 

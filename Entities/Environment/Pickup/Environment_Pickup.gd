@@ -8,6 +8,7 @@ extends Area2D
 
 # variables ------------------------------------------------------------------------------------------------------------
 export(PackedScene) var pickup_particle_scene
+var pickup_flag = false
 
 
 # main functions -------------------------------------------------------------------------------------------------------
@@ -45,7 +46,7 @@ func _get_configuration_warning():
 
 
 func _on_Environment_Pickup_body_entered(body):
-	if body.is_in_group("worm"):
+	if body.is_in_group("worm") and not pickup_flag:
 		if pickup_particle_scene:
 			var pickup_particle_scene_instance = pickup_particle_scene.instance()
 			pickup_particle_scene_instance.global_position = global_position + Vector2(32,32)
@@ -59,6 +60,10 @@ func _on_Environment_Pickup_body_entered(body):
 			$Timer.start()
 		
 		GSM.emit_signal("pickup_collected")
+		
+		$PickupDingASP.play()
+		
+		pickup_flag = true
 
 
 func _on_Timer_timeout():

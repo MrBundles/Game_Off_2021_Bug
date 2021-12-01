@@ -15,6 +15,9 @@ export(GVM.EVENT_TRIGGER_TYPES) var event_trigger_type_rest = GVM.EVENT_TRIGGER_
 export(float, 0.0, 256.0) var event_delay_time_grabbed = 0.0
 export(float, 0.0, 256.0) var event_delay_time_rest = 0.0
 
+export var oneshot = false
+var oneshot_flag = false
+
 # panel appearance variables
 export var color = Color(1,1,1,1) setget set_color
 
@@ -56,7 +59,13 @@ func set_grabbed_offset(new_val):
 
 
 func set_grabbed(new_val):
+	if oneshot and oneshot_flag:
+		return
+	
 	grabbed = new_val
+	
+	if grabbed:
+		oneshot_flag = true
 	
 	if has_node("Tween") and has_node("Switch_Body"):
 		$Tween.stop_all()

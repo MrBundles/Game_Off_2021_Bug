@@ -6,6 +6,7 @@
 [ext_resource path="res://Resources/Audio/Effects/SFXSampleSound.wav" type="AudioStream" id=4]
 
 [node name="GlobalAudioManager" type="Node"]
+pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="MusicASP" type="AudioStreamPlayer" parent="."]
@@ -21,3 +22,5 @@ bus = "Music"
 
 [node name="SFXSampleASP" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -6.0
+bus = "Effects"

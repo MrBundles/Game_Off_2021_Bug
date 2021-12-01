@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=143 format=2]
+[gd_resource type="TileSet" load_steps=144 format=2]
 
 [ext_resource path="res://Resources/Tilesets/Default_Tileset_Color.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Tilesets/Default_Tileset_Grayscale.png" type="Texture" id=2]
@@ -317,6 +317,9 @@ points = PoolVector2Array( 0, 32, 64, 0, 64, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=105]
 points = PoolVector2Array( 64, 64, 56, 64, 40, 60, 32, 56, 8, 32, 4, 24, 0, 8, 0, 0, 32, 0, 32, 32, 64, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=141]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=106]
 points = PoolVector2Array( 32, 8, 28, 16, 16, 28, 8, 32, 0, 32, 0, 0, 32, 0 )
@@ -1778,9 +1781,16 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 64/navigation_offset = Vector2( 0, 0 )
 64/shape_offset = Vector2( 0, 0 )
 64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+64/shape = SubResource( 141 )
 64/shape_one_way = false
-64/shape_one_way_margin = 0.0
-64/shapes = [  ]
+64/shape_one_way_margin = 1.0
+64/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 141 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 64/z_index = 0
 65/name = "Default_Tileset_Color.png 65"
 65/texture = ExtResource( 1 )

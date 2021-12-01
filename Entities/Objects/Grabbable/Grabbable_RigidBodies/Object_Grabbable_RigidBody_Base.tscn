@@ -3,11 +3,13 @@
 [ext_resource path="res://Entities/Objects/Grabbable/Object_Grabbable_Base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Jar/Jar.png" type="Texture" id=2]
 
-[node name="Object_Grabbable_RigidBody_Base" instance=ExtResource( 1 )]
-modulate = Color( 0.756863, 0.780392, 0.752941, 1 )
+[node name="Object_Grabbable_RigidBody_Base" groups=[
+"rigid",
+] instance=ExtResource( 1 )]
 mode = 0
 gravity_scale = 4.0
-color = Color( 0.756863, 0.780392, 0.752941, 1 )
+can_sleep = false
+rigidbody = true
 
 [node name="CollisionPolygon2D" parent="." index="0"]
 polygon = PoolVector2Array( -88, -200, -112, -200, -120, -192, -120, -176, -104, -168, -104, -128, -128, -104, -128, 176, -120, 192, -104, 200, 104, 200, 120, 192, 128, 176, 128, -104, 104, -128, 104, -168, 120, -176, 120, -192, 112, -200, 88, -200, 88, -120, 104, -104, 104, 160, 88, 176, -88, 176, -104, 160, -104, -104, -88, -120 )

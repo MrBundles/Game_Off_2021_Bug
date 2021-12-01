@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
+[ext_resource path="res://Resources/Audio/Effects/GameButtonPress.wav" type="AudioStream" id=1]
 [ext_resource path="res://Entities/Environment/Button/Button_Body.png" type="Texture" id=2]
 [ext_resource path="res://Entities/Environment/Button/Environment_Button.gd" type="Script" id=3]
 [ext_resource path="res://Entities/Environment/Button/Icons/gravity_up.png" type="Texture" id=4]
@@ -11,6 +12,7 @@
 [ext_resource path="res://Entities/Environment/Button/Icons/open_panel_right.png" type="Texture" id=10]
 [ext_resource path="res://Entities/Environment/Button/Icons/win.png" type="Texture" id=11]
 [ext_resource path="res://Entities/Environment/Button/Icons/open_panel_up.png" type="Texture" id=12]
+[ext_resource path="res://Resources/Audio/Effects/GameButtonRelease.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 96, 8 )
@@ -24,7 +26,7 @@ icons = [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 9
 color_worm = Color( 0.603922, 0.384314, 0.819608, 1 )
 color_left = Color( 0.247059, 0.729412, 0.87451, 1 )
 color_right = Color( 0.917647, 0.333333, 0.498039, 1 )
-color_rigid = Color( 0.84, 0.48986, 0.3276, 1 )
+color_rigid = Color( 1, 0.686275, 0.541176, 1 )
 color_disabled = Color( 0.945098, 0.968627, 0.929412, 1 )
 
 [node name="Tween" type="Tween" parent="."]
@@ -87,6 +89,16 @@ modulate = Color( 0.945098, 0.968627, 0.929412, 1 )
 position = Vector2( 0, -72 )
 scale = Vector2( 0.65, 0.65 )
 texture = ExtResource( 11 )
+
+[node name="GameButtonPressASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -12.0
+bus = "Effects"
+
+[node name="GameButtonReleaseASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -12.0
+bus = "Effects"
 
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

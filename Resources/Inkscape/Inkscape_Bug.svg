@@ -272,11 +272,11 @@
      inkscape:window-width="1920"
      showgrid="true"
      inkscape:document-rotation="0"
-     inkscape:current-layer="g1605"
+     inkscape:current-layer="g1835"
      inkscape:document-units="mm"
-     inkscape:cy="321.55341"
-     inkscape:cx="329.23508"
-     inkscape:zoom="0.35355339"
+     inkscape:cy="-127.8097"
+     inkscape:cx="1744.023"
+     inkscape:zoom="1"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -2218,6 +2218,46 @@
          style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:2.5475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
          rx="42.333328"
          ry="42.333332" />
+      <g
+         inkscape:export-ydpi="48"
+         inkscape:export-xdpi="48"
+         inkscape:export-filename="D:\Kevin\Godot\Projects\Jam_Games\Game_Off\Game_Off_2021_Bug\Entities\Environment\Pickup\SpawnIcon.png"
+         id="g1652">
+        <circle
+           style="fill:#f1f7ed;fill-opacity:1;stroke:none;stroke-width:1.019;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="circle1637"
+           cx="584.20001"
+           cy="-29.633335"
+           r="16.933332" />
+        <ellipse
+           cy="-38.100002"
+           cx="575.73334"
+           id="circle1639"
+           style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.5095;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           rx="8.4666624"
+           ry="8.4666662" />
+        <ellipse
+           ry="4.2333341"
+           rx="4.2333193"
+           style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.25475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="ellipse1641"
+           cx="596.90002"
+           cy="-42.333332" />
+        <ellipse
+           cy="-21.166668"
+           cx="592.66669"
+           id="ellipse1643"
+           style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.5095;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           rx="8.4666624"
+           ry="8.4666662" />
+        <ellipse
+           ry="4.2333331"
+           rx="4.2333269"
+           style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.25475;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="ellipse1645"
+           cx="571.5"
+           cy="-16.933334" />
+      </g>
     </g>
     <rect
        y="-77.828888"
@@ -2415,7 +2455,7 @@
          id="g1605">
         <path
            d="M 43.360864,-237.06667 H 67.30821 l 16.933358,16.93336 h -23.94735 z"
-           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1587" />
         <path
            id="rect1217"
@@ -2423,7 +2463,7 @@
            d="m 19.163895,-237.0667 h 23.94735 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1219"
-           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="M -4.7834548,-237.0667 H 19.163895 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1221"
@@ -2431,7 +2471,7 @@
            d="m -28.730805,-237.0667 h 23.9473502 l 16.9333578,16.93336 h -23.947349 z" />
         <path
            id="rect1223"
-           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m -52.678154,-237.0667 h 23.947349 l 16.933359,16.93336 h -23.94735 z" />
         <path
            id="rect1225"
@@ -2439,7 +2479,7 @@
            d="m -76.625504,-237.0667 h 23.94735 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1227"
-           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            d="m -100.57285,-237.0667 h 23.947346 l 16.933358,16.93336 h -23.94735 z" />
         <path
            id="rect1229"
@@ -2447,7 +2487,7 @@
            d="m -101.60038,-237.0667 h 1.02753 l 16.933354,16.93336 h -17.960514 z" />
         <path
            d="m 187.04496,-237.06667 h 23.94735 l 0.67455,0.67455 3.6e-4,16.2588 -7.6889,1e-5 z"
-           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1575" />
         <path
            d="m 163.09761,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
@@ -2455,7 +2495,7 @@
            id="path1577" />
         <path
            d="m 139.15026,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
-           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1579" />
         <path
            d="m 115.20291,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
@@ -2463,7 +2503,7 @@
            id="path1581" />
         <path
            d="m 91.25556,-237.06667 h 23.94735 l 16.93336,16.93336 h -23.94735 z"
-           style="fill:#616766;fill-opacity:0.98431373;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
+           style="fill:#616766;fill-opacity:0.984314;stroke-width:1.61118;stroke-linecap:round;stroke-linejoin:bevel"
            id="path1583" />
         <path
            d="m 67.30821,-237.06667 h 23.94735 l 16.93336,16.93336 H 84.241568 Z"

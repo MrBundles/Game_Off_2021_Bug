@@ -59,7 +59,8 @@ func _ready():
 	self.radius = radius
 	
 	# initialize variables
-	pass
+	if GVM.float_mode:
+		gravity_scale = 0
 
 
 func _process(delta):
@@ -73,10 +74,15 @@ func _physics_process(delta):
 
 func _draw():
 	# draw force vector
-	var color_force_target = color_left_outline
+	var color_force_target
+	match input_type:
+		GVM.INPUT_TYPES.left:
+			color_force_target = color_left_outline
+		GVM.INPUT_TYPES.right:
+			color_force_target = color_right_outline
 	var width_force_target = 0.0
 	
-	if Input.is_action_pressed("left_click") or Input.is_action_pressed("right_click"):
+	if (input_type == GVM.INPUT_TYPES.left and Input.is_action_pressed("left_click")) or (input_type == GVM.INPUT_TYPES.right and Input.is_action_pressed("right_click")):
 		color_force_target.a = color_force.a
 		width_force_target = move_force_current / move_force * width_force
 	else:
@@ -89,6 +95,7 @@ func _draw():
 	var snip_length = 12
 	for i in range(1, clamp(Vector2(0,0).distance_to(get_local_mouse_position()) / snip_length, 4, 8)):
 		var line_length = get_local_mouse_position().normalized() * i * snip_length
+#		if (input_type == GVM.INPUT_TYPES.left and Input.is_action_pressed("left_click")) or (input_type == GVM.INPUT_TYPES.right and Input.is_action_pressed("right_click")):
 		draw_circle(line_length, clamp(width_force_current - i * .75, 2, width_force_current), color_force_current)
 #		draw_line(Vector2(0,0), line_length, color_force_current, width_force_current - i, true)
 	
@@ -96,18 +103,24 @@ func _draw():
 	var grab_available = bodies.size() > 0
 	var grab_active = bodies_grabbed.size() > 0
 	
-	if grab_available:
-		if grab_active:
-			draw_circle(Vector2(0,0), radius + color_grab_outline_thickness, color_grab_active)
-		else:
-			draw_circle(Vector2(0,0), radius + color_grab_outline_thickness, color_grab_available)
-	
 	match input_type:
 		GVM.INPUT_TYPES.left:
+			if grab_available:
+				if grab_active:
+					draw_circle(Vector2(0,0), radius + color_grab_outline_thickness, color_grab_active)
+				else:
+					draw_circle(Vector2(0,0), radius + color_grab_outline_thickness, color_grab_available)
+			
 			draw_circle(Vector2(0,0), radius, color_left_outline)
 			draw_circle(Vector2(0,0), radius - color_outline_thickness, color_left)
 			
 		GVM.INPUT_TYPES.right:
+			if grab_available:
+				if grab_active:
+					draw_circle(Vector2(0,0), radius + color_grab_outline_thickness, color_grab_active)
+				else:
+					draw_circle(Vector2(0,0), radius + color_grab_outline_thickness, color_grab_available)
+			
 			draw_circle(Vector2(0,0), radius, color_right_outline)
 			draw_circle(Vector2(0,0), radius - color_outline_thickness, color_right)
 
@@ -173,8 +186,11 @@ func clear_pins():
 	for body in bodies_grabbed:
 		if "grabbed" in body:
 			body.grabbed = false
+		
+		if not body in bodies:
+			bodies.append(body)
 	
-	bodies.clear()
+#	bodies.clear()
 	bodies_grabbed.clear()
 
 
@@ -240,7 +256,7 @@ func _on_break_worm():
 
 
 func _on_evaporate_worm():
-	queue_free()
+	$EvaporateWormASP.play()
 
 
 func _on_Area2D_body_entered(body):
@@ -257,3 +273,7 @@ func _on_Area2D_body_exited(body):
 func _on_Timer_timeout():
 	if has_node("Timer"):
 		$Timer.stop()
+
+
+func _on_EvaporateWormASP_finished():
+	queue_free()

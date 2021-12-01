@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entities/Objects/Panel/Object_Panel.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Objects/Panel/Panel.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Audio/Effects/PanelOpen.wav" type="AudioStream" id=3]
+[ext_resource path="res://Resources/Audio/Effects/PanelClose.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 resource_local_to_scene = true
@@ -11,7 +13,7 @@ region = Rect2( 0, 0, 128, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
 resource_local_to_scene = true
-extents = Vector2( 64, 16 )
+extents = Vector2( 64, 15 )
 
 [node name="Object_Panel" type="Node2D"]
 script = ExtResource( 1 )
@@ -41,3 +43,13 @@ text = "event_id: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PanelOpenASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -9.0
+bus = "Effects"
+
+[node name="PanelCloseASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -12.0
+bus = "Effects"

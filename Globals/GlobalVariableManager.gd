@@ -37,6 +37,9 @@ var highest_unlocked_game_scene_id = -1
 var revision_major = 0
 var revision_minor = 0
 
+# special variables
+var float_mode = false
+
 # main functions -------------------------------------------------------------------------------------------------------
 func _ready():
 	# connect signals

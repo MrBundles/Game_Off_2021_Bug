@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/MenuScenes/MenuSceneResources/LevelSelect/PointHandle/MenuScene_LevelSelect_PointHandle.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Fonts/blinker/fonts_ttf/Blinker-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Entities/Features/FeatureFontSizeOverrider/FeatureFontSizeOverrider.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resources/Audio/Effects/LevelHoverOn.wav" type="AudioStream" id=4]
+[ext_resource path="res://Resources/Audio/Effects/LevelPress.wav" type="AudioStream" id=5]
+[ext_resource path="res://Resources/Audio/Effects/LevelHoverOff.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 64.0
@@ -55,6 +58,21 @@ __meta__ = {
 
 [node name="FeatureFontSizeOverrider" parent="LockedLabel" instance=ExtResource( 3 )]
 font_size = 64
+
+[node name="LevelHoverOnASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -9.0
+bus = "Effects"
+
+[node name="LevelHoverOffASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0
+bus = "Effects"
+
+[node name="LevelPressASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -6.0
+bus = "Effects"
 
 [connection signal="mouse_entered" from="." to="." method="_on_PointHandle_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_PointHandle_mouse_exited"]

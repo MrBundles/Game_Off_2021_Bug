@@ -46,7 +46,6 @@ func _ready():
 	# initialize variables
 	_on_ButtonBase_item_rect_changed()
 
-
 func _process(delta):
 	pass
 
@@ -89,6 +88,14 @@ func animate_button(button_pressed, button_hovered):
 			rotation_current = rotation_normal
 		
 		$Tween.start()
+	
+	# handle audio for button
+	if button_pressed:
+		$ButtonPressASP.play()
+	elif button_hovered:
+		$ButtonHoverOnASP.play()
+	else:
+		$ButtonHoverOffASP.play()
 
 
 # set/get functions ------------------------------------------------------------------------------------------------------

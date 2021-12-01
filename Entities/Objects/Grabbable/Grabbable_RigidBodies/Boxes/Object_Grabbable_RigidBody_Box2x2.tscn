@@ -11,7 +11,8 @@ region = Rect2( 128, 0, 64, 64 )
 [node name="Object_Grabbable_RigidBody_Box2x2" instance=ExtResource( 1 )]
 
 [node name="CollisionPolygon2D" parent="." index="0"]
-polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+scale = Vector2( 0.97, 0.97 )
+polygon = PoolVector2Array( -32, -24, -24, -32, 24, -32, 32, -24, 32, 24, 24, 32, -24, 32, -32, 24 )
 
 [node name="Sprite" parent="." index="1"]
 texture = SubResource( 1 )

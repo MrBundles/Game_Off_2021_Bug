@@ -69,7 +69,9 @@ func clear_menu_scenes():
 
 
 func add_game_scene(new_game_scene_id):
-	if not new_game_scene_id < game_scene_array.size() or not game_scene_array[new_game_scene_id] or not has_node("GameScenes"):
+	if new_game_scene_id > game_scene_array.size() - 1 or not game_scene_array[new_game_scene_id] or not has_node("GameScenes"):
+		GSM.emit_signal("change_game_scene", 0)
+		GSM.emit_signal("change_menu_scene", GVM.MENU_SCENE_IDS.credits)
 		return
 	
 	var game_scene_instance = game_scene_array[new_game_scene_id].instance()
@@ -107,12 +109,14 @@ func set_generate_game_scene_samples(new_val):
 	generate_game_scene_samples = new_val
 	
 	if generate_game_scene_samples and get_tree():
+		get_tree().paused = true
+		
 		# save current game and menu scene ids
 		var _current_game_scene_id = current_game_scene_id
 		var _current_menu_scene_id = current_menu_scene_id
 		
 		_on_change_menu_scene(GVM.MENU_SCENE_IDS.null)
-		for j in range(5):
+		for j in range(1):
 			yield(get_tree(), "idle_frame")
 		
 		for i in range(game_scene_array.size()):
@@ -120,7 +124,7 @@ func set_generate_game_scene_samples(new_val):
 				return
 			
 			_on_change_game_scene(i)
-			for j in range(5):
+			for j in range(1):
 				yield(get_tree(), "idle_frame")
 			
 			# generate a sample texture from viewport
@@ -132,10 +136,12 @@ func set_generate_game_scene_samples(new_val):
 		_on_change_game_scene(_current_game_scene_id)
 		print("current: " + str(current_game_scene_id) + "   _current: " + str(_current_game_scene_id))
 		_on_change_menu_scene(_current_menu_scene_id)
-		for j in range(5):
+		for j in range(1):
 			yield(get_tree(), "idle_frame")
 		
-		generate_game_scene_samples = false
+		set_generate_game_scene_samples(false)
+		get_tree().paused = false
+		
 
 
 # signal functions -------------------------------------------------------------------------------------------------------

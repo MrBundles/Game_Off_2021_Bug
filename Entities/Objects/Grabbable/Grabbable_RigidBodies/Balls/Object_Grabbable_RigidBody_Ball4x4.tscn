@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Tilesets/Spawn_Tileset_Tiles.png" type="Texture" id=1]
+[ext_resource path="res://Entities/Objects/Grabbable/Grabbable_RigidBodies/Object_Grabbable_RigidBody_Base.tscn" type="PackedScene" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 928, 0, 128, 128 )
+
+[node name="Object_Grabbable_RigidBody_Box4x4" instance=ExtResource( 2 )]
+
+[node name="CollisionPolygon2D" parent="." index="0"]
+scale = Vector2( 0.97, 0.97 )
+polygon = PoolVector2Array( -8, -64, 8, -64, 24, -60, 32, -56, 44, -48, 48, -44, 56, -32, 60, -24, 64, -8, 64, 8, 60, 24, 56, 32, 48, 44, 44, 48, 32, 56, 24, 60, 8, 64, -8, 64, -24, 60, -32, 56, -44, 48, -48, 44, -56, 32, -60, 24, -64, 8, -64, -8, -60, -24, -56, -32, -48, -44, -44, -48, -32, -56, -24, -60 )
+
+[node name="Sprite" parent="." index="1"]
+texture = SubResource( 1 )
