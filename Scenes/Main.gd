@@ -153,8 +153,8 @@ func _on_change_game_scene(new_game_scene_id):
 		
 		GVM.current_game_scene_id = current_game_scene_id
 		
-		if current_game_scene_id > highest_unlocked_game_scene_id:
-			self.highest_unlocked_game_scene_id = current_game_scene_id
+#		if current_game_scene_id > highest_unlocked_game_scene_id:
+#			self.highest_unlocked_game_scene_id = current_game_scene_id
 
 
 func _on_change_menu_scene(new_menu_scene_id):
@@ -187,8 +187,12 @@ func _on_reload_menu_scene():
 
 func _on_level_completed():
 	if current_game_scene_id + 1 < game_scene_array.size():
-		if current_game_scene_id + 1 > highest_unlocked_game_scene_id:
-			highest_unlocked_game_scene_id = current_game_scene_id + 1
+		if current_game_scene_id > highest_unlocked_game_scene_id:
+			self.highest_unlocked_game_scene_id = current_game_scene_id
 		
 		GSM.emit_signal("change_game_scene", current_game_scene_id + 1)
+	
+	else:
+		GSM.emit_signal("change_game_scene", 0)
+		GSM.emit_signal("change_menu_scene", GVM.MENU_SCENE_IDS.credits)
 
